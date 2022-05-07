@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <button onclick="XlsToHash()"> xls -> json -> string -> encrypt -> hash </button>
+    <button onclick="HashToJson()"> hash -> decrypt -> string -> json </button>
+
+    <script>
+        // fetch ID and Key from URL
+        if( window.location.search != ""){
+            try{
+            UserID=window.location.search.split("?")[1].split("&")[0].split("=")[1]
+            UserKey=window.location.search.split("?")[1].split("&")[1].split("=")[1]
+            console.log("your User ID = "+UserID + "\n" + "Your User Key = " + UserKey);
+            }
+            catch(err){
+                console.error("Could not detect id and key, check whether the syntax is correct eg : ?id=test&key=1234")
+            }
+        }
+
+        //xlsx to json file 
+       /* set up XMLHttpRequest */
+       var url = "Mappe1.xls";
+       let JsonObject;
+       let JsonString;
+
+
+       let JsonPub;
+       let JsonPriv=[];
+
+        var oReq = new XMLHttpRequest();
+        oReq.open("GET", url, true);
+        oReq.responseType = "arraybuffer";
+
+        oReq.onload = function(e) {
+            var arraybuffer = oReq.response;
+
+            /* convert data to binary string */
+            var data = new Uint8Array(arraybuffer);
+            var arr = new Array();
+            for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+            var bstr = arr.join("");
+
+            /* Call XLSX */
+            var workbook = XLS.read(bstr, {
+                type: "binary"
+            });
+
+            /* DO SOMETHING WITH workbook HERE */
+            var first_sheet_name = workbook.SheetNames[0];
+            /* Get worksheet */
+            var worksheet = workbook.Sheets[first_sheet_name];
+            JsonObject=XLS.utils.sheet_to_json(worksheet, {raw: true});
+            //console.log(XLSX.utils.sheet_to_json(worksheet, {raw: true}));
+        }
+
+        oReq.send();
+
+        //var result = JSON.parse(jsonResult);
+
+        var encrypted;
+        var decrypted;
+
+        let JsonLayer2=[];
+        
+        function XlsToHash(){
+            Layer2Encryption();
+            console.log(JsonPriv,typeof(JsonPriv));
+            download(JSON.stringify(JsonPriv), "ID_key.json", "text/plain");
+            console.log(JsonObject)
+            console.log(typeof (JsonObject))
+
+            for (let i = 0; i < JsonObject.length; i++) {
+                let person = JsonObject[i];
+                console.log(person.Name , person.Surname);
+                if(person.ID==UserID){
+                    if(person.Surname==UserKey){
+                        JsonString=JSON.stringify(JsonObject)
+                        console.log(JsonString);
+                        encrypted = CryptoJS.AES.encrypt(JsonString, "test").toString();
+                        console.log(encrypted);
+                    }
+                    else{
+                        console.log("Wrong Credentials , access denied")
+                    }
+                }
+            }
+        }
+
+        function HashToJson(){
+            decrypted = CryptoJS.AES.decrypt(encrypted, "test").toString(CryptoJS.enc.Utf8);
+            console.log(typeof(decrypted))
+            JsonObject =JSON.parse(decrypted)
+            console.log(JsonObject);
+        }
+        
+
+        function makekey() {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            for (var i = 0; i < 5; i++)
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+            return text;
+        }
+
+        //console.log(makeid());
+
+
+        function Layer2Encryption(){
+            for (let i = 0; i < JsonObject.length; i++) {
+                let person=JsonObject[i]
+                let personString=JSON.stringify(person)
+                console.log("___ "+ personString)
+                let personID=person.ID;
+                let Line_encryption=CryptoJS.AES.encrypt(JsonString, "test").toString();
+                JsonPriv[personID.toString()]=makekey()
+
+                
+            }
+        }
+
+
+        
+
+        function download(content, fileName, contentType) {
+        const a = document.createElement("a");
+        const file = new Blob([content], { type: contentType });
+        a.href = URL.createObjectURL(file);
+        a.download = fileName;
+        a.click();
+        }
+
+        
+    
+        
+
+        
+
+    </script>
+</body>
+</html>
