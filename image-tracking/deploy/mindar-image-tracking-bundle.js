@@ -21,17 +21,484 @@
  */
 //# sourceMappingURL=editor-components-bundle.js.map
 
-WL.registerComponent('cursor-custom', {
-    param: {type: WL.Type.Float, default: 1.0},
+WL.registerComponent("cursor-target-custom", {
 }, {
+  init: function () {
+    this.hoverFunctions = [];
+    this.unHoverFunctions = [];
+    this.clickFunctions = [];
+    this.moveFunctions = [];
+    this.downFunctions = [];
+    this.upFunctions = [];
+  },
+  onHover: function(object, cursor) {
+      for(let f of this.hoverFunctions) f(object, cursor);
+  },
+  onUnhover: function(object, cursor) {
+      for(let f of this.unHoverFunctions) f(object, cursor);
+  },
+  onClick: function(object, cursor) {
+      for(let f of this.clickFunctions) f(object, cursor);
+      window.alert("worked")
+  },
+  onMove: function(object, cursor) {
+      for(let f of this.moveFunctions) f(object, cursor);
+  },
+  onDown: function(object, cursor) {
+      for(let f of this.downFunctions) f(object, cursor);
+      window.alert("worked")
+  },
+  onUp: function(object, cursor) {
+      for(let f of this.upFunctions) f(object, cursor);
+      window.alert("worked")
+  },
+  addHoverFunction: function(f) {
+      this._validateCallback(f);
+      this.hoverFunctions.push(f);
+  },
+  removeHoverFunction: function(f) {
+      this._validateCallback(f);
+      this._removeItemOnce(this.hoverFunctions, f);
+  },
+  addUnHoverFunction: function(f) {
+      this._validateCallback(f);
+      this.unHoverFunctions.push(f);
+  },
+  removeUnHoverFunction: function(f) {
+      this._validateCallback(f);
+      this._removeItemOnce(this.unHoverFunctions, f);
+  },
+  addClickFunction: function(f) {
+      this._validateCallback(f);
+      this.clickFunctions.push(f);
+      window.alert("work")
+  },
+  removeClickFunction: function(f) {
+      this._validateCallback(f);
+      this._removeItemOnce(this.clickFunctions, f);
+  },
+  addMoveFunction: function(f) {
+      this._validateCallback(f);
+      this.moveFunctions.push(f);
+  },
+  removeMoveFunction: function(f) {
+      this._validateCallback(f);
+      this._removeItemOnce(this.moveFunctions, f);
+  },
+  addDownFunction: function(f) {
+      this._validateCallback(f);
+      this.downFunctions.push(f);
+      window.alert("win")
+  },
+  removeDownFunction: function(f) {
+      this._validateCallback(f);
+      this._removeItemOnce(this.downFunctions, f);
+  },
+  addUpFunction: function(f) {
+      this._validateCallback(f);
+      this.upFunctions.push(f);
+  },
+  removeUpFunction: function(f) {
+      this._validateCallback(f);
+      this._removeItemOnce(this.upFunctions, f);
+  },
+
+  _removeItemOnce: function(arr, value) {
+      var index = arr.indexOf(value);
+      if(index > -1) arr.splice(index, 1);
+      return arr;
+  },
+  _validateCallback: function(f) {
+      if(typeof f !== "function") {
+          throw new TypeError(this.object.name
+              + ".cursor-target: Argument needs to be a function");
+      }
+  },
+});
+
+   
+
+
+const vec3 = glMatrix.vec3;
+const vec4 = glMatrix.vec4;
+
+WL.registerComponent('cursor-custom', {
+    /** Collision group for the ray cast. Only objects in this group will be affected by this cursor. */
+    collisionGroup: {type: WL.Type.Int, default: 1},
+    /** (optional) Object that visualizes the cursor's ray. */
+    cursorRayObject: {type: WL.Type.Object},
+    /** Axis along which to scale the `cursorRayObject`. */
+    cursorRayScalingAxis: {type: WL.Type.Enum, values: ['x', 'y', 'z', 'none'], default: 'z'},
+    /** (optional) Object that visualizes the cursor's hit location. */
+    cursorObject: {type: WL.Type.Object},
+    /** Handedness for VR cursors to accept trigger events only from respective controller. */
+    handedness: {type: WL.Type.Enum, values: ['input component', 'left', 'right', 'none'], default: 'input component'},
+    /** Mode for raycasting, whether to use PhysX or simple collision components */
+    rayCastMode: {type: WL.Type.Enum, values: ['collision', 'physx'], default: 'collision'},
+    /** Whether to set the CSS style of the mouse cursor on desktop */
+    styleCursor: {type: WL.Type.Bool, default: true},
+  }, {
     init: function() {
-        console.log('init() with param', this.param);
+        /* VR session cache, in case in VR */
+        this.session = null;
+        this.collisionMask = (1 << this.collisionGroup);
+        this.maxDistance = 100;
+
+        const sceneLoaded = this.onDestroy.bind(this);
+        WL.onSceneLoaded.push(sceneLoaded);
+        this.onDestroyCallbacks = [() => {
+            const index = WL.onSceneLoaded.indexOf(sceneLoaded);
+            if(index >= 0) WL.onSceneLoaded.splice(index, 1);
+        }];
     },
     start: function() {
-        console.log('start() with param', this.param);
+        if(this.handedness == 0) {
+            const inputComp = this.object.getComponent('input');
+            if(!inputComp) {
+                console.warn('cursor component on object', this.object.name,
+                    'was configured with handedness "input component", ' +
+                    'but object has no input component.');
+            } else {
+                this.handedness = inputComp.handedness;
+                this.input = inputComp;
+            }
+        } else {
+            this.handedness = ['left', 'right'][this.handedness - 1];
+        }
+
+        this.globalTarget = this.object.addComponent('cursor-target');
+
+        this.origin = new Float32Array(3);
+        this.cursorObjScale = new Float32Array(3);
+        this.direction = [0, 0, 0];
+        this.tempQuat = new Float32Array(4);
+        this.viewComponent = this.object.getComponent("view");
+        /* If this object also has a view component, we will enable inverse-projected mouse clicks,
+         * otherwise just use the objects transformation */
+        if(this.viewComponent != null) {
+            const onClick = this.onClick.bind(this);
+            WL.canvas.addEventListener("click", onClick);
+            const onPointerMove = this.onPointerMove.bind(this);
+            WL.canvas.addEventListener("pointermove", onPointerMove);
+            const onPointerDown = this.onPointerDown.bind(this);
+            WL.canvas.addEventListener("pointerdown", onPointerDown);
+            const onPointerUp = this.onPointerUp.bind(this);
+            WL.canvas.addEventListener("pointerup", onPointerUp);
+
+            this.projectionMatrix = new Float32Array(16);
+            mat4.invert(this.projectionMatrix, this.viewComponent.projectionMatrix);
+            const onViewportResize = this.onViewportResize.bind(this);
+            window.addEventListener("resize", onViewportResize);
+
+            this.onDestroyCallbacks.push(() => {
+                WL.canvas.removeEventListener("click", onClick);
+                WL.canvas.removeEventListener("pointermove", onPointerMove);
+                WL.canvas.removeEventListener("pointerdown", onPointerDown);
+                WL.canvas.removeEventListener("pointerup", onPointerUp);
+                window.removeEventListener("resize", onViewportResize);
+            });
+
+        }
+        this.isHovering = false;
+        this.visible = true;
+        this.isDown = false;
+        this.lastIsDown = false;
+
+        this.cursorPos = new Float32Array(3);
+        this.hoveringObject = null;
+
+        const onXRSessionStart = this.setupVREvents.bind(this);
+        WL.onXRSessionStart.push(onXRSessionStart);
+        this.onDestroyCallbacks.push(() => {
+            const index = WL.onXRSessionStart.indexOf(onXRSessionStart);
+            if(index >= 0) WL.onXRSessionStart.splice(index, 1);
+        });
+
+        if(this.cursorRayObject) {
+            this.cursorRayScale = new Float32Array(3);
+            this.cursorRayScale.set(this.cursorRayObject.scalingLocal);
+
+            /* Set ray to a good default distance of the cursor of 1m */
+            this.object.getTranslationWorld(this.origin);
+            this.object.getForward(this.direction);
+            this._setCursorRayTransform([
+                this.origin[0] + this.direction[0],
+                this.origin[1] + this.direction[1],
+                this.origin[2] + this.direction[2]]);
+        }
     },
-    update: function(dt) {
-        console.log('update() with delta time', dt);
+    onViewportResize: function() {
+        if(!this.viewComponent) return;
+        /* Projection matrix will change if the viewport is resized, which will affect the
+         * projection matrix because of the aspect ratio. */
+        mat4.invert(this.projectionMatrix, this.viewComponent.projectionMatrix);
+    },
+
+    _setCursorRayTransform: function(hitPosition) {
+        if(!this.cursorRayObject) return;
+        const dist = vec3.dist(this.origin, hitPosition);
+        this.cursorRayObject.setTranslationLocal([0.0, 0.0, -dist / 2]);
+        if(this.cursorRayScalingAxis != 4) {
+            this.cursorRayObject.resetScaling();
+            this.cursorRayScale[this.cursorRayScalingAxis] = dist/2;
+            this.cursorRayObject.scale(this.cursorRayScale);
+        }
+    },
+
+    _setCursorVisibility: function(visible) {
+        if(this.visible == visible) return;
+        this.visible = visible;
+        if(!this.cursorObject) return;
+
+        if(visible) {
+            this.cursorObject.resetScaling();
+            this.cursorObject.scale(this.cursorObjScale);
+        } else {
+            this.cursorObjScale.set(this.cursorObject.scalingLocal);
+            this.cursorObject.scale([0, 0, 0]);
+        }
+    },
+
+    update: function() {
+        this.doUpdate(false);
+    },
+
+    doUpdate: function(doClick) {
+        /* If in VR, set the cursor ray based on object transform */
+        if(this.session) {
+            /* Since Google Cardboard tap is registered as arTouchDown without a gamepad, we need to check for gamepad presence */
+            if(this.arTouchDown && this.input && WL.xrSession.inputSources[0].handedness === 'none' && WL.xrSession.inputSources[0].gamepad) {
+                const p = WL.xrSession.inputSources[0].gamepad.axes;
+                /* Screenspace Y is inverted */
+                this.direction = [p[0], -p[1], -1.0];
+                this.updateDirection();
+            } else {
+                this.object.getTranslationWorld(this.origin);
+                this.object.getForward(this.direction);
+            }
+            const rayHit = this.rayHit = (this.rayCastMode == 0) ?
+                WL.scene.rayCast(this.origin, this.direction, this.collisionMask) :
+                WL.physics.rayCast(this.origin, this.direction, this.collisionMask, this.maxDistance);
+
+            if(rayHit.hitCount > 0) {
+                this.cursorPos.set(rayHit.locations[0]);
+            } else {
+                this.cursorPos.fill(0);
+            }
+
+            this.hoverBehaviour(rayHit, doClick);
+        }
+
+        if(this.cursorObject) {
+            if(this.hoveringObject && (this.cursorPos[0] != 0 || this.cursorPos[1] != 0 || this.cursorPos[2] != 0)) {
+                this._setCursorVisibility(true);
+                this.cursorObject.setTranslationWorld(this.cursorPos);
+                this._setCursorRayTransform(this.cursorPos);
+            } else {
+                this._setCursorVisibility(false);
+            }
+        }
+    },
+
+    hoverBehaviour: function(rayHit, doClick) {
+        if(rayHit.hitCount > 0) {
+            if(!this.hoveringObject || !this.hoveringObject.equals(rayHit.objects[0])) {
+                /* Unhover previous, if exists */
+                if(this.hoveringObject) {
+                    const cursorTarget = this.hoveringObject.getComponent("cursor-target");
+                    if(cursorTarget) cursorTarget.onUnhover(this.hoveringObject, this);
+                    this.globalTarget.onUnhover(this.hoveringObject, this);
+                }
+
+                /* Hover new object */
+                this.hoveringObject = rayHit.objects[0];
+                if(this.styleCursor) WL.canvas.style.cursor = "pointer";
+
+                let cursorTarget = this.hoveringObject.getComponent("cursor-target");
+                if(cursorTarget) {
+                    this.hoveringObjectTarget = cursorTarget;
+                    cursorTarget.onHover(this.hoveringObject, this);
+                }
+                this.globalTarget.onHover(this.hoveringObject, this);
+            }
+
+            if(this.hoveringObjectTarget) {
+                this.hoveringObjectTarget.onMove(this.hoveringObject, this);
+            }
+
+            /* Cursor up/down */
+            const cursorTarget = this.hoveringObject.getComponent("cursor-target");
+            if(this.isDown !== this.lastIsDown) {
+                if(this.isDown) {
+                    /* Down */
+                    if(cursorTarget) cursorTarget.onDown(this.hoveringObject, this);
+                    this.globalTarget.onDown(this.hoveringObject, this);
+                } else {
+                    /* Up */
+                    if(cursorTarget) cursorTarget.onUp(this.hoveringObject, this);
+                    this.globalTarget.onUp(this.hoveringObject, this);
+                }
+            }
+
+            /* Click */
+            if(doClick) {
+                if(cursorTarget) cursorTarget.onClick(this.hoveringObject, this);
+                this.globalTarget.onClick(this.hoveringObject, this);
+            }
+        } else if(this.hoveringObject && rayHit.hitCount == 0) {
+            const cursorTarget = this.hoveringObject.getComponent("cursor-target");
+            if(cursorTarget) cursorTarget.onUnhover(this.hoveringObject, this);
+            this.globalTarget.onUnhover(this.hoveringObject, this);
+            this.hoveringObject = null;
+            this.hoveringObjectTarget = null;
+            if(this.styleCursor) WL.canvas.style.cursor = "default";
+        }
+
+        this.lastIsDown = this.isDown;
+    },
+
+    /**
+     * Setup event listeners on session object
+     * @param s WebXR session
+     *
+     * Sets up 'select' and 'end' events and caches the session to avoid
+     * Module object access.
+     */
+    setupVREvents: function(s) {
+        /* If in VR, one-time bind the listener */
+        this.session = s;
+        const onSessionEnd = function(e) {
+            /* Reset cache once the session ends to rebind select etc, in case
+             * it starts again */
+            this.session = null;
+        }.bind(this);
+        s.addEventListener('end', onSessionEnd);
+
+        const onSelect = this.onSelect.bind(this);
+        s.addEventListener('select', onSelect);
+        const onSelectStart = this.onSelectStart.bind(this);
+        s.addEventListener('selectstart', onSelectStart);
+        const onSelectEnd = this.onSelectEnd.bind(this);
+        s.addEventListener('selectend', onSelectEnd);
+
+        this.onDestroyCallbacks.push(() => {
+            if(!this.session) return;
+            s.removeEventListener('end', onSessionEnd);
+            s.removeEventListener('select', onSelect);
+            s.removeEventListener('selectstart', onSelectStart);
+            s.removeEventListener('selectend', onSelectEnd);
+        });
+
+        /* After AR session was entered, the projection matrix changed */
+        this.onViewportResize();
+    },
+
+    /** 'select' event listener */
+    onSelect: function(e) {
+        if(e.inputSource.handedness != this.handedness) return;
+        this.doUpdate(true);
+    },
+
+    /** 'selectstart' event listener */
+    onSelectStart: function(e) {
+        this.arTouchDown = true;
+        if(e.inputSource.handedness == this.handedness) this.isDown = true;
+    },
+
+    /** 'selectend' event listener */
+    onSelectEnd: function(e) {
+        this.arTouchDown = false;
+        if(e.inputSource.handedness == this.handedness) this.isDown = false;
+    },
+
+    /** 'pointermove' event listener */
+    onPointerMove: function (e) {
+        /* Don't care about secondary pointers */
+        if(!e.isPrimary) return;
+        const bounds = e.target.getBoundingClientRect();
+        const rayHit = this.updateMousePos(e.clientX, e.clientY, bounds.width, bounds.height);
+
+        this.hoverBehaviour(rayHit, false);
+    },
+
+    /** 'click' event listener */
+    onClick: function (e) {
+        const bounds = e.target.getBoundingClientRect();
+        const rayHit = this.updateMousePos(e.clientX, e.clientY, bounds.width, bounds.height);
+        this.hoverBehaviour(rayHit, true);
+    },
+
+    /** 'pointerdown' event listener */
+    onPointerDown: function (e) {
+        /* Don't care about secondary pointers or non-left clicks */
+        if(!e.isPrimary || e.button !== 0) return;
+        const bounds = e.target.getBoundingClientRect();
+        const rayHit = this.updateMousePos(e.clientX, e.clientY, bounds.width, bounds.height);
+        this.isDown = true;
+
+        this.hoverBehaviour(rayHit, false);
+    },
+
+    /** 'pointerup' event listener */
+    onPointerUp: function (e) {
+        /* Don't care about secondary pointers or non-left clicks */
+        if(!e.isPrimary || e.button !== 0) return;
+        const bounds = e.target.getBoundingClientRect();
+        const rayHit = this.updateMousePos(e.clientX, e.clientY, bounds.width, bounds.height);
+        this.isDown = false;
+
+        this.hoverBehaviour(rayHit, false);
+    },
+
+    /**
+     * Update mouse position in non-VR mode and raycast for new position
+     * @returns @ref WL.RayHit for new position.
+     */
+    updateMousePos: function(clientX, clientY, w, h) {
+        /* Get direction in normalized device coordinate space from mouse position */
+        const left = clientX/w;
+        const top = clientY/h;
+        this.direction = [left*2 - 1, -top*2 + 1, -1.0];
+        return this.updateDirection();
+    },
+
+    updateDirection: function() {
+        this.object.getTranslationWorld(this.origin);
+
+        /* Reverse-project the direction into view space */
+        vec3.transformMat4(this.direction, this.direction,
+            this.projectionMatrix);
+        vec3.normalize(this.direction, this.direction);
+        vec3.transformQuat(this.direction, this.direction, this.object.transformWorld);
+        const rayHit = this.rayHit = (this.rayCastMode == 0) ?
+            WL.scene.rayCast(this.origin, this.direction, this.collisionMask) :
+            WL.physics.rayCast(this.origin, this.direction, this.collisionMask, this.maxDistance);
+
+        if(rayHit.hitCount > 0) {
+            this.cursorPos.set(rayHit.locations[0]);
+        } else {
+            this.cursorPos.fill(0);
+        }
+
+        return rayHit;
+    },
+
+    onDeactivate: function() {
+        this._setCursorVisibility(false);
+        if(this.hoveringObject) {
+            const target = this.hoveringObject.getComponent('cursor-target');
+            if(target) target.onUnhover(this.hoveringObject, this);
+            this.globalTarget.onUnhover(this.hoveringObject, this);
+        }
+        if(this.cursorRayObject) this.cursorRayObject.scale([0, 0, 0]);
+    },
+
+    onActivate: function() {
+        this._setCursorVisibility(true);
+    },
+
+    onDestroy: function() {
+        for(const f of this.onDestroyCallbacks) f();
     },
 });
 
@@ -2520,5 +2987,45 @@ WL.registerComponent('cursor-custom', {
   });
 })();
 //# sourceMappingURL=image-tracking.js.map
+
+WL.registerComponent('Raycast-counter', {}, {
+    init: function() {
+        console.log('Counting gaze initialized');
+        this.origin = [0, 0, 0];
+        this.dir = [0, 0, 0];
+    },
+    update: function() {
+        /* Get the translation of this object and store it in "origin" */
+        this.object.getTranslationWorld(this.origin);
+        /* Get the direction of this object and store it in "dir" */
+        this.object.getForward(this.dir);
+
+        /* Send a ray into the scene and see if it hits and object in
+           collision group "1" or "2" */
+        let rayHit = WL.scene.rayCast(this.origin, this.dir, (1 << 1) | (1 << 2));
+        if(rayHit.hitCount > 0) {
+            for(let i = 0; i < rayHit.hitCount; ++i) {
+                let o = rayHit.objects[i];
+
+                // TODO: We will count up the counter on the
+                // hit object here later instead!
+                console.log('Raycast hit object:', o.name);
+            }
+        }
+    },
+});
+WL.registerComponent('test', {
+    param: {type: WL.Type.Float, default: 1.0},
+}, {
+    init: function() {
+        console.log('init() with param', this.param);
+    },
+    start: function() {
+        console.log('start() with param', this.param);
+    },
+    update: function(dt) {
+        console.log('update() with delta time', dt);
+    },
+});
 
 //# sourceMappingURL=mindar-image-tracking-bundle.js.map

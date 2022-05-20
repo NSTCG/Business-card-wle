@@ -7,19 +7,13 @@
                     "type": "view"
                 },
                 {
-                    "type": "image-tracking",
-                    "image-tracking": {
-                        "videoPane": "18",
-                        "mindPath": "./targets.mind"
-                    }
+                    "type": "Raycast-counter"
                 },
                 {
-                    "type": "cursor",
-                    "cursor": {
-                        "handedness": "input component",
-                        "cursorObject": null,
-                        "cursorRayObject": null,
-                        "styleCursor": true
+                    "type": "image-tracking",
+                    "image-tracking": {
+                        "mindPath": "./targets.mind",
+                        "videoPane": "18"
                     }
                 }
             ]
@@ -34,7 +28,31 @@
                         "mesh": "p0",
                         "material": "DefaultFontMaterial"
                     }
+                },
+                {
+                    "type": "Raycast-counter"
+                },
+                {
+                    "type": "cursor"
                 }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ]
         },
         "19": {
@@ -59,7 +77,7 @@
                         "mesh": "p1",
                         "material": "21"
                     },
-                    "active": true
+                    "active": false
                 }
             ],
             "transformation": [
@@ -79,7 +97,8 @@
                 0.0,
                 0.0,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "26": {
             "name": "call",
@@ -122,9 +141,9 @@
                 0.0,
                 1.0,
                 0.0,
-                0.0,
+                -6.332993507385254e-7,
                 1.0,
-                0.2,
+                0.1999999,
                 1.0
             ]
         },
@@ -169,8 +188,8 @@
                 0.0,
                 0.99,
                 0.0,
-                -1.0,
-                0.0399999,
+                -0.9999679,
+                0.0399998,
                 0.2,
                 1.0
             ]
@@ -218,7 +237,7 @@
                 0.0,
                 -2.0,
                 1.0,
-                0.2,
+                0.1999999,
                 1.0
             ]
         },
@@ -326,7 +345,7 @@
                     }
                 },
                 {
-                    "type": "cursor-target"
+                    "type": "cursor-target-custom"
                 }
             ],
             "transformation": [
@@ -342,9 +361,9 @@
                 0.0,
                 0.99,
                 0.0,
-                -1.0,
+                -0.9999898,
                 3.0,
-                0.1999999,
+                0.1999998,
                 1.0
             ]
         },
@@ -389,9 +408,9 @@
                 0.0,
                 1.0,
                 0.0,
-                9.015202522277832e-7,
+                -3.427267074584961e-7,
                 2.2000038,
-                0.1999999,
+                0.1999998,
                 1.0
             ]
         },
@@ -407,6 +426,128 @@
                 {
                     "type": "cursor"
                 }
+            ],
+            "deleted": true
+        },
+        "66": {
+            "name": "Light",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "light"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -1.0259683,
+                2.2992918,
+                2.8708183,
+                1.0
+            ],
+            "deleted": true
+        },
+        "67": {
+            "name": "Light.000",
+            "parent": "20",
+            "components": [
+                {
+                    "type": "light",
+                    "light": {
+                        "type": "point"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.4726576,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                11.4193964,
+                0.0,
+                -0.7266386,
+                3.4060158,
+                40.5503692,
+                1.0
+            ],
+            "deleted": true
+        },
+        "72": {
+            "name": "Light.001",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "light"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -0.4920913,
+                1.8584694,
+                2.2609663,
+                1.0
+            ]
+        },
+        "73": {
+            "name": "Empty",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "31"
+                    },
+                    "active": false
+                },
+                {
+                    "type": "test"
+                }
+            ],
+            "parent": "17",
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ],
             "deleted": true
         }
@@ -462,40 +603,58 @@
                 "file": "template.png"
             }
         },
-        "29": {
-            "link": {
-                "name": "Call.png",
-                "file": "models\\Icons\\Call.png"
-            }
-        },
-        "37": {
-            "link": {
-                "name": "Web.png",
-                "file": "models\\Icons\\Web.png"
-            }
-        },
-        "40": {
-            "link": {
-                "name": "mail.png",
-                "file": "models\\Icons\\mail.png"
-            }
-        },
-        "43": {
-            "link": {
-                "name": "Youtube.png",
-                "file": "models\\Icons\\Youtube.png"
-            }
-        },
-        "47": {
+        "53": {
             "link": {
                 "name": "Linkedin.png",
-                "file": "models\\Icons\\Linkedin.png"
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin.png"
             }
         },
-        "50": {
+        "55": {
+            "link": {
+                "name": "Linkedin2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin2.png"
+            }
+        },
+        "57": {
+            "link": {
+                "name": "Youtube.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Youtube.png"
+            }
+        },
+        "59": {
+            "link": {
+                "name": "Call (1).png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call (1).png"
+            }
+        },
+        "61": {
+            "link": {
+                "name": "Web.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Web.png"
+            }
+        },
+        "63": {
+            "link": {
+                "name": "mail2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
+            }
+        },
+        "65": {
+            "link": {
+                "name": "Location2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location2.png"
+            }
+        },
+        "69": {
+            "link": {
+                "name": "Call.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call.png"
+            }
+        },
+        "71": {
             "link": {
                 "name": "Location.png",
-                "file": "models\\Icons\\Location.png"
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location.png"
             }
         }
     },
@@ -512,40 +671,58 @@
                 "file": "template.png"
             }
         },
-        "28": {
-            "link": {
-                "name": "Call.png",
-                "file": "models\\Icons\\Call.png"
-            }
-        },
-        "36": {
-            "link": {
-                "name": "Web.png",
-                "file": "models\\Icons\\Web.png"
-            }
-        },
-        "39": {
-            "link": {
-                "name": "mail.png",
-                "file": "models\\Icons\\mail.png"
-            }
-        },
-        "42": {
-            "link": {
-                "name": "Youtube.png",
-                "file": "models\\Icons\\Youtube.png"
-            }
-        },
-        "46": {
+        "52": {
             "link": {
                 "name": "Linkedin.png",
-                "file": "models\\Icons\\Linkedin.png"
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin.png"
             }
         },
-        "49": {
+        "54": {
+            "link": {
+                "name": "Linkedin2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin2.png"
+            }
+        },
+        "56": {
+            "link": {
+                "name": "Youtube.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Youtube.png"
+            }
+        },
+        "58": {
+            "link": {
+                "name": "Call (1).png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call (1).png"
+            }
+        },
+        "60": {
+            "link": {
+                "name": "Web.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Web.png"
+            }
+        },
+        "62": {
+            "link": {
+                "name": "mail2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
+            }
+        },
+        "64": {
+            "link": {
+                "name": "Location2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location2.png"
+            }
+        },
+        "68": {
+            "link": {
+                "name": "Call.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call.png"
+            }
+        },
+        "70": {
             "link": {
                 "name": "Location.png",
-                "file": "models\\Icons\\Location.png"
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location.png"
             }
         }
     },
@@ -591,80 +768,128 @@
         },
         "27": {
             "name": "call",
-            "pipeline": "12",
+            "pipeline": "6",
             "Phong": {
-                "diffuseTexture": "29",
+                "diffuseTexture": "69",
                 "ambientColor": [
-                    1.0,
-                    0.9999899,
-                    0.9999899,
+                    9.999999974752428e-7,
+                    0.0,
+                    0.0,
                     1.0
                 ]
+            },
+            "Flat": {
+                "flatTexture": "69"
             }
         },
         "31": {
             "name": "website",
-            "pipeline": "12",
+            "pipeline": "6",
             "Phong": {
-                "diffuseTexture": "37",
+                "diffuseTexture": "61",
                 "ambientColor": [
-                    1.0,
-                    0.9999899,
-                    0.9999899,
+                    9.999999974752428e-7,
+                    0.0,
+                    0.0,
                     1.0
                 ]
+            },
+            "Flat": {
+                "flatTexture": "61"
             }
         },
         "32": {
             "name": "mail",
-            "pipeline": "12",
+            "pipeline": "6",
             "Phong": {
-                "diffuseTexture": "40",
+                "diffuseTexture": "63",
                 "ambientColor": [
-                    1.0,
-                    0.9999899,
-                    0.9999899,
+                    9.999999974752428e-7,
+                    0.0,
+                    0.0,
                     1.0
                 ]
+            },
+            "Flat": {
+                "flatTexture": "63"
             }
         },
         "33": {
             "name": "location",
-            "pipeline": "12",
+            "pipeline": "6",
             "Phong": {
-                "diffuseTexture": "50",
+                "diffuseTexture": "71",
                 "ambientColor": [
-                    1.0,
-                    0.9999899,
-                    0.9999899,
+                    9.999999974752428e-7,
+                    0.0,
+                    0.0,
                     1.0
                 ]
+            },
+            "Flat": {
+                "flatTexture": "71"
             }
         },
         "34": {
             "name": "linkedIn",
-            "pipeline": "12",
+            "pipeline": "6",
             "Phong": {
-                "diffuseTexture": "47",
+                "diffuseTexture": "55",
                 "ambientColor": [
+                    9.999999974752428e-7,
+                    9.999899930335233e-7,
+                    9.999899930335233e-7,
+                    1.0
+                ],
+                "fogColor": [
                     1.0,
                     0.9999899,
                     0.9999899,
+                    0.0
+                ],
+                "specularColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    0.0
+                ],
+                "diffuseColor": [
+                    0.5607843,
+                    0.5607787,
+                    0.5607787,
+                    1.0
+                ],
+                "emissiveColor": [
+                    9.999999974752428e-7,
+                    9.999899930335233e-7,
+                    9.999899930335233e-7,
                     1.0
                 ]
+            },
+            "Flat": {
+                "flatTexture": "55"
             }
         },
         "35": {
             "name": "youtube",
-            "pipeline": "12",
+            "pipeline": "6",
             "Phong": {
-                "diffuseTexture": "43",
+                "diffuseTexture": "57",
                 "ambientColor": [
-                    1.0,
-                    0.9999899,
-                    0.9999899,
+                    9.999999974752428e-7,
+                    9.999899930335233e-7,
+                    9.999899930335233e-7,
+                    1.0
+                ],
+                "emissiveColor": [
+                    9.999999974752428e-7,
+                    9.999899930335233e-7,
+                    9.999899930335233e-7,
                     1.0
                 ]
+            },
+            "Flat": {
+                "flatTexture": "57"
             }
         }
     },
@@ -743,7 +968,8 @@
             "link": {
                 "name": "Flat Opaque Textured",
                 "file": "default"
-            }
+            },
+            "sampleAlphaToCoverage": true
         },
         "8": {
             "link": {
@@ -808,11 +1034,11 @@
     "files": [
         "Imblend.jpg",
         "template.png",
-        "models/Icons/Call.png",
-        "models/Icons/Web.png",
-        "models/Icons/mail.png",
-        "models/Icons/Youtube.png",
-        "models/Icons/Linkedin.png",
-        "models/Icons/Location.png"
+        "ICONS REMODELLED/ICONS REMODELLED/Linkedin2.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Youtube.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Web.png",
+        "ICONS REMODELLED/ICONS REMODELLED/mail2.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Call.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Location.png"
     ]
 }
