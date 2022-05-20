@@ -1,0 +1,818 @@
+{
+    "objects": {
+        "17": {
+            "name": "ARCamera",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "image-tracking",
+                    "image-tracking": {
+                        "videoPane": "18",
+                        "mindPath": "./targets.mind"
+                    }
+                },
+                {
+                    "type": "cursor",
+                    "cursor": {
+                        "handedness": "input component",
+                        "cursorObject": null,
+                        "cursorRayObject": null,
+                        "styleCursor": true
+                    }
+                }
+            ]
+        },
+        "18": {
+            "name": "VideoPlane",
+            "parent": "17",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "DefaultFontMaterial"
+                    }
+                }
+            ]
+        },
+        "19": {
+            "name": "TrackingTarget",
+            "parent": "17",
+            "components": [
+                {
+                    "type": "image-tracking-target",
+                    "image-tracking-target": {
+                        "arCamera": "17"
+                    }
+                }
+            ]
+        },
+        "20": {
+            "name": "Cube",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "21"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6790444,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0875703,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "26": {
+            "name": "call",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "27"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.2,
+                1.0
+            ]
+        },
+        "30": {
+            "name": "Website",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "31"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                0.495,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.495,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.99,
+                0.0,
+                -1.0,
+                0.0399999,
+                0.2,
+                1.0
+            ]
+        },
+        "38": {
+            "name": "Mail",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "32"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                0.4635663,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -2.0,
+                1.0,
+                0.2,
+                1.0
+            ]
+        },
+        "41": {
+            "name": "Location",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "33"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                0.4999999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -2.0,
+                2.2,
+                0.2,
+                1.0
+            ]
+        },
+        "44": {
+            "name": "Website",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "31"
+                    }
+                }
+            ],
+            "transformation": [
+                0.495,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.495,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.99,
+                0.0,
+                0.1875292,
+                0.0059878,
+                0.123671,
+                1.0
+            ],
+            "deleted": true
+        },
+        "45": {
+            "name": "Website",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "34"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                0.495,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.495,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.99,
+                0.0,
+                -1.0,
+                3.0,
+                0.1999999,
+                1.0
+            ]
+        },
+        "48": {
+            "name": "youtube",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "35"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                9.015202522277832e-7,
+                2.2000038,
+                0.1999999,
+                1.0
+            ]
+        },
+        "51": {
+            "name": "NonVrCamera",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "mouse-look"
+                },
+                {
+                    "type": "cursor"
+                }
+            ],
+            "deleted": true
+        }
+    },
+    "meshes": {
+        "p0": {
+            "link": {
+                "name": "PrimitivePlane",
+                "file": "default"
+            }
+        },
+        "p1": {
+            "link": {
+                "name": "PrimitiveCube",
+                "file": "default"
+            }
+        },
+        "p2": {
+            "link": {
+                "name": "PrimitiveSphere",
+                "file": "default"
+            }
+        },
+        "p3": {
+            "link": {
+                "name": "PrimitiveCone",
+                "file": "default"
+            }
+        },
+        "p4": {
+            "link": {
+                "name": "PrimitiveCylinder",
+                "file": "default"
+            }
+        },
+        "p5": {
+            "link": {
+                "name": "PrimitiveCircle",
+                "file": "default"
+            }
+        }
+    },
+    "textures": {
+        "t0": {
+            "link": {
+                "name": "DefaultFont",
+                "file": "default"
+            }
+        },
+        "25": {
+            "link": {
+                "name": "template.png",
+                "file": "template.png"
+            }
+        },
+        "29": {
+            "link": {
+                "name": "Call.png",
+                "file": "models\\Icons\\Call.png"
+            }
+        },
+        "37": {
+            "link": {
+                "name": "Web.png",
+                "file": "models\\Icons\\Web.png"
+            }
+        },
+        "40": {
+            "link": {
+                "name": "mail.png",
+                "file": "models\\Icons\\mail.png"
+            }
+        },
+        "43": {
+            "link": {
+                "name": "Youtube.png",
+                "file": "models\\Icons\\Youtube.png"
+            }
+        },
+        "47": {
+            "link": {
+                "name": "Linkedin.png",
+                "file": "models\\Icons\\Linkedin.png"
+            }
+        },
+        "50": {
+            "link": {
+                "name": "Location.png",
+                "file": "models\\Icons\\Location.png"
+            }
+        }
+    },
+    "images": {
+        "f0": {
+            "link": {
+                "name": "DefaultFontImage",
+                "file": "default"
+            }
+        },
+        "24": {
+            "link": {
+                "name": "template.png",
+                "file": "template.png"
+            }
+        },
+        "28": {
+            "link": {
+                "name": "Call.png",
+                "file": "models\\Icons\\Call.png"
+            }
+        },
+        "36": {
+            "link": {
+                "name": "Web.png",
+                "file": "models\\Icons\\Web.png"
+            }
+        },
+        "39": {
+            "link": {
+                "name": "mail.png",
+                "file": "models\\Icons\\mail.png"
+            }
+        },
+        "42": {
+            "link": {
+                "name": "Youtube.png",
+                "file": "models\\Icons\\Youtube.png"
+            }
+        },
+        "46": {
+            "link": {
+                "name": "Linkedin.png",
+                "file": "models\\Icons\\Linkedin.png"
+            }
+        },
+        "49": {
+            "link": {
+                "name": "Location.png",
+                "file": "models\\Icons\\Location.png"
+            }
+        }
+    },
+    "materials": {
+        "DefaultFontMaterial": {
+            "link": {
+                "name": "DefaultFontMaterial",
+                "file": "default"
+            },
+            "pipeline": "6",
+            "Phong": {
+                "ambientColor": [
+                    0.199998,
+                    0.1999994,
+                    0.2,
+                    1.0
+                ]
+            },
+            "Flat": {
+                "color": [
+                    0.9999914,
+                    1.0,
+                    0.9999899,
+                    1.0
+                ],
+                "flatTexture": "t0"
+            }
+        },
+        "21": {
+            "name": "material1",
+            "Phong": {
+                "ambientColor": [
+                    0.432449,
+                    0.5483562,
+                    0.7254902,
+                    1.0
+                ]
+            },
+            "pipeline": "6",
+            "Flat": {
+                "flatTexture": "25"
+            }
+        },
+        "27": {
+            "name": "call",
+            "pipeline": "12",
+            "Phong": {
+                "diffuseTexture": "29",
+                "ambientColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    1.0
+                ]
+            }
+        },
+        "31": {
+            "name": "website",
+            "pipeline": "12",
+            "Phong": {
+                "diffuseTexture": "37",
+                "ambientColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    1.0
+                ]
+            }
+        },
+        "32": {
+            "name": "mail",
+            "pipeline": "12",
+            "Phong": {
+                "diffuseTexture": "40",
+                "ambientColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    1.0
+                ]
+            }
+        },
+        "33": {
+            "name": "location",
+            "pipeline": "12",
+            "Phong": {
+                "diffuseTexture": "50",
+                "ambientColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    1.0
+                ]
+            }
+        },
+        "34": {
+            "name": "linkedIn",
+            "pipeline": "12",
+            "Phong": {
+                "diffuseTexture": "47",
+                "ambientColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    1.0
+                ]
+            }
+        },
+        "35": {
+            "name": "youtube",
+            "pipeline": "12",
+            "Phong": {
+                "diffuseTexture": "43",
+                "ambientColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    1.0
+                ]
+            }
+        }
+    },
+    "shaders": {
+        "1": {
+            "link": {
+                "name": "DistanceFieldVector",
+                "file": "default"
+            }
+        },
+        "3": {
+            "link": {
+                "name": "Dynamic",
+                "file": "default"
+            }
+        },
+        "4": {
+            "link": {
+                "name": "Flat",
+                "file": "default"
+            }
+        },
+        "7": {
+            "link": {
+                "name": "MeshVisualizer",
+                "file": "default"
+            }
+        },
+        "9": {
+            "link": {
+                "name": "Static",
+                "file": "default"
+            }
+        },
+        "10": {
+            "link": {
+                "name": "Phong",
+                "file": "default"
+            }
+        },
+        "13": {
+            "link": {
+                "name": "Skinning",
+                "file": "default"
+            }
+        },
+        "14": {
+            "link": {
+                "name": "Particle",
+                "file": "default"
+            }
+        },
+        "22": {
+            "link": {
+                "name": "Depth",
+                "file": "default"
+            }
+        }
+    },
+    "animations": {},
+    "skins": {},
+    "pipelines": {
+        "2": {
+            "link": {
+                "name": "DistanceFieldVector",
+                "file": "default"
+            }
+        },
+        "5": {
+            "link": {
+                "name": "Flat Opaque",
+                "file": "default"
+            }
+        },
+        "6": {
+            "link": {
+                "name": "Flat Opaque Textured",
+                "file": "default"
+            }
+        },
+        "8": {
+            "link": {
+                "name": "MeshVisualizer",
+                "file": "default"
+            }
+        },
+        "11": {
+            "link": {
+                "name": "Phong Opaque",
+                "file": "default"
+            }
+        },
+        "12": {
+            "link": {
+                "name": "Phong Opaque Textured",
+                "file": "default"
+            }
+        },
+        "15": {
+            "link": {
+                "name": "Foliage",
+                "file": "default"
+            }
+        },
+        "16": {
+            "link": {
+                "name": "Particle",
+                "file": "default"
+            }
+        },
+        "23": {
+            "link": {
+                "name": "Depth",
+                "file": "default"
+            }
+        }
+    },
+    "settings": {
+        "project": {
+            "name": "mindar-image-tracking",
+            "version": [
+                0,
+                8,
+                10
+            ],
+            "customIndexHtml": true
+        },
+        "vr": {
+            "enable": false
+        },
+        "scripting": {
+            "sourcePaths": [
+                "/js/editor-components-bundle.js",
+                "js"
+            ]
+        },
+        "editor": {
+            "serverCOEP": "unsafe-none"
+        }
+    },
+    "files": [
+        "Imblend.jpg",
+        "template.png",
+        "models/Icons/Call.png",
+        "models/Icons/Web.png",
+        "models/Icons/mail.png",
+        "models/Icons/Youtube.png",
+        "models/Icons/Linkedin.png",
+        "models/Icons/Location.png"
+    ]
+}
