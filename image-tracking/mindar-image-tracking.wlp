@@ -4,10 +4,8 @@
             "name": "ARCamera",
             "components": [
                 {
-                    "type": "view"
-                },
-                {
-                    "type": "Raycast-counter"
+                    "type": "view",
+                    "active": true
                 },
                 {
                     "type": "image-tracking",
@@ -15,6 +13,9 @@
                         "mindPath": "./targets.mind",
                         "videoPane": "18"
                     }
+                },
+                {
+                    "type": "cursor"
                 }
             ]
         },
@@ -27,13 +28,39 @@
                     "mesh": {
                         "mesh": "p0",
                         "material": "DefaultFontMaterial"
-                    }
-                },
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -2.980232238769532e-8,
+                0.0,
+                -5.5387449,
+                1.0
+            ]
+        },
+        "19": {
+            "name": "TrackingTarget",
+            "parent": "17",
+            "components": [
                 {
-                    "type": "Raycast-counter"
-                },
-                {
-                    "type": "cursor"
+                    "type": "image-tracking-target",
+                    "image-tracking-target": {
+                        "arCamera": "17"
+                    },
+                    "active": true
                 }
             ],
             "transformation": [
@@ -53,18 +80,6 @@
                 0.0,
                 0.0,
                 1.0
-            ]
-        },
-        "19": {
-            "name": "TrackingTarget",
-            "parent": "17",
-            "components": [
-                {
-                    "type": "image-tracking-target",
-                    "image-tracking-target": {
-                        "arCamera": "17"
-                    }
-                }
             ]
         },
         "20": {
@@ -102,14 +117,15 @@
         },
         "26": {
             "name": "call",
-            "parent": "19",
+            "parent": "77",
             "components": [
                 {
                     "type": "mesh",
                     "mesh": {
                         "mesh": "p0",
                         "material": "27"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "collision",
@@ -117,46 +133,58 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.5,
-                                0.5,
-                                0.5
+                                120.0,
+                                120.0,
+                                120.0
                             ]
+                        },
+                        "sphere": {
+                            "radius": 120.0
                         }
                     }
                 },
                 {
                     "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "26",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
                 }
             ],
             "transformation": [
-                0.5,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.5,
+                1.0,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
                 1.0,
                 0.0,
-                -6.332993507385254e-7,
+                0.0,
+                0.0,
+                0.0,
                 1.0,
-                0.1999999,
+                0.0,
+                1.0,
+                -0.5,
+                0.0,
                 1.0
             ]
         },
         "30": {
             "name": "Website",
-            "parent": "19",
+            "parent": "77",
             "components": [
                 {
                     "type": "mesh",
                     "mesh": {
                         "mesh": "p0",
                         "material": "31"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "collision",
@@ -164,46 +192,65 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.5,
-                                0.5,
-                                0.5
+                                120.0,
+                                120.0,
+                                120.0
                             ]
+                        },
+                        "box": {
+                            "extents": [
+                                400.0,
+                                400.0,
+                                400.0
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 120.0
                         }
                     }
                 },
                 {
                     "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "30",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
                 }
             ],
             "transformation": [
-                0.495,
+                1.0,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.495,
+                1.0,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.99,
+                1.0,
                 0.0,
-                -0.9999679,
-                0.0399998,
-                0.2,
+                0.0,
+                -1.0,
+                0.0,
                 1.0
             ]
         },
         "38": {
             "name": "Mail",
-            "parent": "19",
+            "parent": "77",
             "components": [
                 {
                     "type": "mesh",
                     "mesh": {
                         "mesh": "p0",
                         "material": "32"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "collision",
@@ -211,46 +258,59 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.5,
-                                0.5,
-                                0.5
+                                120.0,
+                                120.0,
+                                120.0
                             ]
+                        },
+                        "sphere": {
+                            "radius": 120.0
                         }
-                    }
+                    },
+                    "active": true
                 },
                 {
                     "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "38",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
                 }
             ],
             "transformation": [
-                0.4635663,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.5,
+                1.0,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
                 1.0,
                 0.0,
-                -2.0,
+                0.0,
+                0.0,
+                0.0,
                 1.0,
-                0.1999999,
+                0.0,
+                -1.0,
+                -0.5,
+                0.0,
                 1.0
             ]
         },
         "41": {
             "name": "Location",
-            "parent": "19",
+            "parent": "77",
             "components": [
                 {
                     "type": "mesh",
                     "mesh": {
                         "mesh": "p0",
                         "material": "33"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "collision",
@@ -258,33 +318,44 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.5,
-                                0.5,
-                                0.5
+                                120.0,
+                                120.0,
+                                120.0
                             ]
+                        },
+                        "sphere": {
+                            "radius": 120.0
                         }
                     }
                 },
                 {
                     "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "41",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
                 }
             ],
             "transformation": [
-                0.4999999,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.5,
+                1.0,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
                 1.0,
                 0.0,
-                -2.0,
-                2.2,
-                0.2,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -1.0,
+                0.5,
+                0.0,
                 1.0
             ]
         },
@@ -321,15 +392,16 @@
             "deleted": true
         },
         "45": {
-            "name": "Website",
-            "parent": "19",
+            "name": "linkedin",
+            "parent": "77",
             "components": [
                 {
                     "type": "mesh",
                     "mesh": {
                         "mesh": "p0",
                         "material": "34"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "collision",
@@ -337,80 +409,103 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.5,
-                                0.5,
-                                0.5
+                                120.0,
+                                120.0,
+                                120.0
                             ]
-                        }
-                    }
-                },
-                {
-                    "type": "cursor-target-custom"
-                }
-            ],
-            "transformation": [
-                0.495,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.495,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.99,
-                0.0,
-                -0.9999898,
-                3.0,
-                0.1999998,
-                1.0
-            ]
-        },
-        "48": {
-            "name": "youtube",
-            "parent": "19",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p0",
-                        "material": "35"
-                    }
-                },
-                {
-                    "type": "collision",
-                    "collision": {
-                        "collider": "aabb",
-                        "aabb": {
-                            "extents": [
-                                0.5,
-                                0.5,
-                                0.5
-                            ]
+                        },
+                        "sphere": {
+                            "radius": 120.0
                         }
                     }
                 },
                 {
                     "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "45",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
                 }
             ],
             "transformation": [
-                0.5,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.5,
+                1.0,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
                 1.0,
                 0.0,
-                -3.427267074584961e-7,
-                2.2000038,
-                0.1999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1.0
+            ]
+        },
+        "48": {
+            "name": "youtube",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "35"
+                    },
+                    "active": false
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                120.0,
+                                120.0,
+                                120.0
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 120.0
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "48",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1.0,
+                0.5,
+                0.0,
                 1.0
             ]
         },
@@ -490,7 +585,7 @@
         },
         "72": {
             "name": "Light.001",
-            "parent": "19",
+            "parent": "77",
             "components": [
                 {
                     "type": "light"
@@ -509,11 +604,12 @@
                 0.0,
                 1.0,
                 0.0,
-                -0.4920913,
-                1.8584694,
+                -0.4920912,
+                1.8584693,
                 2.2609663,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "73": {
             "name": "Empty",
@@ -550,6 +646,302 @@
                 1.0
             ],
             "deleted": true
+        },
+        "74": {
+            "name": "curser",
+            "parent": "18",
+            "components": [
+                {
+                    "type": "input"
+                },
+                {
+                    "type": "cursor"
+                },
+                {
+                    "type": "view"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                3.0158092,
+                1.0
+            ],
+            "deleted": true
+        },
+        "75": {
+            "name": "Mesh",
+            "deleted": true
+        },
+        "76": {
+            "name": "Mesh.000",
+            "parent": "18",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "31"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.2
+                        }
+                    }
+                }
+            ],
+            "transformation": [
+                0.1738,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1738,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1738,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "77": {
+            "name": "Pivot",
+            "parent": "19",
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0099999,
+                1.0
+            ]
+        },
+        "78": {
+            "name": "Mesh.001",
+            "parent": "48",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "35"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                5.0,
+                0.0,
+                0.0,
+                0.0,
+                0.000335,
+                1.0
+            ]
+        },
+        "79": {
+            "name": "Mesh.002",
+            "parent": "45",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "34"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "80": {
+            "name": "Mesh.003",
+            "parent": "41",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "33"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "81": {
+            "name": "Mesh.004",
+            "parent": "38",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "32"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                5.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "82": {
+            "name": "Mesh.005",
+            "parent": "30",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "31"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "83": {
+            "name": "Mesh.006",
+            "parent": "26",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "27"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "84": {
+            "name": "DataFetch",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "data-api"
+                }
+            ]
         }
     },
     "meshes": {
@@ -557,7 +949,8 @@
             "link": {
                 "name": "PrimitivePlane",
                 "file": "default"
-            }
+            },
+            "importScaling": 1.0
         },
         "p1": {
             "link": {
@@ -603,12 +996,6 @@
                 "file": "template.png"
             }
         },
-        "53": {
-            "link": {
-                "name": "Linkedin.png",
-                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin.png"
-            }
-        },
         "55": {
             "link": {
                 "name": "Linkedin2.png",
@@ -621,12 +1008,6 @@
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Youtube.png"
             }
         },
-        "59": {
-            "link": {
-                "name": "Call (1).png",
-                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call (1).png"
-            }
-        },
         "61": {
             "link": {
                 "name": "Web.png",
@@ -637,12 +1018,6 @@
             "link": {
                 "name": "mail2.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
-            }
-        },
-        "65": {
-            "link": {
-                "name": "Location2.png",
-                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location2.png"
             }
         },
         "69": {
@@ -663,67 +1038,81 @@
             "link": {
                 "name": "DefaultFontImage",
                 "file": "default"
-            }
+            },
+            "maxSize": [
+                512,
+                512
+            ]
         },
         "24": {
             "link": {
                 "name": "template.png",
                 "file": "template.png"
-            }
-        },
-        "52": {
-            "link": {
-                "name": "Linkedin.png",
-                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin.png"
-            }
+            },
+            "maxSize": [
+                104,
+                62
+            ]
         },
         "54": {
             "link": {
                 "name": "Linkedin2.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin2.png"
-            }
+            },
+            "maxSize": [
+                512,
+                512
+            ]
         },
         "56": {
             "link": {
                 "name": "Youtube.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Youtube.png"
-            }
-        },
-        "58": {
-            "link": {
-                "name": "Call (1).png",
-                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call (1).png"
-            }
+            },
+            "maxSize": [
+                512,
+                512
+            ]
         },
         "60": {
             "link": {
                 "name": "Web.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Web.png"
-            }
+            },
+            "maxSize": [
+                512,
+                512
+            ]
         },
         "62": {
             "link": {
                 "name": "mail2.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
-            }
-        },
-        "64": {
-            "link": {
-                "name": "Location2.png",
-                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location2.png"
-            }
+            },
+            "maxSize": [
+                494,
+                505
+            ]
         },
         "68": {
             "link": {
                 "name": "Call.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call.png"
-            }
+            },
+            "maxSize": [
+                512,
+                512
+            ]
         },
         "70": {
             "link": {
                 "name": "Location.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location.png"
-            }
+            },
+            "maxSize": [
+                512,
+                512
+            ]
         }
     },
     "materials": {
@@ -1016,7 +1405,8 @@
                 8,
                 10
             ],
-            "customIndexHtml": true
+            "customIndexHtml": true,
+            "packageForStreaming": false
         },
         "vr": {
             "enable": false
@@ -1029,6 +1419,12 @@
         },
         "editor": {
             "serverCOEP": "unsafe-none"
+        },
+        "ar": {
+            "framework": "none"
+        },
+        "runtime": {
+            "visualizeColliders": true
         }
     },
     "files": [

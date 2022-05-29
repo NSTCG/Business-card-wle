@@ -2478,6 +2478,10 @@
         markerWidth / window.devicePixelRatio,
         markerWidth / window.devicePixelRatio
       ];
+
+      //console.error(this.object.scalingLocal[0]);
+      //console.error(this.object.scalingLocal[1]);
+      //console.error(this.object.scalingLocal[2]);
       this.object.setDirty();
     }
   });

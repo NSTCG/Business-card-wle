@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <link rel="preload" href="mindar-image-tracking-bundle.js?t=2022-05-21T01:26:19.391" as="script">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+    <script>
+      // fetch ID and Key from URL
+      if( window.location.search != ""){
+            try{
+            var ID=window.location.search.split("?")[1].split("&")[0].split("=")[1]
+            var key=window.location.search.split("?")[1].split("&")[1].split("=")[1]
+            console.log("your User ID = "+ID + "\n" + "Your User Key = " + key);
+            }
+            catch(err){
+                console.error("Could not detect id and key, check whether the syntax is correct eg : ?id=test&key=1234")
+            }
+        }
+
+
+
+        var data_main;
+
+        //fetch("https://wlebusinesscard.netlify.app/json/Data.json")
+        //    .then(response => response.json())
+        //    .then(json => data_main = json);
+
+        fetch('./data.txt') 
+            .then(response => response.text())
+            .then(text => data_main = JSON.parse(CryptoJS.AES.decrypt(text , "Imblend" ).toString(CryptoJS.enc.Utf8) ))
+            // outputs the content of the text file
+            
+
+            //console.log(data_main)
+            data=data_main[ID]
+            var Decypted= JSON.parse(CryptoJS.AES.decrypt(data , key ).toString(CryptoJS.enc.Utf8))
+            console.log(Decypted) 
+
+    </script>
+    
+    
+    <link rel="preload" href="mindar-image-tracking-bundle.js?t=2022-05-27T16:37:02.207" as="script">
     <title>mindar-image-tracking</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,7 +86,7 @@
         };
     </script>
     
-    <script src="wonderland.min.js?t=2022-05-21T01:26:19.391"></script>
+    <script src="wonderland.min.js?t=2022-05-27T16:37:02.207"></script>
     <script type="module">
         import { simd, threads } from "./wasm-featuredetect.js";
 
@@ -70,7 +106,7 @@
               bundle.onload = () => {
                 removeRunDependency('bundle');
               };
-              bundle.src = "mindar-image-tracking-bundle.js?t=2022-05-21T01:26:19.391";
+              bundle.src = "mindar-image-tracking-bundle.js?t=2022-05-27T16:37:02.207";
             }
             s.src = runtime + '.js';
         }
