@@ -11,7 +11,7 @@
   var RANDOM = Math.random;
   var degree = Math.PI / 180;
   if (!Math.hypot)
-    Math.hypot = function() {
+    Math.hypot = function () {
       var y = 0, i = arguments.length;
       while (i--) {
         y += arguments[i] * arguments[i];
@@ -1644,9 +1644,9 @@
   var sqrDist = squaredDistance;
   var len = length;
   var sqrLen = squaredLength;
-  var forEach = function() {
+  var forEach = function () {
     var vec = create3();
-    return function(a, stride, offset, count, fn, arg) {
+    return function (a, stride, offset, count, fn, arg) {
       var i, l;
       if (!stride) {
         stride = 3;
@@ -1722,9 +1722,9 @@
   function dot2(a, b) {
     return a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3];
   }
-  var forEach2 = function() {
+  var forEach2 = function () {
     var vec = create4();
-    return function(a, stride, offset, count, fn, arg) {
+    return function (a, stride, offset, count, fn, arg) {
       var i, l;
       if (!stride) {
         stride = 4;
@@ -1861,11 +1861,11 @@
   var length3 = length2;
   var squaredLength3 = squaredLength2;
   var normalize3 = normalize2;
-  var rotationTo = function() {
+  var rotationTo = function () {
     var tmpvec3 = create3();
     var xUnitVec3 = fromValues2(1, 0, 0);
     var yUnitVec3 = fromValues2(0, 1, 0);
-    return function(out, a, b) {
+    return function (out, a, b) {
       var dot5 = dot(a, b);
       if (dot5 < -0.999999) {
         cross(tmpvec3, xUnitVec3, a);
@@ -1890,19 +1890,19 @@
       }
     };
   }();
-  var sqlerp = function() {
+  var sqlerp = function () {
     var temp1 = create5();
     var temp2 = create5();
-    return function(out, a, b, c, d, t) {
+    return function (out, a, b, c, d, t) {
       slerp(temp1, a, d, t);
       slerp(temp2, b, c, t);
       slerp(out, temp1, temp2, 2 * t * (1 - t));
       return out;
     };
   }();
-  var setAxes = function() {
+  var setAxes = function () {
     var matr = create();
-    return function(out, view, right, up) {
+    return function (out, view, right, up) {
       matr[0] = right[0];
       matr[3] = right[1];
       matr[6] = right[2];
@@ -2333,14 +2333,14 @@
     mindPath: { type: WL.Type.String },
     maxTrack: { type: WL.Type.Int, default: 1 }
   }, {
-    init: function() {
+    init: function () {
       if (!navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         console.error("No media devices found.");
         this.active = false;
       }
       this.trackingTargets = [];
     },
-    start: async function() {
+    start: async function () {
       this.view = this.object.getComponent("view");
       navigator.mediaDevices.getUserMedia({ audio: false, video: true }).then((stream) => {
         this.video = document.createElement("video");
@@ -2353,13 +2353,13 @@
         });
       });
     },
-    update: function(dt) {
+    update: function (dt) {
       this._updateCameraProjection();
     },
     registerTarget(targetIndex, target) {
       this.trackingTargets.push({ targetIndex, target });
     },
-    _setupAR: async function(input) {
+    _setupAR: async function (input) {
       const controller = new MINDAR.IMAGE.Controller({
         inputWidth: input.width,
         inputHeight: input.height,
@@ -2395,7 +2395,7 @@
       this._updateCameraProjection();
       this.controller.processVideo(input);
     },
-    _updateCameraProjection: function() {
+    _updateCameraProjection: function () {
       const { input, controller } = this;
       if (!input || !controller) {
         return;
@@ -2431,7 +2431,7 @@
         videoScaleY / corner[2] * videoTranslateZ,
         1
       ];
-      
+
       this.videoPane.setTranslationLocal([0, 0, videoTranslateZ]);
 
       this.videoPane.setDirty()
@@ -2445,12 +2445,13 @@
     targetIndex: { type: WL.Type.Int },
     arCamera: { type: WL.Type.Object }
   }, {
-    init: function() {
+    init: function () {
+      this.scale_flag=false;
       this.arCamera.getComponent("image-tracking").registerTarget(this.targetIndex, this);
       this.object.scalingLocal = [0, 0, 0];
       this.object.setDirty();
     },
-    updateTrack: function(worldMatrix, markerWidth, markerHeight) {
+    updateTrack: function (worldMatrix, markerWidth, markerHeight) {
       if (!worldMatrix) {
         this.object.scalingLocal = [1, 1, 1];
         this.object.setDirty();
@@ -2476,7 +2477,10 @@
         1
       ];
       mat4_exports.multiply(fixedWorldMatrix, worldMatrix, adjustMatrix);
-      quat2_exports.fromMat4(this.object.transformLocal, fixedWorldMatrix);
+      let transformLocal = [];
+      quat2_exports.fromMat4(transformLocal, fixedWorldMatrix);
+      glMatrix.quat2.normalize(transformLocal, transformLocal);
+      this.object.transformLocal = transformLocal;
       this.object.scalingLocal = [
         markerWidth / window.devicePixelRatio,
         markerWidth / window.devicePixelRatio,
@@ -2488,35 +2492,44 @@
       //console.error(this.object.scalingLocal[0]);
       //console.error(this.object.scalingLocal[1]);
       //console.error(this.object.scalingLocal[2]);
-
-      this.affectChildren=true;
-      this.collisions = [];
-      this.getComponents(this.object);
-      this.setCollisionScale(this.object.scalingLocal[0]/2)
-
-
+      if(this.scale_flag==false){
+        this.affectChildren = true;
+        this.collisions = [];
+        this.getComponents(this.object);
+        this.setCollisionScale(this.object.scalingLocal[0] /1.5);
+        this.scale_flag=true;
+      }
       this.object.setDirty();
     },
 
-    getComponents: function(obj) {
-      try{if(obj.getComponent("collision")!=null)this.collisions = this.collisions.concat(obj)}catch(err) {}
-      if(this.affectChildren) {
-          let children = obj.children;
-          for(let i = 0; i < children.length; ++i) {
-              this.getComponents(children[i]);
-          }
+    getComponents: function (obj) {
+      try { if (obj.getComponent("collision") != null || obj.getComponent("physx") != null) this.collisions = this.collisions.concat(obj) } catch (err) { }
+      if (this.affectChildren) {
+        let children = obj.children;
+        for (let i = 0; i < children.length; ++i) {
+          this.getComponents(children[i]);
+        }
       }
-  },
+    },
 
-  setCollisionScale: function(scale) {
+    setCollisionScale: function (scale) {
       const comps = this.collisions;
-      
+
       for (let i = 0; i < comps.length; ++i) {
-         
-          comps[i].getComponent("collision").extents=[scale,scale,scale];
-          comps[i].setDirty();
+
+        let collision = comps[i].getComponent("collision");
+        let physx = comps[i].getComponent("physx");
+
+        if (collision) {
+          collision.extents = [scale / 2, scale / 2, scale / 20];
+        }
+
+        if (physx) {
+          physx.extents = [scale / 2, scale / 2, scale / 20];
+        }
+        //comps[i].setDirty();
       }
-  },
+    },
 
 
   });

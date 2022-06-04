@@ -11,7 +11,8 @@
             console.log("your User ID = "+ID + "\n" + "Your User Key = " + key);
             }
             catch(err){
-                console.error("Could not detect id and key, check whether the syntax is correct eg : ?id=test&key=1234")
+                console.error("Could not detect id and key, check whether the syntax is correct eg : ?id=test&key=1234");
+                alert("Could not detect id and key, check whether the URL syntax is correct eg : ?id=test&key=1234");
             }
         }
 
@@ -29,11 +30,14 @@
             // outputs the content of the text file
             
         function data_load(text){
-            data_main = JSON.parse(CryptoJS.AES.decrypt(text , "Imblend" ).toString(CryptoJS.enc.Utf8) )
-            console.log(data_main)
+            try{data_main = JSON.parse(CryptoJS.AES.decrypt(text , "Imblend" ).toString(CryptoJS.enc.Utf8) )}
+            catch(error){alert("Couldnt decrypt! check whether the URL syntax is correct eg : ?id=test&key=1234")}
+            
+            //console.log(data_main)
             data=data_main[ID]
-            var Decypted= JSON.parse(CryptoJS.AES.decrypt(data , key ).toString(CryptoJS.enc.Utf8))
-            console.log(Decypted) 
+            try{var Decypted= JSON.parse(CryptoJS.AES.decrypt(data , key ).toString(CryptoJS.enc.Utf8))}
+            catch(error){alert("Couldnt decrypt layer2! check whether the URL syntax is correct eg : ?id=test&key=1234")}
+            //console.log(Decypted) 
             window.data=Decypted
         }
             
@@ -41,7 +45,7 @@
     </script>
     
     
-    <link rel="preload" href="mindar-image-tracking-bundle.js?t=2022-06-04T10:52:54.092" as="script">
+    <link rel="preload" href="mindar-image-tracking-bundle.js?t=2022-06-05T01:20:18.696" as="script">
     <title>mindar-image-tracking</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -90,7 +94,7 @@
         };
     </script>
     
-    <script src="wonderland.min.js?t=2022-06-04T10:52:54.092"></script>
+    <script src="wonderland.min.js?t=2022-06-05T01:20:18.696"></script>
     <script type="module">
         import { simd, threads } from "./wasm-featuredetect.js";
 
@@ -110,7 +114,7 @@
               bundle.onload = () => {
                 removeRunDependency('bundle');
               };
-              bundle.src = "mindar-image-tracking-bundle.js?t=2022-06-04T10:52:54.092";
+              bundle.src = "mindar-image-tracking-bundle.js?t=2022-06-05T01:20:18.696";
             }
             s.src = runtime + '.js';
         }

@@ -1,33 +1,35 @@
 WL.registerComponent('data-api', {
-    param: {type: WL.Type.Float, default: 1.0},
-    call: { type: WL.Type.Object},
-    mail:{ type: WL.Type.Object},
-    web:{ type: WL.Type.Object},
-    location:{ type: WL.Type.Object},
-    linkedIn:{ type: WL.Type.Object},
-    instagram:{ type: WL.Type.Object},
+    param: { type: WL.Type.Float, default: 1.0 },
+    call: { type: WL.Type.Object },
+    mail: { type: WL.Type.Object },
+    web: { type: WL.Type.Object },
+    location: { type: WL.Type.Object },
+    linkedIn: { type: WL.Type.Object },
+    instagram: { type: WL.Type.Object },
 
 }, {
-    init: function() {
-        
+    init: function () {
+
     },
-    start: function() {
-        this.dataread=0;
-        
-        
+    start: function () {
+        this.dataread = 0;
     },
-    update: function() {
+    update: function () {
         if(this.dataread==0){
-            this.call.getComponent('text').text= data["Telephone"].toString();
-            this.mail.getComponent('text').text=data["Mail"];
-            this.web.getComponent('text').text=data["Website"];
-            this.location.getComponent('text').text="private"
-            this.linkedIn.getComponent('text').text=data["LinkedIn ID"];
-            this.instagram.getComponent('text').text=data["Instagram ID"];       
-            //console.log( data["LinkedIn ID"]);
+            try{
+                this.call.getComponent('text').text= data["Telephone"].toString();
+                this.mail.getComponent('text').text=data["Mail"];
+                this.web.getComponent('text').text=data["Website"];
+                this.location.getComponent('text').text="private";
+                this.linkedIn.getComponent('text').text=data["LinkedIn ID"];
+                this.instagram.getComponent('text').text=data["Instagram ID"];       
+                //console.log( data["LinkedIn ID"]);
+            }catch(error){
+                console.warn("Can't fetch data ! Ensure your URL contains valid ID and password variables ")
+            }
+            
             this.dataread=1;
         }
-        
     },
 });
 

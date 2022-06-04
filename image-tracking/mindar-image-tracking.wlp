@@ -15,7 +15,20 @@
                     }
                 },
                 {
-                    "type": "cursor"
+                    "type": "cursor",
+                    "cursor": {
+                        "cursorObject": null
+                    },
+                    "active": false
+                },
+                {
+                    "type": "cursor-custom",
+                    "cursor-custom": {
+                        "cursorObject": "100",
+                        "handedness": "none",
+                        "rayCastMode": "collision"
+                    },
+                    "active": true
                 }
             ]
         },
@@ -27,7 +40,7 @@
                     "type": "mesh",
                     "mesh": {
                         "mesh": "p0",
-                        "material": "99"
+                        "material": "109"
                     },
                     "active": true
                 }
@@ -46,7 +59,7 @@
                 1.0,
                 0.0,
                 0.0,
-                5.960464477539064e-8,
+                -0.0000685,
                 -5.5387449,
                 1.0
             ]
@@ -125,7 +138,7 @@
                         "mesh": "p0",
                         "material": "27"
                     },
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "collision",
@@ -133,9 +146,9 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.3,
-                                0.3,
-                                0.3
+                                0.4,
+                                0.4,
+                                0.4
                             ]
                         },
                         "sphere": {
@@ -149,26 +162,26 @@
                 {
                     "type": "button",
                     "button": {
-                        "buttonMeshObject": "83",
+                        "buttonMeshObject": "26",
                         "hoverMaterial": "DefaultFontMaterial"
                     },
                     "active": true
                 }
             ],
             "transformation": [
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
-                1.0,
+                0.999994,
                 -0.5,
                 0.0,
                 1.0
@@ -184,7 +197,7 @@
                         "mesh": "p0",
                         "material": "31"
                     },
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "collision",
@@ -192,16 +205,16 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.3,
-                                0.3,
-                                0.3
+                                0.4,
+                                0.4,
+                                0.4
                             ]
                         },
                         "box": {
                             "extents": [
-                                400.0,
-                                400.0,
-                                400.0
+                                1.0,
+                                1.0,
+                                1.0
                             ]
                         },
                         "sphere": {
@@ -215,24 +228,24 @@
                 {
                     "type": "button",
                     "button": {
-                        "buttonMeshObject": "82",
+                        "buttonMeshObject": "30",
                         "hoverMaterial": "DefaultFontMaterial"
                     },
                     "active": true
                 }
             ],
             "transformation": [
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 -1.0,
@@ -250,7 +263,7 @@
                         "mesh": "p0",
                         "material": "32"
                     },
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "collision",
@@ -258,9 +271,9 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.3,
-                                0.3,
-                                0.3
+                                0.4,
+                                0.4,
+                                0.4
                             ]
                         },
                         "sphere": {
@@ -275,24 +288,24 @@
                 {
                     "type": "button",
                     "button": {
-                        "buttonMeshObject": "81",
+                        "buttonMeshObject": "38",
                         "hoverMaterial": "DefaultFontMaterial"
                     },
                     "active": true
                 }
             ],
             "transformation": [
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 -1.0,
                 -0.5,
@@ -310,7 +323,7 @@
                         "mesh": "p0",
                         "material": "33"
                     },
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "collision",
@@ -318,15 +331,16 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.3,
-                                0.3,
-                                0.3
+                                0.4,
+                                0.4,
+                                0.4
                             ]
                         },
                         "sphere": {
                             "radius": 0.5
                         }
-                    }
+                    },
+                    "active": true
                 },
                 {
                     "type": "cursor-target"
@@ -334,24 +348,24 @@
                 {
                     "type": "button",
                     "button": {
-                        "buttonMeshObject": "80",
+                        "buttonMeshObject": "45",
                         "hoverMaterial": "DefaultFontMaterial"
                     },
                     "active": true
                 }
             ],
             "transformation": [
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 -1.0,
                 0.5,
@@ -401,7 +415,7 @@
                         "mesh": "p0",
                         "material": "34"
                     },
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "collision",
@@ -409,9 +423,9 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.3,
-                                0.3,
-                                0.3
+                                0.4,
+                                0.4,
+                                0.4
                             ]
                         },
                         "sphere": {
@@ -425,24 +439,24 @@
                 {
                     "type": "button",
                     "button": {
-                        "buttonMeshObject": "79",
+                        "buttonMeshObject": "45",
                         "hoverMaterial": "DefaultFontMaterial"
                     },
                     "active": true
                 }
             ],
             "transformation": [
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 1.0,
@@ -460,7 +474,7 @@
                         "mesh": "p0",
                         "material": "85"
                     },
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "collision",
@@ -468,9 +482,9 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                0.3,
-                                0.3,
-                                0.3
+                                0.4,
+                                0.4,
+                                0.4
                             ]
                         },
                         "sphere": {
@@ -484,24 +498,24 @@
                 {
                     "type": "button",
                     "button": {
-                        "buttonMeshObject": "78",
+                        "buttonMeshObject": "48",
                         "hoverMaterial": "DefaultFontMaterial"
                     },
                     "active": true
                 }
             ],
             "transformation": [
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                1.0,
+                0.5,
                 0.0,
                 1.0,
                 0.5,
@@ -749,7 +763,7 @@
         },
         "78": {
             "name": "Mesh.001",
-            "parent": "48",
+            "parent": "107",
             "components": [
                 {
                     "type": "mesh",
@@ -757,27 +771,28 @@
                         "mesh": "p0",
                         "material": "85"
                     },
-                    "active": true
+                    "active": false
                 }
             ],
             "transformation": [
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
-                -0.5277411,
-                -0.2715895,
-                0.0003349,
+                0.0,
+                0.0113927,
+                0.0,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "79": {
             "name": "Mesh.002",
@@ -792,23 +807,24 @@
                 }
             ],
             "transformation": [
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
-                0.0389129,
-                -0.5001098,
+                0.0,
+                0.0,
                 0.0,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "80": {
             "name": "Mesh.003",
@@ -823,23 +839,24 @@
                 }
             ],
             "transformation": [
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
-                0.5653092,
-                -0.2124627,
+                0.0,
+                0.0,
                 0.0,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "81": {
             "name": "Mesh.004",
@@ -854,7 +871,12 @@
                 }
             ],
             "transformation": [
-                0.25,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
@@ -863,14 +885,10 @@
                 0.0,
                 0.0,
                 0.0,
-                0.0,
-                0.25,
-                0.0,
-                0.5283122,
-                0.2819253,
                 0.0,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "82": {
             "name": "Mesh.005",
@@ -885,23 +903,24 @@
                 }
             ],
             "transformation": [
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
                 0.0,
-                0.4941,
+                0.0,
                 0.0,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "83": {
             "name": "Mesh.006",
@@ -913,27 +932,28 @@
                         "mesh": "p0",
                         "material": "27"
                     },
-                    "active": true
+                    "active": false
                 }
             ],
             "transformation": [
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
                 0.0,
                 0.0,
                 0.0,
-                0.25,
+                0.5,
                 0.0,
-                -0.5059596,
-                0.2212565,
-                0.0354404,
+                0.0,
+                0.0,
+                0.0,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "84": {
             "name": "DataFetch",
@@ -942,12 +962,12 @@
                 {
                     "type": "data-api",
                     "data-api": {
-                        "call": "90",
-                        "mail": "92",
-                        "web": "91",
-                        "location": "93",
-                        "linkedIn": "94",
-                        "instagram": "95"
+                        "call": "102",
+                        "mail": "104",
+                        "web": "103",
+                        "location": "105",
+                        "linkedIn": "106",
+                        "instagram": "107"
                     }
                 }
             ],
@@ -1066,7 +1086,8 @@
                 0.0,
                 0.2068142,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "91": {
             "name": "Text.002",
@@ -1093,7 +1114,8 @@
                 0.0,
                 0.1561055,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "92": {
             "name": "Text.003",
@@ -1123,7 +1145,8 @@
                 -0.0000137,
                 0.1120369,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "93": {
             "name": "Text.004",
@@ -1153,7 +1176,8 @@
                 0.0,
                 0.1281446,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "94": {
             "name": "Text.005",
@@ -1180,7 +1204,8 @@
                 0.0,
                 0.1520927,
                 1.0
-            ]
+            ],
+            "deleted": true
         },
         "95": {
             "name": "Text.006",
@@ -1209,6 +1234,201 @@
                 0.0,
                 0.0,
                 0.0578551,
+                1.0
+            ],
+            "deleted": true
+        },
+        "100": {
+            "name": "Ray",
+            "parent": "17",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "101"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                10.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "102": {
+            "name": "Text.007",
+            "parent": "26",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "103": {
+            "name": "Text.008",
+            "parent": "30",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "104": {
+            "name": "Text.009",
+            "parent": "38",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "105": {
+            "name": "Text.010",
+            "parent": "41",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "106": {
+            "name": "Text.011",
+            "parent": "45",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "107": {
+            "name": "Text.012",
+            "parent": "48",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
                 1.0
             ]
         }
@@ -1331,8 +1551,8 @@
                 "file": "template.png"
             },
             "maxSize": [
-                838,
-                502
+                104,
+                62
             ]
         },
         "54": {
@@ -1399,13 +1619,21 @@
             "link": {
                 "name": "Insta.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Insta.png"
-            }
+            },
+            "maxSize": [
+                512,
+                512
+            ]
         },
         "97": {
             "link": {
                 "name": "immblend.png",
                 "file": "immblend.png"
-            }
+            },
+            "maxSize": [
+                220,
+                215
+            ]
         }
     },
     "materials": {
@@ -1584,24 +1812,26 @@
                 "flatTexture": "87"
             }
         },
-        "96": {
-            "name": "text",
+        "99": {
+            "name": "logo",
             "pipeline": "6",
             "Flat": {
-                "flatTexture": "98",
-                "color": [
+                "flatTexture": "98"
+            }
+        },
+        "101": {
+            "name": "cursor",
+            "Phong": {
+                "ambientColor": [
                     1.0,
                     0.9999899,
                     0.9999899,
                     1.0
                 ]
-            },
-            "Phong": {
-                "diffuseTexture": "98"
             }
         },
-        "99": {
-            "name": "logo",
+        "109": {
+            "name": "logo2",
             "pipeline": "6",
             "Flat": {
                 "flatTexture": "98"
@@ -1750,7 +1980,8 @@
             "framework": "none"
         },
         "runtime": {
-            "visualizeColliders": true
+            "visualizeColliders": false,
+            "visualizePhysX": false
         },
         "rendering": {
             "clearColor": [
@@ -1759,6 +1990,9 @@
                 0.9999899,
                 1.0
             ]
+        },
+        "physx": {
+            "enable": false
         }
     },
     "files": [
