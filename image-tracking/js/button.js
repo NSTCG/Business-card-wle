@@ -18,6 +18,7 @@ WL.registerComponent('button', {
 
     onHover: function(_, cursor) {
         this.mesh.material = this.hoverMaterial;
+       // alert(this.object.name);
         if(cursor.type == 'finger-cursor') {
             this.onDown(_, cursor);
         }
@@ -28,6 +29,14 @@ WL.registerComponent('button', {
     onDown: function(_, cursor) {
         this.soundClick.play();
         //this.buttonMeshObject.translate([0.0, -0.1, 0.0]);
+        //alert(this.object.name);
+
+        if(this.object.name=="instagram")window.open(data["Instagram ID"], '_blank');
+        if(this.object.name=="linkedin")window.open(data["LinkedIn ID"], '_blank');
+        if(this.object.name=="website")window.open(data["Website"], '_blank');
+        if(this.object.name=="call")window.open('tel:'+data["Telephone"].toString());
+        if(this.object.name=="Mail")window.open('mailto:'+data["Mail"]);
+
         this.hapticFeedback(cursor.object, 1.0, 20);
     },
 

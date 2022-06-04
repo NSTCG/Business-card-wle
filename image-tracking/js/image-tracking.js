@@ -2431,7 +2431,11 @@
         videoScaleY / corner[2] * videoTranslateZ,
         1
       ];
+      
       this.videoPane.setTranslationLocal([0, 0, videoTranslateZ]);
+
+      this.videoPane.setDirty()
+
       this.view.projectionMatrix.set(projectionMatrix);
       this.lastProjectionCanvasWidth = WL.canvas.width;
       this.lastProjectionCanvasHeight = WL.canvas.height;
@@ -2448,7 +2452,7 @@
     },
     updateTrack: function(worldMatrix, markerWidth, markerHeight) {
       if (!worldMatrix) {
-        this.object.scalingLocal = [0, 0, 0];
+        this.object.scalingLocal = [1, 1, 1];
         this.object.setDirty();
         return;
       }
@@ -2478,12 +2482,43 @@
         markerWidth / window.devicePixelRatio,
         markerWidth / window.devicePixelRatio
       ];
+      this.object.setDirty();
+      //set collision extend to 120 
 
       //console.error(this.object.scalingLocal[0]);
       //console.error(this.object.scalingLocal[1]);
       //console.error(this.object.scalingLocal[2]);
+
+      this.affectChildren=true;
+      this.collisions = [];
+      this.getComponents(this.object);
+      this.setCollisionScale(this.object.scalingLocal[0]/2)
+
+
       this.object.setDirty();
-    }
+    },
+
+    getComponents: function(obj) {
+      try{if(obj.getComponent("collision")!=null)this.collisions = this.collisions.concat(obj)}catch(err) {}
+      if(this.affectChildren) {
+          let children = obj.children;
+          for(let i = 0; i < children.length; ++i) {
+              this.getComponents(children[i]);
+          }
+      }
+  },
+
+  setCollisionScale: function(scale) {
+      const comps = this.collisions;
+      
+      for (let i = 0; i < comps.length; ++i) {
+         
+          comps[i].getComponent("collision").extents=[scale,scale,scale];
+          comps[i].setDirty();
+      }
+  },
+
+
   });
 })();
 //# sourceMappingURL=image-tracking.js.map

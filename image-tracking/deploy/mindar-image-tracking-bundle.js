@@ -41,6 +41,7 @@ WL.registerComponent('button', {
 
     onHover: function(_, cursor) {
         this.mesh.material = this.hoverMaterial;
+       // alert(this.object.name);
         if(cursor.type == 'finger-cursor') {
             this.onDown(_, cursor);
         }
@@ -51,6 +52,14 @@ WL.registerComponent('button', {
     onDown: function(_, cursor) {
         this.soundClick.play();
         //this.buttonMeshObject.translate([0.0, -0.1, 0.0]);
+        //alert(this.object.name);
+
+        if(this.object.name=="instagram")window.open(data["Instagram ID"], '_blank');
+        if(this.object.name=="linkedin")window.open(data["LinkedIn ID"], '_blank');
+        if(this.object.name=="website")window.open(data["Website"], '_blank');
+        if(this.object.name=="call")window.open('tel:'+data["Telephone"].toString());
+        if(this.object.name=="Mail")window.open('mailto:'+data["Mail"]);
+
         this.hapticFeedback(cursor.object, 1.0, 20);
     },
 
@@ -561,18 +570,49 @@ WL.registerComponent('cursor-custom', {
 
 WL.registerComponent('data-api', {
     param: {type: WL.Type.Float, default: 1.0},
+    call: { type: WL.Type.Object},
+    mail:{ type: WL.Type.Object},
+    web:{ type: WL.Type.Object},
+    location:{ type: WL.Type.Object},
+    linkedIn:{ type: WL.Type.Object},
+    instagram:{ type: WL.Type.Object},
+
 }, {
     init: function() {
         
     },
     start: function() {
+        this.dataread=0;
         
         
     },
-    update: function(dt) {
-        console.log('update() with delta time', dt);
+    update: function() {
+        if(this.dataread==0){
+            this.call.getComponent('text').text= data["Telephone"].toString();
+            this.mail.getComponent('text').text=data["Mail"];
+            this.web.getComponent('text').text=data["Website"];
+            this.location.getComponent('text').text="private"
+            this.linkedIn.getComponent('text').text=data["LinkedIn ID"];
+            this.instagram.getComponent('text').text=data["Instagram ID"];       
+            //console.log( data["LinkedIn ID"]);
+            this.dataread=1;
+        }
+        
     },
 });
+
+/** 
+ * ID: 6421235
+Instagram ID: "https://www.instagram.com/digi_tonics/"
+LinkedIn ID: "https://www.linkedin.com/in/nithin-steven-f-9a5b63195/"
+Mail: "nstcg32@gmail.com"
+Name: "ns"
+Surname: "tcg"
+Telephone: 919495321820
+Vcasrd: "Vcard Data"
+Website: "https://tvroom.in"
+
+*/
 
 (() => {
   var __defProp = Object.defineProperty;
@@ -3007,7 +3047,11 @@ WL.registerComponent('data-api', {
         videoScaleY / corner[2] * videoTranslateZ,
         1
       ];
+      
       this.videoPane.setTranslationLocal([0, 0, videoTranslateZ]);
+
+      this.videoPane.setDirty()
+
       this.view.projectionMatrix.set(projectionMatrix);
       this.lastProjectionCanvasWidth = WL.canvas.width;
       this.lastProjectionCanvasHeight = WL.canvas.height;
@@ -3024,7 +3068,7 @@ WL.registerComponent('data-api', {
     },
     updateTrack: function(worldMatrix, markerWidth, markerHeight) {
       if (!worldMatrix) {
-        this.object.scalingLocal = [0, 0, 0];
+        this.object.scalingLocal = [1, 1, 1];
         this.object.setDirty();
         return;
       }
@@ -3054,12 +3098,43 @@ WL.registerComponent('data-api', {
         markerWidth / window.devicePixelRatio,
         markerWidth / window.devicePixelRatio
       ];
+      this.object.setDirty();
+      //set collision extend to 120 
 
       //console.error(this.object.scalingLocal[0]);
       //console.error(this.object.scalingLocal[1]);
       //console.error(this.object.scalingLocal[2]);
+
+      this.affectChildren=true;
+      this.collisions = [];
+      this.getComponents(this.object);
+      this.setCollisionScale(this.object.scalingLocal[0]/2)
+
+
       this.object.setDirty();
-    }
+    },
+
+    getComponents: function(obj) {
+      try{if(obj.getComponent("collision")!=null)this.collisions = this.collisions.concat(obj)}catch(err) {}
+      if(this.affectChildren) {
+          let children = obj.children;
+          for(let i = 0; i < children.length; ++i) {
+              this.getComponents(children[i]);
+          }
+      }
+  },
+
+  setCollisionScale: function(scale) {
+      const comps = this.collisions;
+      
+      for (let i = 0; i < comps.length; ++i) {
+         
+          comps[i].getComponent("collision").extents=[scale,scale,scale];
+          comps[i].setDirty();
+      }
+  },
+
+
   });
 })();
 //# sourceMappingURL=image-tracking.js.map
@@ -3094,13 +3169,13 @@ WL.registerComponent('test', {
     param: {type: WL.Type.Float, default: 1.0},
 }, {
     init: function() {
-        console.log('init() with param', this.param);
+        //console.log('init() with param', this.param);
     },
     start: function() {
-        console.log('start() with param', this.param);
+        //console.log('start() with param', this.param);
     },
     update: function(dt) {
-        console.log('update() with delta time', dt);
+        //console.log('update() with delta time', dt);
     },
 });
 
