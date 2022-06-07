@@ -181,8 +181,8 @@
                 0.0,
                 0.5,
                 0.0,
-                0.999994,
-                -0.5,
+                0.9999939,
+                -0.6,
                 0.0,
                 1.0
             ]
@@ -308,7 +308,7 @@
                 0.5,
                 0.0,
                 -1.0,
-                -0.5,
+                -0.6,
                 0.0,
                 1.0
             ]
@@ -1275,7 +1275,8 @@
             "parent": "26",
             "components": [
                 {
-                    "type": "text"
+                    "type": "text",
+                    "active": false
                 }
             ],
             "transformation": [
@@ -1302,7 +1303,8 @@
             "parent": "30",
             "components": [
                 {
-                    "type": "text"
+                    "type": "text",
+                    "active": false
                 }
             ],
             "transformation": [
@@ -1329,7 +1331,8 @@
             "parent": "38",
             "components": [
                 {
-                    "type": "text"
+                    "type": "text",
+                    "active": false
                 }
             ],
             "transformation": [
@@ -1356,7 +1359,8 @@
             "parent": "41",
             "components": [
                 {
-                    "type": "text"
+                    "type": "text",
+                    "active": false
                 }
             ],
             "transformation": [
@@ -1383,7 +1387,8 @@
             "parent": "45",
             "components": [
                 {
-                    "type": "text"
+                    "type": "text",
+                    "active": false
                 }
             ],
             "transformation": [
@@ -1410,7 +1415,8 @@
             "parent": "48",
             "components": [
                 {
-                    "type": "text"
+                    "type": "text",
+                    "active": false
                 }
             ],
             "transformation": [
@@ -1479,12 +1485,6 @@
                 "file": "default"
             }
         },
-        "25": {
-            "link": {
-                "name": "template.png",
-                "file": "template.png"
-            }
-        },
         "55": {
             "link": {
                 "name": "Linkedin2.png",
@@ -1543,16 +1543,6 @@
             "maxSize": [
                 512,
                 512
-            ]
-        },
-        "24": {
-            "link": {
-                "name": "template.png",
-                "file": "template.png"
-            },
-            "maxSize": [
-                104,
-                62
             ]
         },
         "54": {
@@ -1812,13 +1802,6 @@
                 "flatTexture": "87"
             }
         },
-        "99": {
-            "name": "logo",
-            "pipeline": "6",
-            "Flat": {
-                "flatTexture": "98"
-            }
-        },
         "101": {
             "name": "cursor",
             "Phong": {
@@ -1996,8 +1979,6 @@
         }
     },
     "files": [
-        "Imblend.jpg",
-        "template.png",
         "ICONS REMODELLED/ICONS REMODELLED/Linkedin2.png",
         "ICONS REMODELLED/ICONS REMODELLED/Youtube.png",
         "ICONS REMODELLED/ICONS REMODELLED/Web.png",

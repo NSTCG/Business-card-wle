@@ -1756,17 +1756,6 @@
       </a>
 
     <script>
-        // fetch ID and Key from URL
-        if( window.location.search != ""){
-            try{
-            UserID=window.location.search.split("?")[1].split("&")[0].split("=")[1]
-            UserKey=window.location.search.split("?")[1].split("&")[1].split("=")[1]
-            console.log("your User ID = "+UserID + "\n" + "Your User Key = " + UserKey);
-            }
-            catch(err){
-                console.error("Could not detect id and key, check whether the syntax is correct eg : ?id=test&key=1234")
-            }
-        }
 
         //xlsx to json file 
        /* set up XMLHttpRequest */
@@ -1800,43 +1789,29 @@
             var first_sheet_name = workbook.SheetNames[0];
             /* Get worksheet */
             var worksheet = workbook.Sheets[first_sheet_name];
-            JsonObject=XLSX.utils.sheet_to_json(worksheet, {raw: true});
-            //console.log(XLSX.utils.sheet_to_json(worksheet, {raw: true}));
+            JsonObject=XLS.utils.sheet_to_json(worksheet, {raw: true});
+           
         }
 
         oReq.send();
 
-        //var result = JSON.parse(jsonResult);
-
         var encrypted;
         var decrypted;
 
-        
-
-
-
         function download(content, fileName, contentType) {
-        const a = document.createElement("a");
-        const file = new Blob([content], { type: contentType });
-        a.href = URL.createObjectURL(file);
-        a.download = fileName;
-        a.click();
+            const a = document.createElement("a");
+            const file = new Blob([content], { type: contentType });
+            a.href = URL.createObjectURL(file);
+            a.download = fileName;
+            a.click();
         }
 
-        
         function XlsxToHash(){
-
             Layer2Encryption();
             download(JSON.stringify(JsonPriv), "JsonPriv.json", "text/plain");
             let Json_final=CryptoJS.AES.encrypt(JSON.stringify(Json_Public), "Imblend");
             download(Json_final, "data.txt", "text/plain")
-
-
-            //console.log("Json object :")
-            //console.log(  JsonObject ,typeof (JsonObject))
         }
-
-        
         
         function makekey() {
             var text = "";
@@ -1846,16 +1821,21 @@
 
             return text;
         }
-
-        //console.log(makeid());
-
+        
         function Layer2Encryption(){
-            //console.log("Json string is " + JsonString)
+            
+
             for (let i = 0; i < JsonObject.length; i++) {
                 let person=JsonObject[i]
                 let personID=person.ID;
                 let personString=JSON.stringify(person)  //console.log("___ "+ personString)
                 let key=makekey()
+                try{ 
+                  //call custom key and assign it to key here 
+                 }
+                catch(error){
+                }
+                
                 let Line_encryption=CryptoJS.AES.encrypt(personString, key).toString();
                 Json_Public[personID]= Line_encryption;
                 JsonPriv[personID]=key;
