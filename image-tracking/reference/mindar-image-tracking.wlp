@@ -1,0 +1,2048 @@
+{
+    "objects": {
+        "17": {
+            "name": "ARCamera",
+            "components": [
+                {
+                    "type": "view",
+                    "active": true
+                },
+                {
+                    "type": "image-tracking",
+                    "image-tracking": {
+                        "mindPath": "./targets.mind",
+                        "videoPane": "18"
+                    }
+                },
+                {
+                    "type": "cursor",
+                    "cursor": {
+                        "cursorObject": null
+                    },
+                    "active": false
+                },
+                {
+                    "type": "cursor-custom",
+                    "cursor-custom": {
+                        "cursorObject": "100",
+                        "handedness": "none",
+                        "rayCastMode": "collision"
+                    },
+                    "active": true
+                }
+            ]
+        },
+        "18": {
+            "name": "VideoPlane",
+            "parent": "17",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "110"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                -0.0000684,
+                -5.5387449,
+                1.0
+            ]
+        },
+        "19": {
+            "name": "TrackingTarget",
+            "parent": "17",
+            "components": [
+                {
+                    "type": "image-tracking-target",
+                    "image-tracking-target": {
+                        "arCamera": "17"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                1.00002,
+                1.50998829440141e-7,
+                8.742452450860584e-8,
+                0.0,
+                -1.509962999080017e-7,
+                1.0000033,
+                1.509962999080017e-7,
+                0.0,
+                -8.74244960868964e-8,
+                -1.50998829440141e-7,
+                1.00002,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "20": {
+            "name": "Cube",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "21"
+                    },
+                    "active": false
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.6790444,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0875703,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "26": {
+            "name": "call",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "27"
+                    },
+                    "active": true
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "26",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.9999939,
+                -0.6,
+                0.0,
+                1.0
+            ]
+        },
+        "30": {
+            "name": "Website",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "31"
+                    },
+                    "active": true
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "box": {
+                            "extents": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "30",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                1.0
+            ]
+        },
+        "38": {
+            "name": "Mail",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "32"
+                    },
+                    "active": true
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    },
+                    "active": true
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "38",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                -1.0,
+                -0.6,
+                0.0,
+                1.0
+            ]
+        },
+        "41": {
+            "name": "Location",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "33"
+                    },
+                    "active": true
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    },
+                    "active": true
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "45",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                -1.0,
+                0.5,
+                0.0,
+                1.0
+            ]
+        },
+        "44": {
+            "name": "Website",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "31"
+                    }
+                }
+            ],
+            "transformation": [
+                0.495,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.495,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.99,
+                0.0,
+                0.1875292,
+                0.0059878,
+                0.123671,
+                1.0
+            ],
+            "deleted": true
+        },
+        "45": {
+            "name": "linkedin",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "34"
+                    },
+                    "active": true
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "45",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1.0
+            ]
+        },
+        "48": {
+            "name": "Instagram",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "85"
+                    },
+                    "active": true
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "aabb",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "48",
+                        "hoverMaterial": "DefaultFontMaterial"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                1.0,
+                0.5,
+                0.0,
+                1.0
+            ]
+        },
+        "51": {
+            "name": "NonVrCamera",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "mouse-look"
+                },
+                {
+                    "type": "cursor"
+                }
+            ],
+            "deleted": true
+        },
+        "66": {
+            "name": "Light",
+            "parent": "19",
+            "components": [
+                {
+                    "type": "light"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -1.0259683,
+                2.2992918,
+                2.8708183,
+                1.0
+            ],
+            "deleted": true
+        },
+        "67": {
+            "name": "Light.000",
+            "parent": "20",
+            "components": [
+                {
+                    "type": "light",
+                    "light": {
+                        "type": "point"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.4726576,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                11.4193964,
+                0.0,
+                -0.7266386,
+                3.4060158,
+                40.5503692,
+                1.0
+            ],
+            "deleted": true
+        },
+        "72": {
+            "name": "Light.001",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "light"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -0.4920912,
+                1.8584693,
+                2.2609663,
+                1.0
+            ],
+            "deleted": true
+        },
+        "73": {
+            "name": "Empty",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "31"
+                    },
+                    "active": false
+                },
+                {
+                    "type": "test"
+                }
+            ],
+            "parent": "17",
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "74": {
+            "name": "curser",
+            "parent": "18",
+            "components": [
+                {
+                    "type": "input"
+                },
+                {
+                    "type": "cursor"
+                },
+                {
+                    "type": "view"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                3.0158092,
+                1.0
+            ],
+            "deleted": true
+        },
+        "75": {
+            "name": "Mesh",
+            "deleted": true
+        },
+        "76": {
+            "name": "Mesh.000",
+            "parent": "18",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "31"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.2
+                        }
+                    }
+                }
+            ],
+            "transformation": [
+                0.1738,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1738,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1738,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "77": {
+            "name": "Pivot",
+            "parent": "19",
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "78": {
+            "name": "Mesh.001",
+            "parent": "107",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "85"
+                    },
+                    "active": false
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0113927,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "79": {
+            "name": "Mesh.002",
+            "parent": "45",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "34"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "80": {
+            "name": "Mesh.003",
+            "parent": "41",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "33"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "81": {
+            "name": "Mesh.004",
+            "parent": "38",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "32"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.25,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "82": {
+            "name": "Mesh.005",
+            "parent": "30",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "31"
+                    }
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "83": {
+            "name": "Mesh.006",
+            "parent": "26",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "27"
+                    },
+                    "active": false
+                }
+            ],
+            "transformation": [
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "84": {
+            "name": "DataFetch",
+            "parent": "77",
+            "components": [
+                {
+                    "type": "data-api",
+                    "data-api": {
+                        "call": "102",
+                        "mail": "104",
+                        "web": "103",
+                        "location": "105",
+                        "linkedIn": "106",
+                        "instagram": "107"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -0.1,
+                1.0
+            ]
+        },
+        "88": {
+            "name": "Text",
+            "parent": "26",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                15.6576032,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                15.6576032,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                15.6576032,
+                0.0,
+                0.0,
+                0.0,
+                0.6007527,
+                1.0
+            ],
+            "deleted": true
+        },
+        "89": {
+            "name": "Text.000",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "won",
+                        "alignment": "center"
+                    },
+                    "active": true
+                },
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "21"
+                    },
+                    "active": false
+                }
+            ],
+            "transformation": [
+                0.4900278,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.49,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.49,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "deleted": true
+        },
+        "90": {
+            "name": "Text.001",
+            "parent": "26",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "alignment": "left"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.2068142,
+                1.0
+            ],
+            "deleted": true
+        },
+        "91": {
+            "name": "Text.002",
+            "parent": "30",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1561055,
+                1.0
+            ],
+            "deleted": true
+        },
+        "92": {
+            "name": "Text.003",
+            "parent": "38",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "alignment": "right"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -0.0000296,
+                -0.0000137,
+                0.1120369,
+                1.0
+            ],
+            "deleted": true
+        },
+        "93": {
+            "name": "Text.004",
+            "parent": "41",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "alignment": "right"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1281446,
+                1.0
+            ],
+            "deleted": true
+        },
+        "94": {
+            "name": "Text.005",
+            "parent": "45",
+            "components": [
+                {
+                    "type": "text"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1520927,
+                1.0
+            ],
+            "deleted": true
+        },
+        "95": {
+            "name": "Text.006",
+            "parent": "48",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "alignment": "left"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0578551,
+                1.0
+            ],
+            "deleted": true
+        },
+        "100": {
+            "name": "Ray",
+            "parent": "17",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "101"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                10.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "102": {
+            "name": "Text.007",
+            "parent": "26",
+            "components": [
+                {
+                    "type": "text",
+                    "active": false
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "103": {
+            "name": "Text.008",
+            "parent": "30",
+            "components": [
+                {
+                    "type": "text",
+                    "active": false
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "104": {
+            "name": "Text.009",
+            "parent": "38",
+            "components": [
+                {
+                    "type": "text",
+                    "active": false
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "105": {
+            "name": "Text.010",
+            "parent": "41",
+            "components": [
+                {
+                    "type": "text",
+                    "active": false
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "106": {
+            "name": "Text.011",
+            "parent": "45",
+            "components": [
+                {
+                    "type": "text",
+                    "active": false
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        "107": {
+            "name": "Text.012",
+            "parent": "48",
+            "components": [
+                {
+                    "type": "text",
+                    "active": false
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        }
+    },
+    "meshes": {
+        "p0": {
+            "link": {
+                "name": "PrimitivePlane",
+                "file": "default"
+            },
+            "importScaling": 1.0
+        },
+        "p1": {
+            "link": {
+                "name": "PrimitiveCube",
+                "file": "default"
+            }
+        },
+        "p2": {
+            "link": {
+                "name": "PrimitiveSphere",
+                "file": "default"
+            }
+        },
+        "p3": {
+            "link": {
+                "name": "PrimitiveCone",
+                "file": "default"
+            }
+        },
+        "p4": {
+            "link": {
+                "name": "PrimitiveCylinder",
+                "file": "default"
+            }
+        },
+        "p5": {
+            "link": {
+                "name": "PrimitiveCircle",
+                "file": "default"
+            }
+        }
+    },
+    "textures": {
+        "t0": {
+            "link": {
+                "name": "DefaultFont",
+                "file": "default"
+            }
+        },
+        "55": {
+            "link": {
+                "name": "Linkedin2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin2.png"
+            }
+        },
+        "57": {
+            "link": {
+                "name": "Youtube.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Youtube.png"
+            }
+        },
+        "61": {
+            "link": {
+                "name": "Web.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Web.png"
+            }
+        },
+        "63": {
+            "link": {
+                "name": "mail2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
+            }
+        },
+        "69": {
+            "link": {
+                "name": "Call.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call.png"
+            }
+        },
+        "71": {
+            "link": {
+                "name": "Location.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location.png"
+            }
+        },
+        "87": {
+            "link": {
+                "name": "Insta.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Insta.png"
+            }
+        },
+        "98": {
+            "link": {
+                "name": "immblend.png",
+                "file": "immblend.png"
+            }
+        }
+    },
+    "images": {
+        "f0": {
+            "link": {
+                "name": "DefaultFontImage",
+                "file": "default"
+            },
+            "maxSize": [
+                512,
+                512
+            ],
+            "compress": false,
+            "stream": false
+        },
+        "54": {
+            "link": {
+                "name": "Linkedin2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin2.png"
+            },
+            "maxSize": [
+                512,
+                512
+            ],
+            "compress": true,
+            "stream": false
+        },
+        "56": {
+            "link": {
+                "name": "Youtube.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Youtube.png"
+            },
+            "maxSize": [
+                512,
+                512
+            ],
+            "compress": true,
+            "stream": false
+        },
+        "60": {
+            "link": {
+                "name": "Web.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Web.png"
+            },
+            "maxSize": [
+                512,
+                512
+            ],
+            "compress": true,
+            "stream": false
+        },
+        "62": {
+            "link": {
+                "name": "mail2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
+            },
+            "maxSize": [
+                494,
+                505
+            ],
+            "compress": true,
+            "stream": false
+        },
+        "68": {
+            "link": {
+                "name": "Call.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call.png"
+            },
+            "maxSize": [
+                512,
+                512
+            ],
+            "compress": true,
+            "stream": false
+        },
+        "70": {
+            "link": {
+                "name": "Location.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location.png"
+            },
+            "maxSize": [
+                512,
+                512
+            ],
+            "compress": true,
+            "stream": false
+        },
+        "86": {
+            "link": {
+                "name": "Insta.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Insta.png"
+            },
+            "maxSize": [
+                512,
+                512
+            ],
+            "compress": true,
+            "stream": false
+        },
+        "97": {
+            "link": {
+                "name": "immblend.png",
+                "file": "immblend.png"
+            },
+            "maxSize": [
+                220,
+                215
+            ],
+            "compress": false,
+            "stream": false
+        }
+    },
+    "materials": {
+        "DefaultFontMaterial": {
+            "link": {
+                "name": "DefaultFontMaterial",
+                "file": "default"
+            },
+            "pipeline": "2",
+            "Phong": {
+                "ambientColor": [
+                    0.199998,
+                    0.1999994,
+                    0.2,
+                    1.0
+                ]
+            },
+            "Flat": {
+                "color": [
+                    0.9999914,
+                    1.0,
+                    0.9999899,
+                    1.0
+                ],
+                "flatTexture": "t0"
+            }
+        },
+        "21": {
+            "name": "material1",
+            "Phong": {
+                "ambientColor": [
+                    0.432449,
+                    0.5483562,
+                    0.7254902,
+                    1.0
+                ]
+            },
+            "pipeline": "6",
+            "Flat": {
+                "flatTexture": "25"
+            }
+        },
+        "27": {
+            "name": "call",
+            "pipeline": "6",
+            "Phong": {
+                "diffuseTexture": "69",
+                "ambientColor": [
+                    9.999999974752427e-7,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            },
+            "Flat": {
+                "flatTexture": "69"
+            }
+        },
+        "31": {
+            "name": "website",
+            "pipeline": "6",
+            "Phong": {
+                "diffuseTexture": "61",
+                "ambientColor": [
+                    9.999999974752427e-7,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            },
+            "Flat": {
+                "flatTexture": "61"
+            }
+        },
+        "32": {
+            "name": "mail",
+            "pipeline": "6",
+            "Phong": {
+                "diffuseTexture": "63",
+                "ambientColor": [
+                    9.999999974752427e-7,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            },
+            "Flat": {
+                "flatTexture": "63"
+            }
+        },
+        "33": {
+            "name": "location",
+            "pipeline": "6",
+            "Phong": {
+                "diffuseTexture": "71",
+                "ambientColor": [
+                    9.999999974752427e-7,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            },
+            "Flat": {
+                "flatTexture": "71"
+            }
+        },
+        "34": {
+            "name": "linkedIn",
+            "pipeline": "6",
+            "Phong": {
+                "diffuseTexture": "55",
+                "ambientColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ],
+                "fogColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    0.0
+                ],
+                "specularColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    0.0
+                ],
+                "diffuseColor": [
+                    0.5607843,
+                    0.5607787,
+                    0.5607787,
+                    1.0
+                ],
+                "emissiveColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ]
+            },
+            "Flat": {
+                "flatTexture": "55"
+            }
+        },
+        "35": {
+            "name": "youtube",
+            "pipeline": "6",
+            "Phong": {
+                "diffuseTexture": "57",
+                "ambientColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ],
+                "emissiveColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ]
+            },
+            "Flat": {
+                "flatTexture": "57"
+            }
+        },
+        "85": {
+            "name": "Instagram",
+            "pipeline": "6",
+            "Phong": {
+                "diffuseTexture": "87"
+            },
+            "Flat": {
+                "flatTexture": "87"
+            }
+        },
+        "101": {
+            "name": "cursor",
+            "Phong": {
+                "ambientColor": [
+                    1.0,
+                    0.9999899,
+                    0.9999899,
+                    1.0
+                ]
+            }
+        },
+        "109": {
+            "name": "logo2",
+            "pipeline": "6",
+            "Flat": {
+                "flatTexture": "98"
+            }
+        },
+        "110": {
+            "name": "logo",
+            "pipeline": "6",
+            "Flat": {
+                "flatTexture": "98"
+            }
+        }
+    },
+    "shaders": {
+        "1": {
+            "link": {
+                "name": "DistanceFieldVector.frag",
+                "file": "default"
+            }
+        },
+        "3": {
+            "link": {
+                "name": "Dynamic.vert",
+                "file": "default"
+            }
+        },
+        "4": {
+            "link": {
+                "name": "Flat.frag",
+                "file": "default"
+            }
+        },
+        "7": {
+            "link": {
+                "name": "MeshVisualizer.frag",
+                "file": "default"
+            }
+        },
+        "9": {
+            "link": {
+                "name": "Static.frag",
+                "file": "default"
+            }
+        },
+        "10": {
+            "link": {
+                "name": "Phong.frag",
+                "file": "default"
+            }
+        },
+        "13": {
+            "link": {
+                "name": "Skinning.vert",
+                "file": "default"
+            }
+        },
+        "14": {
+            "link": {
+                "name": "Particle.frag",
+                "file": "default"
+            }
+        },
+        "22": {
+            "link": {
+                "name": "Depth.frag",
+                "file": "default"
+            }
+        },
+        "111": {
+            "link": {
+                "name": "TileFeedback.frag",
+                "file": "default"
+            }
+        },
+        "112": {
+            "link": {
+                "name": "Physical.frag",
+                "file": "default"
+            }
+        }
+    },
+    "animations": {},
+    "skins": {},
+    "pipelines": {
+        "2": {
+            "link": {
+                "name": "DistanceFieldVector",
+                "file": "default"
+            }
+        },
+        "5": {
+            "link": {
+                "name": "Flat Opaque",
+                "file": "default"
+            }
+        },
+        "6": {
+            "link": {
+                "name": "Flat Opaque Textured",
+                "file": "default"
+            },
+            "sampleAlphaToCoverage": true
+        },
+        "8": {
+            "link": {
+                "name": "MeshVisualizer",
+                "file": "default"
+            }
+        },
+        "11": {
+            "link": {
+                "name": "Phong Opaque",
+                "file": "default"
+            }
+        },
+        "12": {
+            "link": {
+                "name": "Phong Opaque Textured",
+                "file": "default"
+            }
+        },
+        "15": {
+            "link": {
+                "name": "Foliage",
+                "file": "default"
+            }
+        },
+        "16": {
+            "link": {
+                "name": "Particle",
+                "file": "default"
+            }
+        },
+        "23": {
+            "link": {
+                "name": "Depth",
+                "file": "default"
+            }
+        },
+        "113": {
+            "link": {
+                "name": "Physical Opaque",
+                "file": "default"
+            }
+        },
+        "114": {
+            "link": {
+                "name": "Physical Opaque Textured",
+                "file": "default"
+            }
+        }
+    },
+    "settings": {
+        "project": {
+            "name": "mindar-image-tracking",
+            "version": [
+                0,
+                8,
+                10
+            ],
+            "customIndexHtml": false,
+            "packageForStreaming": false
+        },
+        "vr": {
+            "enable": false
+        },
+        "scripting": {
+            "sourcePaths": [
+                "/js/editor-components-bundle.js",
+                "js"
+            ]
+        },
+        "editor": {
+            "serverCOEP": "unsafe-none"
+        },
+        "ar": {
+            "framework": "none"
+        },
+        "runtime": {
+            "visualizeColliders": false,
+            "visualizePhysX": false
+        },
+        "rendering": {
+            "clearColor": [
+                1.0,
+                0.9999961,
+                0.9999899,
+                1.0
+            ],
+            "textureAtlasSize": [
+                8192,
+                4096
+            ],
+            "compressedTextureAtlasSize": [
+                8192,
+                4096
+            ]
+        },
+        "physx": {
+            "enable": false
+        }
+    },
+    "files": [
+        "ICONS REMODELLED/ICONS REMODELLED/Linkedin2.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Youtube.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Web.png",
+        "ICONS REMODELLED/ICONS REMODELLED/mail2.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Call.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Location.png",
+        "ICONS REMODELLED/ICONS REMODELLED/Insta.png",
+        "immblend.png"
+    ]
+}

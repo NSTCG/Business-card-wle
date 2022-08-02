@@ -1,59 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
-    <script>
-      // fetch ID and Key from URL
-      if( window.location.search != ""){
-            try{
-            var ID=window.location.search.split("?")[1].split("&")[0].split("=")[1]
-            var key=window.location.search.split("?")[1].split("&")[1].split("=")[1]
-            console.log("your User ID = "+ID + "\n" + "Your User Key = " + key);
-            }
-            catch(err){
-                console.error("Could not detect id and key, check whether the syntax is correct eg : ?id=test&key=1234");
-                alert("Could not detect id and key, check whether the URL syntax is correct eg : ?id=test&key=1234");
-            }
-        }
-
-
-
-        var data_main;
-
-        //fetch("https://wlebusinesscard.netlify.app/json/Data.json")
-        //    .then(response => response.json())
-        //    .then(json => data_main = json);
-
-        fetch('https://wlebusinesscard.netlify.app/json/final.txt') 
-            .then(response => response.text())
-            .then(text =>data_load(text))
-            // outputs the content of the text file
-            
-        function data_load(text){
-            try{data_main = JSON.parse(CryptoJS.AES.decrypt(text , "Imblend" ).toString(CryptoJS.enc.Utf8) )}
-            catch(error){alert("Couldnt decrypt! check whether the URL syntax is correct eg : ?id=test&key=1234")}
-            
-            //console.log(data_main)
-            data=data_main[ID]
-            try{var Decypted= JSON.parse(CryptoJS.AES.decrypt(data , key ).toString(CryptoJS.enc.Utf8))}
-            catch(error){alert("Couldnt decrypt layer2! check whether the URL syntax is correct eg : ?id=test&key=1234")}
-            //console.log(Decypted) 
-            window.data=Decypted
-        }
-            
-
-    </script>
-    
-    
-    <link rel="preload" href="mindar-image-tracking-bundle.js?t=2022-06-08T00:36:16.924" as="script">
-    <title>mindar-image-tracking</title>
+    <link rel="preload" href="businessCard-bundle.js?t=2022-08-02T21:46:56.293" as="script">
+    <title>businessCard</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="white">
     
-
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.4/dist/mindar-image.prod.js"></script>
-
     <style>
     html {
         height: 100%;
@@ -73,10 +26,21 @@
     }
     #vr-button, #ar-button {
       float: left;
-      width: 100px;
+      width: 0px; /* Hidden until we know supported state */
       padding-left: 10px;
       padding-bottom: 25px;
       display: block;
+    }
+
+    /* Once supported state is known, show the button */
+    [data-supported] {
+      width: 100px !important;
+      transition: 0.5s;
+    }
+
+    /* If not supported, we dim out */
+    [data-supported='0'] {
+      opacity: 0.25;
     }
 
     .xr-button-label {
@@ -89,35 +53,44 @@
     </style>
     <script>
         var Module = {
-          scene: "mindar-image-tracking.bin",
+          scene: "businessCard.bin",
           webxr_framebuffer_scale_factor: 1.000
         };
     </script>
     
-    <script src="wonderland.min.js?t=2022-06-08T00:36:16.924"></script>
+    <script src="wonderland.min.js?t=2022-08-02T21:46:56.293"></script>
     <script type="module">
         import { simd, threads } from "./wasm-featuredetect.js";
 
         function loadRuntime(simd, threads) {
 
             let runtime = 'WonderlandRuntime' + (simd ? '-simd' : '') + (threads ? '-threads' : '')
+            Module.worker = runtime + ".worker.js";
 
-            const s = document.createElement('script');
-            document.body.appendChild(s);
-            const bundle = document.createElement('script');
-            bundle.id = 'bundle';
-            document.body.appendChild(bundle);
+            fetch(runtime + ".wasm")
+                .then(r => r.arrayBuffer())
+                .then(wasm => {
+                    Module.wasm = wasm;
 
-            /* We need to ensure the bundle is loaded after the runtime js always */
-            Module.preRun = function() {
-              addRunDependency('bundle');
-              bundle.onload = () => {
-                removeRunDependency('bundle');
-              };
-              bundle.src = "mindar-image-tracking-bundle.js?t=2022-06-08T00:36:16.924";
-            }
-            s.src = runtime + '.js';
+                    const s = document.createElement('script');
+                    /* We need to ensure the bundle is loaded after the runtime js always */
+                    s.onload = () => {
+                        const bundle = document.createElement('script');
+                        bundle.id = 'bundle';
+                        bundle.src = "businessCard-bundle.js?t=2022-08-02T21:46:56.293";
+                        document.body.appendChild(bundle);
+                    };
+                    s.src = runtime + '.js';
+
+                    document.body.appendChild(s);
+                })
+                .catch(console.error);
         }
+
+        WL.onXRSupported.push((type, supported) => {
+            const button = document.getElementById(type + '-button');
+            if(button) button.dataset.supported = supported;
+        })
 
         Promise.all([simd(), threads()]).then((support) => {
             const simdSupported = support[0];
