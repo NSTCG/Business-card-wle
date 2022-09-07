@@ -3,7 +3,7 @@ WL.registerComponent(
 	{
 		url: {
 			type: WL.Type.String,
-			default: "https://wlebusinesscard.netlify.app/json/final.txt",
+			default: "",
 		},
 	},
 	{
@@ -11,15 +11,17 @@ WL.registerComponent(
 			// fetch ID and Key from URL
 			if (window.location.search != "") {
 				try {
-					var ID = window.location.search
+					this.ID = window.location.search
 						.split("?")[1]
 						.split("&")[0]
 						.split("=")[1];
-					var key = window.location.search
+					this.key = window.location.search
 						.split("?")[1]
 						.split("&")[1]
 						.split("=")[1];
-					console.log("your User ID = " + ID + "\n" + "Your User Key = " + key);
+					console.log(
+						"your User ID = " + this.ID + "\n" + "Your User Key = " + this.key
+					);
 				} catch (err) {
 					console.error(
 						"Could not detect id and key, check whether the syntax is correct eg : ?id=test&key=1234"
@@ -29,29 +31,17 @@ WL.registerComponent(
 					);
 				}
 			}
-			var data_main;
+			this.data_main;
 
-			fetch(this.url)
+			fetch("url.txt")
 				.then((response) => response.text())
-				.then((text) => this.data_load(text, data_main, ID, key));
-			// outputs the content of the text file
+				.then((text) => this.load_src(text));
 		},
 		start: function () {
 			this.dataread = 0;
 		},
-		update: function () {
-			if (this.dataread == 0) {
-				try {
-					console.log("data loaded successfully" + data);
-				} catch (error) {
-					console.warn(
-						"Can't fetch data ! Ensure your URL contains valid ID and password variables "
-					);
-				}
+		update: function () {},
 
-				this.dataread = 1;
-			}
-		},
 		data_load: function (text, data_main, ID, key) {
 			console.log("Started loading data");
 
@@ -65,10 +55,10 @@ WL.registerComponent(
 					"Couldnt decrypt layer1! check whether the URL syntax is correct eg : ?id=test&key=1234"
 				);
 			}
-			data = data_main[ID];
+			this.data = data_main[ID];
 			try {
 				var Decypted = JSON.parse(
-					CryptoJS.AES.decrypt(data, key).toString(CryptoJS.enc.Utf8)
+					CryptoJS.AES.decrypt(this.data, key).toString(CryptoJS.enc.Utf8)
 				);
 				console.log("second layer decrypted successfully");
 			} catch (error) {
@@ -77,6 +67,16 @@ WL.registerComponent(
 				);
 			}
 			this.data = Decypted;
+		},
+
+		load_src: function (text) {
+			console.log("Started loading src");
+			this.url = text;
+			fetch(this.url)
+				.then((response) => response.text())
+				.then((text) =>
+					this.data_load(text, this.data_main, this.ID, this.key)
+				);
 		},
 	}
 );
