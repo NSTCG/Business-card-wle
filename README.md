@@ -61,24 +61,12 @@ Open Image-tracking/index.html in live server
 
 A. go to https://hiukim.github.io/mind-ar-js-doc/tools/compile 
 B. Compile company logo and download .mind file 
-C. Copy paste and replace that inside image-tracking/static
-D. Open .wlp and recompile 
-E. Deploy ( drag drop deploy folder)
+C. Copy paste and replace that inside "deploy" ( and "image-tracking/static" if you are using editor )
+D. Deploy ( drag drop deploy folder to hosting server)
 
 
 
 
 
-
-
-Wonderland bug ?
-
-Plain white screen after loading ?
-
-Try :
-
-View → resources → image → untick and tick compress for immblend.png
-Videopane → property → mesh → material → pipeline → change to Phong opaque textured then back to flat opaque textured 
-
-recompile and run to check , it will be fixed
-
+For Wonderland development.
+stable version of WLE nightly 28-07-2022 : https://drive.google.com/drive/folders/1y6_oXUP6Avj9JbA5c4V_HMJL8Os6ONTL?usp=sharing
