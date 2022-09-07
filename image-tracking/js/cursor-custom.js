@@ -307,8 +307,10 @@ WL.registerComponent(
 			s.addEventListener("select", onSelect);
 			const onSelectStart = this.onSelectStart.bind(this);
 			s.addEventListener("selectstart", onSelectStart);
+			s.addEventListener("touchstart", onSelectStart);
 			const onSelectEnd = this.onSelectEnd.bind(this);
 			s.addEventListener("selectend", onSelectEnd);
+			s.addEventListener("touchend", onSelectEnd);
 
 			this.onDestroyCallbacks.push(() => {
 				if (!this.session) return;
@@ -316,6 +318,8 @@ WL.registerComponent(
 				s.removeEventListener("select", onSelect);
 				s.removeEventListener("selectstart", onSelectStart);
 				s.removeEventListener("selectend", onSelectEnd);
+				s.removeEventListener("touchend", onSelectEnd);
+				s.removeEventListener("touchstart", onSelectStart);
 			});
 
 			/* After AR session was entered, the projection matrix changed */
