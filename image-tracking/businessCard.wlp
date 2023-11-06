@@ -1,0 +1,1077 @@
+{
+    "settings": {
+        "project": {
+            "name": "businessCard",
+            "version": [
+                1,
+                1,
+                2
+            ]
+        },
+        "vr": {
+            "enable": false
+        },
+        "rendering": {
+            "clearColor": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "compressedTextureAtlasSize": [
+                8192,
+                8192
+            ],
+            "textureAtlasSize": [
+                4096,
+                4096
+            ]
+        },
+        "scripting": {
+            "sourcePaths": [
+                "js"
+            ]
+        },
+        "runtime": {
+            "visualizeColliders": true,
+            "visualizeOverdraw": false,
+            "visualizePhysX": false
+        },
+        "physx": {
+            "enable": true
+        }
+    },
+    "files": {
+        "71": {
+            "fileName": "static/target0.png",
+            "importerName": ""
+        },
+        "74": {
+            "fileName": "ICONS REMODELLED/ICONS REMODELLED/Call.png",
+            "importerName": ""
+        },
+        "77": {
+            "fileName": "ICONS REMODELLED/ICONS REMODELLED/Web.png",
+            "importerName": ""
+        },
+        "80": {
+            "fileName": "ICONS REMODELLED/ICONS REMODELLED/mail2.png",
+            "importerName": ""
+        },
+        "83": {
+            "fileName": "ICONS REMODELLED/ICONS REMODELLED/Location.png",
+            "importerName": ""
+        },
+        "86": {
+            "fileName": "ICONS REMODELLED/ICONS REMODELLED/Linkedin2.png",
+            "importerName": ""
+        },
+        "89": {
+            "fileName": "ICONS REMODELLED/ICONS REMODELLED/Insta.png",
+            "importerName": ""
+        }
+    },
+    "images": {
+        "69": {
+            "link": {
+                "name": "target0.png",
+                "file": "static\\target0.png"
+            }
+        },
+        "72": {
+            "link": {
+                "name": "Call.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call.png"
+            }
+        },
+        "75": {
+            "link": {
+                "name": "Web.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Web.png"
+            }
+        },
+        "78": {
+            "link": {
+                "name": "mail2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
+            }
+        },
+        "81": {
+            "link": {
+                "name": "Location.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location.png"
+            }
+        },
+        "84": {
+            "link": {
+                "name": "Linkedin2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin2.png"
+            }
+        },
+        "87": {
+            "link": {
+                "name": "Insta.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Insta.png"
+            }
+        }
+    },
+    "shaders": {
+        "1": {
+            "link": {
+                "name": "Background.frag",
+                "file": "default"
+            }
+        },
+        "2": {
+            "link": {
+                "name": "lib\\Color.glsl",
+                "file": "default"
+            }
+        },
+        "3": {
+            "link": {
+                "name": "lib\\Compatibility.frag",
+                "file": "default"
+            }
+        },
+        "4": {
+            "link": {
+                "name": "lib\\CoordinateSystems.glsl",
+                "file": "default"
+            }
+        },
+        "5": {
+            "link": {
+                "name": "Depth.frag",
+                "file": "default"
+            }
+        },
+        "7": {
+            "link": {
+                "name": "DistanceFieldVector.frag",
+                "file": "default"
+            }
+        },
+        "9": {
+            "link": {
+                "name": "Dynamic.vert",
+                "file": "default"
+            }
+        },
+        "10": {
+            "link": {
+                "name": "Flat.frag",
+                "file": "default"
+            }
+        },
+        "13": {
+            "link": {
+                "name": "FullScreenTriangle.vert",
+                "file": "default"
+            }
+        },
+        "14": {
+            "link": {
+                "name": "lib\\GI.frag",
+                "file": "default"
+            }
+        },
+        "15": {
+            "link": {
+                "name": "lib\\Inputs.frag",
+                "file": "default"
+            }
+        },
+        "16": {
+            "link": {
+                "name": "lib\\Lights.frag",
+                "file": "default"
+            }
+        },
+        "17": {
+            "link": {
+                "name": "lib\\Materials.frag",
+                "file": "default"
+            }
+        },
+        "18": {
+            "link": {
+                "name": "lib\\Math.glsl",
+                "file": "default"
+            }
+        },
+        "19": {
+            "link": {
+                "name": "MeshVisualizer.frag",
+                "file": "default"
+            }
+        },
+        "21": {
+            "link": {
+                "name": "lib\\Packing.frag",
+                "file": "default"
+            }
+        },
+        "22": {
+            "link": {
+                "name": "Phong.frag",
+                "file": "default"
+            }
+        },
+        "25": {
+            "link": {
+                "name": "Physical.frag",
+                "file": "default"
+            }
+        },
+        "28": {
+            "link": {
+                "name": "lib\\Quaternion.glsl",
+                "file": "default"
+            }
+        },
+        "29": {
+            "link": {
+                "name": "Skinning.vert",
+                "file": "default"
+            }
+        },
+        "30": {
+            "link": {
+                "name": "Sky.frag",
+                "file": "default"
+            }
+        },
+        "31": {
+            "link": {
+                "name": "lib\\Slug.frag",
+                "file": "default"
+            }
+        },
+        "32": {
+            "link": {
+                "name": "lib\\Slug.vert",
+                "file": "default"
+            }
+        },
+        "33": {
+            "link": {
+                "name": "lib\\Surface.frag",
+                "file": "default"
+            }
+        },
+        "34": {
+            "link": {
+                "name": "Text.frag",
+                "file": "default"
+            }
+        },
+        "36": {
+            "link": {
+                "name": "Text.vert",
+                "file": "default"
+            }
+        },
+        "37": {
+            "link": {
+                "name": "lib\\Textures.frag",
+                "file": "default"
+            }
+        },
+        "38": {
+            "link": {
+                "name": "TileFeedback.frag",
+                "file": "default"
+            }
+        },
+        "40": {
+            "link": {
+                "name": "lib\\Uniforms.glsl",
+                "file": "default"
+            }
+        },
+        "41": {
+            "link": {
+                "name": "Particle.frag",
+                "file": "default"
+            }
+        }
+    },
+    "meshes": {
+        "p0": {
+            "link": {
+                "name": "PrimitivePlane",
+                "file": "default"
+            }
+        },
+        "p1": {
+            "link": {
+                "name": "PrimitiveCube",
+                "file": "default"
+            }
+        },
+        "p2": {
+            "link": {
+                "name": "PrimitiveSphere",
+                "file": "default"
+            }
+        },
+        "p3": {
+            "link": {
+                "name": "PrimitiveCone",
+                "file": "default"
+            }
+        },
+        "p4": {
+            "link": {
+                "name": "PrimitiveCylinder",
+                "file": "default"
+            }
+        },
+        "p5": {
+            "link": {
+                "name": "PrimitiveCircle",
+                "file": "default"
+            }
+        }
+    },
+    "textures": {
+        "70": {
+            "link": {
+                "name": "target0.png",
+                "file": "static\\target0.png"
+            }
+        },
+        "73": {
+            "link": {
+                "name": "Call.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call.png"
+            }
+        },
+        "76": {
+            "link": {
+                "name": "Web.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Web.png"
+            }
+        },
+        "79": {
+            "link": {
+                "name": "mail2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
+            }
+        },
+        "82": {
+            "link": {
+                "name": "Location.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location.png"
+            }
+        },
+        "85": {
+            "link": {
+                "name": "Linkedin2.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin2.png"
+            }
+        },
+        "88": {
+            "link": {
+                "name": "Insta.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Insta.png"
+            }
+        }
+    },
+    "materials": {
+        "DefaultFontMaterial": {
+            "link": {
+                "name": "DefaultFontMaterial",
+                "file": "default"
+            }
+        },
+        "59": {
+            "name": "cursor-custom",
+            "Phong": {
+                "ambientColor": [
+                    1.0,
+                    0.3004484,
+                    0.3004484,
+                    1.0
+                ]
+            }
+        },
+        "60": {
+            "name": "logo",
+            "pipeline": "91",
+            "Flat": {
+                "flatTexture": "70",
+                "alphaMaskThreshold": 0.0
+            }
+        },
+        "61": {
+            "name": "call",
+            "pipeline": "91",
+            "Flat": {
+                "flatTexture": "73",
+                "color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "alphaMaskThreshold": 0.1
+            }
+        },
+        "62": {
+            "name": "website",
+            "pipeline": "91",
+            "Flat": {
+                "flatTexture": "76"
+            }
+        },
+        "63": {
+            "name": "mail",
+            "pipeline": "91",
+            "Flat": {
+                "flatTexture": "79"
+            }
+        },
+        "64": {
+            "name": "location",
+            "pipeline": "91",
+            "Flat": {
+                "flatTexture": "82"
+            }
+        },
+        "65": {
+            "name": "linkedin",
+            "pipeline": "91",
+            "Flat": {
+                "flatTexture": "85"
+            }
+        },
+        "66": {
+            "name": "youtube",
+            "pipeline": "91"
+        },
+        "67": {
+            "name": "instagram",
+            "pipeline": "91",
+            "Flat": {
+                "flatTexture": "88"
+            }
+        },
+        "68": {
+            "name": "VideoMaterial",
+            "pipeline": "12",
+            "Flat": {
+                "flatTexture": "70"
+            }
+        }
+    },
+    "objects": {
+        "48": {
+            "name": "ARCamera",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "image-tracking",
+                    "image-tracking": {
+                        "videoPane": "58",
+                        "mindPath": "./targets.mind"
+                    }
+                },
+                {
+                    "type": "cursor-custom",
+                    "cursor-custom": {
+                        "maxDistance": 100.0,
+                        "collisionGroup": 0,
+                        "handedness": "none"
+                    }
+                }
+            ],
+            "parent": null
+        },
+        "49": {
+            "name": "TrackingTarget",
+            "parent": "48",
+            "components": [
+                {
+                    "type": "image-tracking-collision-target",
+                    "image-tracking-collision-target": {
+                        "arCamera": "48"
+                    }
+                }
+            ]
+        },
+        "50": {
+            "name": "Pivot",
+            "parent": "49"
+        },
+        "51": {
+            "name": "call",
+            "parent": "50",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "61"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "sphere",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.1
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "51",
+                        "hoverMaterial": "DefaultFontMaterial",
+                        "DataFetch": "57"
+                    }
+                }
+            ],
+            "translation": [
+                1.0,
+                -0.6,
+                0.0833569
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "52": {
+            "name": "website",
+            "parent": "50",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "62"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "sphere",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.1
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "52",
+                        "hoverMaterial": "DefaultFontMaterial",
+                        "DataFetch": "57"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "53": {
+            "name": "mail",
+            "parent": "50",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "63"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "sphere",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.1
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "53",
+                        "hoverMaterial": "DefaultFontMaterial",
+                        "DataFetch": "57"
+                    }
+                }
+            ],
+            "translation": [
+                -1.0,
+                -0.6,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "54": {
+            "name": "location",
+            "parent": "50",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "64"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "sphere",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.1
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "54",
+                        "hoverMaterial": "DefaultFontMaterial",
+                        "DataFetch": "57"
+                    }
+                }
+            ],
+            "translation": [
+                -1.0,
+                0.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "55": {
+            "name": "linkedIn",
+            "parent": "50",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "65"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "sphere",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.1
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "55",
+                        "hoverMaterial": "DefaultFontMaterial",
+                        "DataFetch": "57"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.9999921,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "56": {
+            "name": "instagram",
+            "parent": "50",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "67"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "sphere",
+                        "aabb": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.4
+                            ]
+                        },
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.4,
+                                0.1
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.5
+                        }
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "56",
+                        "hoverMaterial": "DefaultFontMaterial",
+                        "DataFetch": "57"
+                    }
+                }
+            ],
+            "translation": [
+                1.0,
+                0.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "57": {
+            "name": "DataFetch",
+            "parent": "50",
+            "components": [
+                {
+                    "type": "data-api",
+                    "active": true
+                }
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "58": {
+            "name": "VideoPlane",
+            "parent": null,
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "68"
+                    },
+                    "active": true
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "translation": [
+                -0.4384217,
+                -0.0000683,
+                -7.044672
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "90": {
+            "name": "AudioListener",
+            "components": [
+                {
+                    "type": "howler-audio-source"
+                },
+                {
+                    "type": "howler-audio-listener"
+                }
+            ]
+        }
+    },
+    "animations": {},
+    "skins": {},
+    "pipelines": {
+        "6": {
+            "link": {
+                "name": "Depth",
+                "file": "default"
+            }
+        },
+        "8": {
+            "link": {
+                "name": "DistanceFieldVector",
+                "file": "default"
+            }
+        },
+        "11": {
+            "link": {
+                "name": "Flat Opaque",
+                "file": "default"
+            }
+        },
+        "12": {
+            "link": {
+                "name": "Flat Opaque Textured",
+                "file": "default"
+            },
+            "features": {
+                "ALPHA_MASKED": false
+            },
+            "name": "Flat Opaque Textured"
+        },
+        "20": {
+            "link": {
+                "name": "MeshVisualizer",
+                "file": "default"
+            }
+        },
+        "23": {
+            "link": {
+                "name": "Phong Opaque",
+                "file": "default"
+            }
+        },
+        "24": {
+            "link": {
+                "name": "Phong Opaque Textured",
+                "file": "default"
+            }
+        },
+        "26": {
+            "link": {
+                "name": "Physical Opaque",
+                "file": "default"
+            }
+        },
+        "27": {
+            "link": {
+                "name": "Physical Opaque Textured",
+                "file": "default"
+            }
+        },
+        "35": {
+            "link": {
+                "name": "Text",
+                "file": "default"
+            }
+        },
+        "39": {
+            "link": {
+                "name": "TileFeedback",
+                "file": "default"
+            }
+        },
+        "42": {
+            "link": {
+                "name": "Phong Normalmapped",
+                "file": "default"
+            }
+        },
+        "43": {
+            "link": {
+                "name": "Phong Lightmapped",
+                "file": "default"
+            }
+        },
+        "44": {
+            "link": {
+                "name": "Foliage",
+                "file": "default"
+            }
+        },
+        "45": {
+            "link": {
+                "name": "Particle",
+                "file": "default"
+            }
+        },
+        "46": {
+            "link": {
+                "name": "Sky",
+                "file": "default"
+            }
+        },
+        "91": {
+            "link": {
+                "name": "Flat Opaque Textured",
+                "file": "default"
+            },
+            "features": {
+                "ALPHA_MASKED": true
+            },
+            "name": "Flat Opaque Textured Masked"
+        }
+    },
+    "fonts": {
+        "47": {
+            "link": {
+                "name": "DejaVuSans.ttf",
+                "file": "default"
+            }
+        }
+    },
+    "languages": {}
+}
