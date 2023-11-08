@@ -25,7 +25,11 @@
             "textureAtlasSize": [
                 4096,
                 4096
-            ]
+            ],
+            "sky": {
+                "enabled": true,
+                "material": "68"
+            }
         },
         "scripting": {
             "sourcePaths": [
@@ -76,7 +80,8 @@
             "link": {
                 "name": "target0.png",
                 "file": "static\\target0.png"
-            }
+            },
+            "compression": "none"
         },
         "72": {
             "link": {
@@ -460,9 +465,12 @@
         },
         "68": {
             "name": "VideoMaterial",
-            "pipeline": "12",
+            "pipeline": "46",
             "Flat": {
                 "flatTexture": "70"
+            },
+            "Background": {
+                "texture": "70"
             }
         }
     },
@@ -471,22 +479,29 @@
             "name": "ARCamera",
             "components": [
                 {
-                    "type": "view"
+                    "type": "view",
+                    "view": {
+                        "far": 100.0
+                    }
                 },
                 {
                     "type": "image-tracking",
                     "image-tracking": {
-                        "videoPane": "58",
-                        "mindPath": "./targets.mind"
-                    }
+                        "videoPane": null,
+                        "mindPath": "./targets.mind",
+                        "warmupTolerance": 5
+                    },
+                    "active": true
                 },
                 {
                     "type": "cursor-custom",
                     "cursor-custom": {
-                        "maxDistance": 100.0,
+                        "maxDistance": 0.0,
                         "collisionGroup": 0,
-                        "handedness": "none"
-                    }
+                        "handedness": "none",
+                        "ding": "92"
+                    },
+                    "active": true
                 }
             ],
             "parent": null
@@ -900,45 +915,6 @@
                 0.5
             ]
         },
-        "58": {
-            "name": "VideoPlane",
-            "parent": null,
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p0",
-                        "material": "68"
-                    },
-                    "active": true
-                },
-                {
-                    "type": "collision",
-                    "collision": {
-                        "collider": "box"
-                    }
-                },
-                {
-                    "type": "cursor-target"
-                }
-            ],
-            "translation": [
-                -0.4384217,
-                -0.0000683,
-                -7.044672
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
         "90": {
             "name": "AudioListener",
             "components": [
@@ -948,6 +924,35 @@
                 {
                     "type": "howler-audio-listener"
                 }
+            ]
+        },
+        "92": {
+            "name": "Mesh",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "59"
+                    }
+                }
+            ],
+            "scaling": [
+                0.0099999,
+                0.0099999,
+                0.0099999
+            ],
+            "parent": "48",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ]
         }
     },
@@ -1052,6 +1057,10 @@
             "link": {
                 "name": "Sky",
                 "file": "default"
+            },
+            "shader": "1",
+            "features": {
+                "GRADIENT": false
             }
         },
         "91": {
