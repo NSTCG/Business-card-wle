@@ -86387,6 +86387,20 @@ __publicField(CursorCustom, "TypeName", "cursor-custom");
 /* Properties that are configurable in the editor */
 __publicField(CursorCustom, "InheritProperties", true);
 
+// js/set-collision.js
+var SetCollision = class extends Component {
+  update(dt) {
+    if (this.object.getScalingWorld([])[0] === 0) {
+      this.object.getComponent(CollisionComponent).active = false;
+    } else {
+      this.object.getComponent(CollisionComponent).active = true;
+    }
+  }
+};
+__publicField(SetCollision, "TypeName", "set-collision");
+/* Properties that are configurable in the editor */
+__publicField(SetCollision, "Properties", {});
+
 // js/index.js
 var RuntimeOptions = {
   physx: true,
@@ -86436,6 +86450,7 @@ engine2.registerComponent(ImageTrackingTarget);
 engine2.registerComponent(ButtonComponent);
 engine2.registerComponent(CursorCustom);
 engine2.registerComponent(DataApi);
+engine2.registerComponent(SetCollision);
 engine2.scene.load(`${Constants.ProjectName}.bin`).catch((e) => {
   console.error(e);
   window.alert(`Failed to load ${Constants.ProjectName}.bin:`, e);
