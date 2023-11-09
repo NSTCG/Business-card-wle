@@ -596,6 +596,9 @@
                         "hoverMaterial": "DefaultFontMaterial",
                         "DataFetch": "57"
                     }
+                },
+                {
+                    "type": "set-collision"
                 }
             ],
             "translation": [
@@ -659,6 +662,9 @@
                         "hoverMaterial": "DefaultFontMaterial",
                         "DataFetch": "57"
                     }
+                },
+                {
+                    "type": "set-collision"
                 }
             ],
             "translation": [
@@ -722,6 +728,9 @@
                         "hoverMaterial": "DefaultFontMaterial",
                         "DataFetch": "57"
                     }
+                },
+                {
+                    "type": "set-collision"
                 }
             ],
             "translation": [
@@ -785,6 +794,9 @@
                         "hoverMaterial": "DefaultFontMaterial",
                         "DataFetch": "57"
                     }
+                },
+                {
+                    "type": "set-collision"
                 }
             ],
             "translation": [
@@ -848,6 +860,9 @@
                         "hoverMaterial": "DefaultFontMaterial",
                         "DataFetch": "57"
                     }
+                },
+                {
+                    "type": "set-collision"
                 }
             ],
             "translation": [
@@ -911,6 +926,9 @@
                         "hoverMaterial": "DefaultFontMaterial",
                         "DataFetch": "57"
                     }
+                },
+                {
+                    "type": "set-collision"
                 }
             ],
             "translation": [

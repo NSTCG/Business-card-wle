@@ -20,6 +20,7 @@ import {ImageTrackingTarget} from '@wonderlandengine/mind-ar-tracking';
 import {ButtonComponent} from './button.js';
 import {CursorCustom} from './cursor-custom.js';
 import {DataApi} from './data-api.js';
+import {SetCollision} from './set-collision.js';
 /* wle:auto-imports:end */
 
 import {loadRuntime} from '@wonderlandengine/api';
@@ -86,6 +87,7 @@ engine.registerComponent(ImageTrackingTarget);
 engine.registerComponent(ButtonComponent);
 engine.registerComponent(CursorCustom);
 engine.registerComponent(DataApi);
+engine.registerComponent(SetCollision);
 /* wle:auto-register:end */
 
 engine.scene.load(`${Constants.ProjectName}.bin`).catch((e) => {
