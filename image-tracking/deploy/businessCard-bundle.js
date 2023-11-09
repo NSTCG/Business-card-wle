@@ -57,9 +57,9 @@ var __privateMethod = (obj, member, method) => {
   return method;
 };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/howler/dist/howler.js
+// node_modules/howler/dist/howler.js
 var require_howler = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/howler/dist/howler.js"(exports) {
+  "node_modules/howler/dist/howler.js"(exports) {
     (function() {
       "use strict";
       var HowlerGlobal2 = function() {
@@ -2269,9 +2269,9 @@ var require_howler = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/earcut/src/earcut.js
+// node_modules/earcut/src/earcut.js
 var require_earcut = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/earcut/src/earcut.js"(exports, module) {
+  "node_modules/earcut/src/earcut.js"(exports, module) {
     "use strict";
     module.exports = earcut2;
     module.exports.default = earcut2;
@@ -2741,9 +2741,9 @@ var require_crypto2 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/core.js
+// node_modules/crypto-js/core.js
 var require_core = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/core.js"(exports, module) {
+  "node_modules/crypto-js/core.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory();
@@ -3349,9 +3349,9 @@ var require_core = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/x64-core.js
+// node_modules/crypto-js/x64-core.js
 var require_x64_core = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/x64-core.js"(exports, module) {
+  "node_modules/crypto-js/x64-core.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -3606,9 +3606,9 @@ var require_x64_core = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/lib-typedarrays.js
+// node_modules/crypto-js/lib-typedarrays.js
 var require_lib_typedarrays = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/lib-typedarrays.js"(exports, module) {
+  "node_modules/crypto-js/lib-typedarrays.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -3651,9 +3651,9 @@ var require_lib_typedarrays = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/enc-utf16.js
+// node_modules/crypto-js/enc-utf16.js
 var require_enc_utf16 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/enc-utf16.js"(exports, module) {
+  "node_modules/crypto-js/enc-utf16.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -3769,9 +3769,9 @@ var require_enc_utf16 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/enc-base64.js
+// node_modules/crypto-js/enc-base64.js
 var require_enc_base64 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/enc-base64.js"(exports, module) {
+  "node_modules/crypto-js/enc-base64.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -3877,9 +3877,9 @@ var require_enc_base64 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/enc-base64url.js
+// node_modules/crypto-js/enc-base64url.js
 var require_enc_base64url = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/enc-base64url.js"(exports, module) {
+  "node_modules/crypto-js/enc-base64url.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -3996,9 +3996,9 @@ var require_enc_base64url = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/md5.js
+// node_modules/crypto-js/md5.js
 var require_md5 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/md5.js"(exports, module) {
+  "node_modules/crypto-js/md5.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -4175,9 +4175,9 @@ var require_md5 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha1.js
+// node_modules/crypto-js/sha1.js
 var require_sha1 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha1.js"(exports, module) {
+  "node_modules/crypto-js/sha1.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -4266,9 +4266,9 @@ var require_sha1 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha256.js
+// node_modules/crypto-js/sha256.js
 var require_sha256 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha256.js"(exports, module) {
+  "node_modules/crypto-js/sha256.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -4387,9 +4387,9 @@ var require_sha256 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha224.js
+// node_modules/crypto-js/sha224.js
 var require_sha224 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha224.js"(exports, module) {
+  "node_modules/crypto-js/sha224.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_sha256());
@@ -4432,9 +4432,9 @@ var require_sha224 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha512.js
+// node_modules/crypto-js/sha512.js
 var require_sha512 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha512.js"(exports, module) {
+  "node_modules/crypto-js/sha512.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_x64_core());
@@ -4714,9 +4714,9 @@ var require_sha512 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha384.js
+// node_modules/crypto-js/sha384.js
 var require_sha384 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha384.js"(exports, module) {
+  "node_modules/crypto-js/sha384.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_x64_core(), require_sha512());
@@ -4760,9 +4760,9 @@ var require_sha384 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha3.js
+// node_modules/crypto-js/sha3.js
 var require_sha3 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/sha3.js"(exports, module) {
+  "node_modules/crypto-js/sha3.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_x64_core());
@@ -4962,9 +4962,9 @@ var require_sha3 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/ripemd160.js
+// node_modules/crypto-js/ripemd160.js
 var require_ripemd160 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/ripemd160.js"(exports, module) {
+  "node_modules/crypto-js/ripemd160.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -5433,9 +5433,9 @@ var require_ripemd160 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/hmac.js
+// node_modules/crypto-js/hmac.js
 var require_hmac = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/hmac.js"(exports, module) {
+  "node_modules/crypto-js/hmac.js"(exports, module) {
     (function(root, factory) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core());
@@ -5540,9 +5540,9 @@ var require_hmac = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pbkdf2.js
+// node_modules/crypto-js/pbkdf2.js
 var require_pbkdf2 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pbkdf2.js"(exports, module) {
+  "node_modules/crypto-js/pbkdf2.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_sha256(), require_hmac());
@@ -5638,9 +5638,9 @@ var require_pbkdf2 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/evpkdf.js
+// node_modules/crypto-js/evpkdf.js
 var require_evpkdf = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/evpkdf.js"(exports, module) {
+  "node_modules/crypto-js/evpkdf.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_sha1(), require_hmac());
@@ -5729,9 +5729,9 @@ var require_evpkdf = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/cipher-core.js
+// node_modules/crypto-js/cipher-core.js
 var require_cipher_core = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/cipher-core.js"(exports, module) {
+  "node_modules/crypto-js/cipher-core.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_evpkdf());
@@ -6373,9 +6373,9 @@ var require_cipher_core = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-cfb.js
+// node_modules/crypto-js/mode-cfb.js
 var require_mode_cfb = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-cfb.js"(exports, module) {
+  "node_modules/crypto-js/mode-cfb.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6425,9 +6425,9 @@ var require_mode_cfb = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-ctr.js
+// node_modules/crypto-js/mode-ctr.js
 var require_mode_ctr = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-ctr.js"(exports, module) {
+  "node_modules/crypto-js/mode-ctr.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6465,9 +6465,9 @@ var require_mode_ctr = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-ctr-gladman.js
+// node_modules/crypto-js/mode-ctr-gladman.js
 var require_mode_ctr_gladman = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-ctr-gladman.js"(exports, module) {
+  "node_modules/crypto-js/mode-ctr-gladman.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6540,9 +6540,9 @@ var require_mode_ctr_gladman = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-ofb.js
+// node_modules/crypto-js/mode-ofb.js
 var require_mode_ofb = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-ofb.js"(exports, module) {
+  "node_modules/crypto-js/mode-ofb.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6578,9 +6578,9 @@ var require_mode_ofb = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-ecb.js
+// node_modules/crypto-js/mode-ecb.js
 var require_mode_ecb = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/mode-ecb.js"(exports, module) {
+  "node_modules/crypto-js/mode-ecb.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6609,9 +6609,9 @@ var require_mode_ecb = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-ansix923.js
+// node_modules/crypto-js/pad-ansix923.js
 var require_pad_ansix923 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-ansix923.js"(exports, module) {
+  "node_modules/crypto-js/pad-ansix923.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6641,9 +6641,9 @@ var require_pad_ansix923 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-iso10126.js
+// node_modules/crypto-js/pad-iso10126.js
 var require_pad_iso10126 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-iso10126.js"(exports, module) {
+  "node_modules/crypto-js/pad-iso10126.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6669,9 +6669,9 @@ var require_pad_iso10126 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-iso97971.js
+// node_modules/crypto-js/pad-iso97971.js
 var require_pad_iso97971 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-iso97971.js"(exports, module) {
+  "node_modules/crypto-js/pad-iso97971.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6696,9 +6696,9 @@ var require_pad_iso97971 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-zeropadding.js
+// node_modules/crypto-js/pad-zeropadding.js
 var require_pad_zeropadding = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-zeropadding.js"(exports, module) {
+  "node_modules/crypto-js/pad-zeropadding.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6730,9 +6730,9 @@ var require_pad_zeropadding = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-nopadding.js
+// node_modules/crypto-js/pad-nopadding.js
 var require_pad_nopadding = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/pad-nopadding.js"(exports, module) {
+  "node_modules/crypto-js/pad-nopadding.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6753,9 +6753,9 @@ var require_pad_nopadding = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/format-hex.js
+// node_modules/crypto-js/format-hex.js
 var require_format_hex = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/format-hex.js"(exports, module) {
+  "node_modules/crypto-js/format-hex.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_cipher_core());
@@ -6813,9 +6813,9 @@ var require_format_hex = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/aes.js
+// node_modules/crypto-js/aes.js
 var require_aes = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/aes.js"(exports, module) {
+  "node_modules/crypto-js/aes.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_enc_base64(), require_md5(), require_evpkdf(), require_cipher_core());
@@ -6967,9 +6967,9 @@ var require_aes = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/tripledes.js
+// node_modules/crypto-js/tripledes.js
 var require_tripledes = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/tripledes.js"(exports, module) {
+  "node_modules/crypto-js/tripledes.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_enc_base64(), require_md5(), require_evpkdf(), require_cipher_core());
@@ -7748,9 +7748,9 @@ var require_tripledes = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/rc4.js
+// node_modules/crypto-js/rc4.js
 var require_rc4 = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/rc4.js"(exports, module) {
+  "node_modules/crypto-js/rc4.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_enc_base64(), require_md5(), require_evpkdf(), require_cipher_core());
@@ -7831,9 +7831,9 @@ var require_rc4 = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/rabbit.js
+// node_modules/crypto-js/rabbit.js
 var require_rabbit = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/rabbit.js"(exports, module) {
+  "node_modules/crypto-js/rabbit.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_enc_base64(), require_md5(), require_evpkdf(), require_cipher_core());
@@ -7960,9 +7960,9 @@ var require_rabbit = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/rabbit-legacy.js
+// node_modules/crypto-js/rabbit-legacy.js
 var require_rabbit_legacy = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/rabbit-legacy.js"(exports, module) {
+  "node_modules/crypto-js/rabbit-legacy.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_enc_base64(), require_md5(), require_evpkdf(), require_cipher_core());
@@ -8086,9 +8086,9 @@ var require_rabbit_legacy = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/blowfish.js
+// node_modules/crypto-js/blowfish.js
 var require_blowfish = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/blowfish.js"(exports, module) {
+  "node_modules/crypto-js/blowfish.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_enc_base64(), require_md5(), require_evpkdf(), require_cipher_core());
@@ -9275,9 +9275,9 @@ var require_blowfish = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/index.js
+// node_modules/crypto-js/index.js
 var require_crypto_js = __commonJS({
-  "D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/crypto-js/index.js"(exports, module) {
+  "node_modules/crypto-js/index.js"(exports, module) {
     (function(root, factory, undef) {
       if (typeof exports === "object") {
         module.exports = exports = factory(require_core(), require_x64_core(), require_lib_typedarrays(), require_enc_utf16(), require_enc_base64(), require_enc_base64url(), require_md5(), require_sha1(), require_sha256(), require_sha224(), require_sha512(), require_sha384(), require_sha3(), require_ripemd160(), require_hmac(), require_pbkdf2(), require_evpkdf(), require_cipher_core(), require_mode_cfb(), require_mode_ctr(), require_mode_ctr_gladman(), require_mode_ofb(), require_mode_ecb(), require_pad_ansix923(), require_pad_iso10126(), require_pad_iso97971(), require_pad_zeropadding(), require_pad_nopadding(), require_format_hex(), require_aes(), require_tripledes(), require_rc4(), require_rabbit(), require_rabbit_legacy(), require_blowfish());
@@ -9292,7 +9292,7 @@ var require_crypto_js = __commonJS({
   }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/index.js
+// node_modules/@wonderlandengine/api/dist/index.js
 var dist_exports = {};
 __export(dist_exports, {
   APIVersion: () => APIVersion,
@@ -9350,7 +9350,7 @@ __export(dist_exports, {
   math: () => math
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/wasm-feature-detect/dist/esm/index.js
+// node_modules/wasm-feature-detect/dist/esm/index.js
 var simd = async () => WebAssembly.validate(new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 5, 1, 96, 0, 1, 123, 3, 2, 1, 0, 10, 10, 1, 8, 0, 65, 0, 253, 15, 253, 98, 11]));
 var threads = () => (async (e) => {
   try {
@@ -9360,7 +9360,7 @@ var threads = () => (async (e) => {
   }
 })(new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 4, 1, 96, 0, 0, 3, 2, 1, 0, 5, 4, 1, 3, 1, 1, 10, 11, 1, 9, 0, 65, 0, 254, 16, 2, 0, 26, 11]));
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/property.js
+// node_modules/@wonderlandengine/api/dist/property.js
 var Type;
 (function(Type2) {
   Type2[Type2["Native"] = 1] = "Native";
@@ -9457,7 +9457,7 @@ var Property = {
   }
 };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/decorators.js
+// node_modules/@wonderlandengine/api/dist/decorators.js
 function propertyDecorator(data) {
   return function(target, propertyKey) {
     const ctor = target.constructor;
@@ -9484,7 +9484,7 @@ for (const name in Property) {
   };
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/utils/object.js
+// node_modules/@wonderlandengine/api/dist/utils/object.js
 function isString(value) {
   if (value === "")
     return true;
@@ -9496,7 +9496,7 @@ function isNumber(value) {
   return typeof value === "number" || value.constructor === Number;
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/utils/event.js
+// node_modules/@wonderlandengine/api/dist/utils/event.js
 var Emitter = class {
   /**
    * List of listeners to trigger when `notify` is called.
@@ -9785,7 +9785,7 @@ var RetainEmitter = class extends Emitter {
   }
 };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/wonderland.js
+// node_modules/@wonderlandengine/api/dist/wonderland.js
 var __decorate = function(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
   if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
@@ -14045,7 +14045,7 @@ var XR = class {
   }
 };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/utils/fetch.js
+// node_modules/@wonderlandengine/api/dist/utils/fetch.js
 function fetchWithProgress(path, onProgress) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -14073,7 +14073,7 @@ function getBaseUrl(url) {
   return url.substring(0, url.lastIndexOf("/"));
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/utils/misc.js
+// node_modules/@wonderlandengine/api/dist/utils/misc.js
 function timeout(time) {
   return new Promise((res) => setTimeout(res, time));
 }
@@ -14081,7 +14081,7 @@ function clamp(val, min5, max5) {
   return Math.max(Math.min(max5, val), min5);
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/scene.js
+// node_modules/@wonderlandengine/api/dist/scene.js
 var MAGIC_BIN = "WLEV";
 var Scene = class {
   /** Called before rendering the scene */
@@ -14512,7 +14512,7 @@ var Scene = class {
   }
 };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/texture-manager.js
+// node_modules/@wonderlandengine/api/dist/texture-manager.js
 var TextureManager = class {
   /** Wonderland Engine instance. @hidden */
   _engine;
@@ -14627,7 +14627,7 @@ var TextureManager = class {
   }
 };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/engine.js
+// node_modules/@wonderlandengine/api/dist/engine.js
 var WonderlandEngine = class {
   /**
    * {@link Emitter} for WebXR session end events.
@@ -15179,7 +15179,7 @@ var WonderlandEngine = class {
   }
 };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/wasm.js
+// node_modules/@wonderlandengine/api/dist/wasm.js
 var _componentDefaults = /* @__PURE__ */ new Map([
   [Type.Bool, false],
   [Type.Int, 0],
@@ -15784,7 +15784,7 @@ WASM.prototype._wl_physx_component_get_offsetTransform = requireRuntime1_1_1;
 WASM.prototype._wl_physx_component_set_offsetRotation = requireRuntime1_1_1;
 WASM.prototype._wl_object_clone = requireRuntime1_1_1;
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/version.js
+// node_modules/@wonderlandengine/api/dist/version.js
 var APIVersion = {
   major: 1,
   minor: 1,
@@ -15792,7 +15792,7 @@ var APIVersion = {
   rc: 0
 };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/api/dist/index.js
+// node_modules/@wonderlandengine/api/dist/index.js
 var LOADING_SCREEN_PATH = "WonderlandRuntime-LoadingScreen.bin";
 function loadScript(scriptURL) {
   return new Promise((res, rej) => {
@@ -15921,7 +15921,7 @@ async function loadRuntime(runtime, options = {}) {
   return engine3;
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/8thwall-camera.js
+// node_modules/@wonderlandengine/components/dist/8thwall-camera.js
 var ARCamera8thwall = class extends Component {
   /* 8thwall camera pipeline module name */
   name = "wonderland-engine-8thwall-camera";
@@ -16240,7 +16240,7 @@ var runtimeErrorOverlay = `
   <button class="wall-error-overlay_button" onclick="window.location.reload()">Reload</button>
 </div>`;
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/utils/webxr.js
+// node_modules/@wonderlandengine/components/dist/utils/webxr.js
 var tempVec = new Float32Array(3);
 var tempQuat = new Float32Array(4);
 function setXRRigidTransformLocal(o, transform4) {
@@ -16258,7 +16258,7 @@ function setXRRigidTransformLocal(o, transform4) {
   o.translate(tempVec);
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/anchor.js
+// node_modules/@wonderlandengine/components/dist/anchor.js
 var __decorate2 = function(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
   if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
@@ -16427,7 +16427,7 @@ __decorate2([
   property.string()
 ], Anchor.prototype, "uuid", void 0);
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/cursor-target.js
+// node_modules/@wonderlandengine/components/dist/cursor-target.js
 var CursorTarget = class extends Component {
   /** Emitter for events when the target is hovered */
   onHover = new Emitter();
@@ -16553,7 +16553,7 @@ var CursorTarget = class extends Component {
 __publicField(CursorTarget, "TypeName", "cursor-target");
 __publicField(CursorTarget, "Properties", {});
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/gl-matrix/esm/common.js
+// node_modules/gl-matrix/esm/common.js
 var EPSILON = 1e-6;
 var ARRAY_TYPE = typeof Float32Array !== "undefined" ? Float32Array : Array;
 var RANDOM = Math.random;
@@ -16567,7 +16567,7 @@ if (!Math.hypot)
     return Math.sqrt(y);
   };
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/gl-matrix/esm/mat3.js
+// node_modules/gl-matrix/esm/mat3.js
 function create() {
   var out = new ARRAY_TYPE(9);
   if (ARRAY_TYPE != Float32Array) {
@@ -16584,7 +16584,7 @@ function create() {
   return out;
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/gl-matrix/esm/mat4.js
+// node_modules/gl-matrix/esm/mat4.js
 var mat4_exports = {};
 __export(mat4_exports, {
   add: () => add,
@@ -17836,7 +17836,7 @@ function equals(a, b) {
 var mul = multiply;
 var sub = subtract;
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/gl-matrix/esm/quat.js
+// node_modules/gl-matrix/esm/quat.js
 var quat_exports = {};
 __export(quat_exports, {
   add: () => add4,
@@ -17880,7 +17880,7 @@ __export(quat_exports, {
   str: () => str3
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/gl-matrix/esm/vec3.js
+// node_modules/gl-matrix/esm/vec3.js
 var vec3_exports = {};
 __export(vec3_exports, {
   add: () => add2,
@@ -18264,7 +18264,7 @@ var forEach = function() {
   };
 }();
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/gl-matrix/esm/vec4.js
+// node_modules/gl-matrix/esm/vec4.js
 function create4() {
   var out = new ARRAY_TYPE(4);
   if (ARRAY_TYPE != Float32Array) {
@@ -18400,7 +18400,7 @@ var forEach2 = function() {
   };
 }();
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/gl-matrix/esm/quat.js
+// node_modules/gl-matrix/esm/quat.js
 function create5() {
   var out = new ARRAY_TYPE(4);
   if (ARRAY_TYPE != Float32Array) {
@@ -18693,7 +18693,7 @@ var setAxes = function() {
   };
 }();
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/gl-matrix/esm/quat2.js
+// node_modules/gl-matrix/esm/quat2.js
 var quat2_exports = {};
 __export(quat2_exports, {
   add: () => add5,
@@ -19104,7 +19104,7 @@ function equals5(a, b) {
   return Math.abs(a0 - b0) <= EPSILON * Math.max(1, Math.abs(a0), Math.abs(b0)) && Math.abs(a12 - b1) <= EPSILON * Math.max(1, Math.abs(a12), Math.abs(b1)) && Math.abs(a22 - b2) <= EPSILON * Math.max(1, Math.abs(a22), Math.abs(b2)) && Math.abs(a32 - b3) <= EPSILON * Math.max(1, Math.abs(a32), Math.abs(b3)) && Math.abs(a42 - b4) <= EPSILON * Math.max(1, Math.abs(a42), Math.abs(b4)) && Math.abs(a52 - b5) <= EPSILON * Math.max(1, Math.abs(a52), Math.abs(b5)) && Math.abs(a6 - b6) <= EPSILON * Math.max(1, Math.abs(a6), Math.abs(b6)) && Math.abs(a7 - b7) <= EPSILON * Math.max(1, Math.abs(a7), Math.abs(b7));
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/hit-test-location.js
+// node_modules/@wonderlandengine/components/dist/hit-test-location.js
 var __decorate3 = function(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
   if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
@@ -19208,7 +19208,7 @@ __decorate3([
   property.bool(true)
 ], HitTestLocation.prototype, "scaleObject", void 0);
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/cursor.js
+// node_modules/@wonderlandengine/components/dist/cursor.js
 var __decorate4 = function(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
   if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
@@ -19649,7 +19649,7 @@ __decorate4([
   property.bool(false)
 ], Cursor.prototype, "useWebXRHitTest", void 0);
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/debug-object.js
+// node_modules/@wonderlandengine/components/dist/debug-object.js
 var __decorate5 = function(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
   if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
@@ -19678,7 +19678,7 @@ __decorate5([
   property.object()
 ], DebugObject.prototype, "obj", void 0);
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/fixed-foveation.js
+// node_modules/@wonderlandengine/components/dist/fixed-foveation.js
 var FixedFoveation = class extends Component {
   start() {
     this.onSessionStartCallback = this.setFixedFoveation.bind(this);
@@ -19699,7 +19699,7 @@ __publicField(FixedFoveation, "Properties", {
   fixedFoveation: { type: Type.Float, default: 0.5 }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/hand-tracking.js
+// node_modules/@wonderlandengine/components/dist/hand-tracking.js
 var ORDERED_JOINTS = [
   "wrist",
   "thumb-metacarpal",
@@ -19877,7 +19877,7 @@ __publicField(HandTracking, "Properties", {
   controllerToDeactivate: { type: Type.Object }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/howler-audio-listener.js
+// node_modules/@wonderlandengine/components/dist/howler-audio-listener.js
 var import_howler = __toESM(require_howler(), 1);
 var HowlerAudioListener = class extends Component {
   init() {
@@ -19901,7 +19901,7 @@ __publicField(HowlerAudioListener, "Properties", {
   spatial: { type: Type.Bool, default: true }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/howler-audio-source.js
+// node_modules/@wonderlandengine/components/dist/howler-audio-source.js
 var import_howler2 = __toESM(require_howler(), 1);
 var HowlerAudioSource = class extends Component {
   start() {
@@ -19962,7 +19962,7 @@ __publicField(HowlerAudioSource, "Properties", {
   src: { type: Type.String, default: "" }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/utils/utils.js
+// node_modules/@wonderlandengine/components/dist/utils/utils.js
 function setFirstMaterialTexture(mat, texture, customTextureProperty) {
   if (customTextureProperty !== "auto") {
     mat[customTextureProperty] = texture;
@@ -19991,7 +19991,7 @@ function setFirstMaterialTexture(mat, texture, customTextureProperty) {
   return false;
 }
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/image-texture.js
+// node_modules/@wonderlandengine/components/dist/image-texture.js
 var ImageTexture = class extends Component {
   start() {
     if (!this.material) {
@@ -20015,7 +20015,7 @@ __publicField(ImageTexture, "Properties", {
   textureProperty: Property.string("auto")
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/mouse-look.js
+// node_modules/@wonderlandengine/components/dist/mouse-look.js
 var MouseLookComponent = class extends Component {
   init() {
     this.currentRotationY = 0;
@@ -20092,7 +20092,7 @@ __publicField(MouseLookComponent, "Properties", {
   pointerLockOnClick: { type: Type.Bool, default: false }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/player-height.js
+// node_modules/@wonderlandengine/components/dist/player-height.js
 var __decorate6 = function(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
   if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
@@ -20140,7 +20140,7 @@ __decorate6([
   property.float(1.75)
 ], PlayerHeight.prototype, "height", void 0);
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/target-framerate.js
+// node_modules/@wonderlandengine/components/dist/target-framerate.js
 var TargetFramerate = class extends Component {
   start() {
     this.onSessionStartCallback = this.setTargetFramerate.bind(this);
@@ -20164,7 +20164,7 @@ __publicField(TargetFramerate, "Properties", {
   framerate: { type: Type.Float, default: 90 }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/teleport.js
+// node_modules/@wonderlandengine/components/dist/teleport.js
 var TeleportComponent = class extends Component {
   init() {
     this._prevThumbstickAxis = new Float32Array(2);
@@ -20387,7 +20387,7 @@ __publicField(TeleportComponent, "Properties", {
   maxDistance: { type: Type.Float, default: 100 }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/trail.js
+// node_modules/@wonderlandengine/components/dist/trail.js
 var direction = vec3_exports.create();
 var offset = vec3_exports.create();
 var normal = vec3_exports.create();
@@ -20504,7 +20504,7 @@ __publicField(Trail, "Properties", {
   resetThreshold: { type: Type.Float, default: 0.5 }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/two-joint-ik-solver.js
+// node_modules/@wonderlandengine/components/dist/two-joint-ik-solver.js
 function clamp2(v, a, b) {
   return Math.max(a, Math.min(v, b));
 }
@@ -20606,7 +20606,7 @@ __publicField(TwoJointIkSolver, "Properties", {
   helper: Property.object()
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/video-texture.js
+// node_modules/@wonderlandengine/components/dist/video-texture.js
 var VideoTexture = class extends Component {
   init() {
     if (!this.material) {
@@ -20681,7 +20681,7 @@ __publicField(VideoTexture, "Properties", {
   textureProperty: Property.string("auto")
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/vr-mode-active-switch.js
+// node_modules/@wonderlandengine/components/dist/vr-mode-active-switch.js
 var VrModeActiveSwitch = class extends Component {
   start() {
     this.components = [];
@@ -20733,7 +20733,7 @@ __publicField(VrModeActiveSwitch, "Properties", {
   affectChildren: { type: Type.Bool, default: true }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/plane-detection.js
+// node_modules/@wonderlandengine/components/dist/plane-detection.js
 var import_earcut = __toESM(require_earcut(), 1);
 var __decorate7 = function(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20908,7 +20908,7 @@ __decorate7([
   property.int()
 ], PlaneDetection.prototype, "collisionMask", void 0);
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/vrm.js
+// node_modules/@wonderlandengine/components/dist/vrm.js
 var VRM_ROLL_AXES = {
   X: [1, 0, 0],
   Y: [0, 1, 0],
@@ -21453,7 +21453,7 @@ __publicField(Vrm, "Properties", {
   lookAtTarget: { type: Type.Object }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/components/dist/wasd-controls.js
+// node_modules/@wonderlandengine/components/dist/wasd-controls.js
 var _direction = new Float32Array(3);
 var WasdControlsComponent = class extends Component {
   init() {
@@ -21521,7 +21521,7 @@ __publicField(WasdControlsComponent, "Properties", {
   headObject: { type: Type.Object }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/node_modules/@wonderlandengine/mind-ar-tracking/dist/index.js
+// node_modules/@wonderlandengine/mind-ar-tracking/dist/index.js
 var __create2 = Object.create;
 var __defProp2 = Object.defineProperty;
 var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23026,7 +23026,7 @@ var require_long = __commonJS2({
     Long2.fromInt = fromInt;
     function fromNumber(value, unsigned) {
       if (isNaN(value))
-        return unsigned ? UZERO : ZERO;
+        return unsigned ? UZERO : ZERO2;
       if (unsigned) {
         if (value < 0)
           return UZERO;
@@ -23052,7 +23052,7 @@ var require_long = __commonJS2({
       if (str5.length === 0)
         throw Error("empty string");
       if (str5 === "NaN" || str5 === "Infinity" || str5 === "+Infinity" || str5 === "-Infinity")
-        return ZERO;
+        return ZERO2;
       if (typeof unsigned === "number") {
         radix = unsigned, unsigned = false;
       } else {
@@ -23068,7 +23068,7 @@ var require_long = __commonJS2({
         return fromString(str5.substring(1), unsigned, radix).neg();
       }
       var radixToPower = fromNumber(pow_dbl(radix, 8));
-      var result = ZERO;
+      var result = ZERO2;
       for (var i = 0; i < str5.length; i += 8) {
         var size = Math.min(8, str5.length - i), value = parseInt(str5.substring(i, i + size), radix);
         if (size < 8) {
@@ -23097,8 +23097,8 @@ var require_long = __commonJS2({
     var TWO_PWR_64_DBL = TWO_PWR_32_DBL * TWO_PWR_32_DBL;
     var TWO_PWR_63_DBL = TWO_PWR_64_DBL / 2;
     var TWO_PWR_24 = fromInt(TWO_PWR_24_DBL);
-    var ZERO = fromInt(0);
-    Long2.ZERO = ZERO;
+    var ZERO2 = fromInt(0);
+    Long2.ZERO = ZERO2;
     var UZERO = fromInt(0, true);
     Long2.UZERO = UZERO;
     var ONE = fromInt(1);
@@ -23286,7 +23286,7 @@ var require_long = __commonJS2({
     LongPrototype.sub = LongPrototype.subtract;
     LongPrototype.multiply = function multiply32(multiplier) {
       if (this.isZero())
-        return ZERO;
+        return ZERO2;
       if (!isLong(multiplier))
         multiplier = fromValue(multiplier);
       if (wasm) {
@@ -23299,11 +23299,11 @@ var require_long = __commonJS2({
         return fromBits(low, wasm.get_high(), this.unsigned);
       }
       if (multiplier.isZero())
-        return ZERO;
+        return ZERO2;
       if (this.eq(MIN_VALUE))
-        return multiplier.isOdd() ? MIN_VALUE : ZERO;
+        return multiplier.isOdd() ? MIN_VALUE : ZERO2;
       if (multiplier.eq(MIN_VALUE))
-        return this.isOdd() ? MIN_VALUE : ZERO;
+        return this.isOdd() ? MIN_VALUE : ZERO2;
       if (this.isNegative()) {
         if (multiplier.isNegative())
           return this.neg().mul(multiplier.neg());
@@ -23363,7 +23363,7 @@ var require_long = __commonJS2({
         return fromBits(low, wasm.get_high(), this.unsigned);
       }
       if (this.isZero())
-        return this.unsigned ? UZERO : ZERO;
+        return this.unsigned ? UZERO : ZERO2;
       var approx, rem, res;
       if (!this.unsigned) {
         if (this.eq(MIN_VALUE)) {
@@ -23374,7 +23374,7 @@ var require_long = __commonJS2({
           else {
             var halfThis = this.shr(1);
             approx = halfThis.div(divisor).shl(1);
-            if (approx.eq(ZERO)) {
+            if (approx.eq(ZERO2)) {
               return divisor.isNegative() ? ONE : NEG_ONE;
             } else {
               rem = this.sub(divisor.mul(approx));
@@ -23383,14 +23383,14 @@ var require_long = __commonJS2({
             }
           }
         } else if (divisor.eq(MIN_VALUE))
-          return this.unsigned ? UZERO : ZERO;
+          return this.unsigned ? UZERO : ZERO2;
         if (this.isNegative()) {
           if (divisor.isNegative())
             return this.neg().div(divisor.neg());
           return this.neg().div(divisor).neg();
         } else if (divisor.isNegative())
           return this.div(divisor.neg()).neg();
-        res = ZERO;
+        res = ZERO2;
       } else {
         if (!divisor.unsigned)
           divisor = divisor.toUnsigned();
@@ -85553,7 +85553,21 @@ var init_input_loader = __esm({
       }
       // input is instance of HTMLVideoElement or HTMLImageElement
       loadInput(input2) {
-        this.context.drawImage(input2, 0, 0, this.width, this.height);
+        const context = this.context;
+        context.clearRect(0, 0, this.context.canvas.width, this.context.canvas.height);
+        const isInputRotated = input2.width === this.height && input2.height === this.width;
+        if (isInputRotated) {
+          let x = this.context.canvas.width / 2;
+          let y = this.context.canvas.height / 2;
+          let angleInDegrees = 90;
+          context.save();
+          context.translate(x, y);
+          context.rotate(angleInDegrees * Math.PI / 180);
+          context.drawImage(input2, -input2.width / 2, -input2.height / 2);
+          context.restore();
+        } else {
+          this.context.drawImage(input2, 0, 0, input2.width, input2.height);
+        }
         const backend2 = backend();
         backend2.gpgpu.uploadPixelDataToTexture(backend2.getTexture(this.tempPixelHandle.dataId), this.context.canvas);
         const res = this._compileAndRun(this.program, [this.tempPixelHandle]);
@@ -85774,6 +85788,27 @@ var init_controller = __esm({
       getProjectionMatrix() {
         return this.projectionMatrix;
       }
+      getRotatedZ90Matrix(m) {
+        const rotatedMatrix = [
+          -m[1],
+          m[0],
+          m[2],
+          m[3],
+          -m[5],
+          m[4],
+          m[6],
+          m[7],
+          -m[9],
+          m[8],
+          m[10],
+          m[11],
+          -m[13],
+          m[12],
+          m[14],
+          m[15]
+        ];
+        return rotatedMatrix;
+      }
       getWorldMatrix(modelViewTransform, targetIndex) {
         return this._glModelViewMatrix(modelViewTransform, targetIndex);
       }
@@ -85865,9 +85900,13 @@ var init_controller = __esm({
               if (trackingState.showing) {
                 const worldMatrix = this._glModelViewMatrix(trackingState.currentModelViewTransform, i);
                 trackingState.trackingMatrix = trackingState.filter.filter(Date.now(), worldMatrix);
-                const clone22 = [];
+                let clone22 = [];
                 for (let j = 0; j < trackingState.trackingMatrix.length; j++) {
                   clone22[j] = trackingState.trackingMatrix[j];
+                }
+                const isInputRotated = input2.width === this.inputHeight && input2.height === this.inputWidth;
+                if (isInputRotated) {
+                  clone22 = this.getRotatedZ90Matrix(clone22);
                 }
                 this.onUpdate && this.onUpdate({ type: "updateMatrix", targetIndex: i, worldMatrix: clone22 });
               }
@@ -86001,14 +86040,10 @@ var ImageTracking = class extends Component {
       inputWidth: input2.width,
       inputHeight: input2.height,
       maxTrack: this.maxTrack,
-      filterMinCF: 1e-3,
-      // OneEuroFilter, min cutoff frequency. default is 0.001
-      filterBeta: 1,
-      // OneEuroFilter, beta. default is 1000
-      missTolerance: 5,
-      // number of miss before considered target lost. default is 5
-      warmupTolerance: 5,
-      // number of track before considered target found. default is 5
+      filterMinCF: this.filterMinCF,
+      filterBeta: this.filterBeta,
+      missTolerance: this.missTolerance,
+      warmupTolerance: this.warmupTolerance,
       onUpdate: (data) => {
         if (this.videoTexture)
           this.videoTexture.update();
@@ -86031,10 +86066,15 @@ var ImageTracking = class extends Component {
     this.controller = controller;
     this.markerDimensions = dimensions;
     this.videoTexture = texture;
-    const videoPaneMesh = this.videoPane.getComponent("mesh");
-    videoPaneMesh.material = videoPaneMesh.material.clone();
-    videoPaneMesh.material.flatTexture = texture;
-    this._updateCameraProjection();
+    if (this.videoPane) {
+      const videoPaneMesh = this.videoPane.getComponent("mesh");
+      videoPaneMesh.material = videoPaneMesh.material.clone();
+      videoPaneMesh.material.flatTexture = texture;
+    } else if (this.engine.scene.skyMaterial) {
+      this.engine.scene.skyMaterial.texture = texture;
+    } else {
+      console.warn("No videoPane or sky material set, cannot show video feed.");
+    }
     this.controller.processVideo(input2);
   }
   /* Update camera projection matrix and background video plane */
@@ -86052,11 +86092,14 @@ var ImageTracking = class extends Component {
     const inputAspect = input2.width / input2.height;
     if (canvasAspect < inputAspect) {
       projectionMatrix[0] *= inputAspect / canvasAspect;
-    } else {
-      projectionMatrix[5] *= canvasAspect / inputAspect;
     }
+    this.view.fov = 2 * Math.atan(1 / projectionMatrix[0]) * 180 / Math.PI;
+    this.lastProjectionCanvasWidth = this.engine.canvas.width;
+    this.lastProjectionCanvasHeight = this.engine.canvas.height;
+    if (!this.videoPane)
+      return;
     const invProjectionMatrix = new Float32Array(16);
-    mat4_exports.invert(invProjectionMatrix, projectionMatrix);
+    mat4_exports.invert(invProjectionMatrix, this.view.projectionMatrix);
     const corner = new Float32Array(3);
     vec3_exports.transformMat4(corner, [1, 1, 0], invProjectionMatrix);
     let videoScaleX, videoScaleY;
@@ -86075,42 +86118,62 @@ var ImageTracking = class extends Component {
       1
     ];
     this.videoPane.setTranslationLocal([0, 0, videoTranslateZ]);
-    this.videoPane.setDirty();
-    this.view.projectionMatrix.set(projectionMatrix);
-    this.lastProjectionCanvasWidth = this.engine.canvas.width;
-    this.lastProjectionCanvasHeight = this.engine.canvas.height;
   }
 };
 __publicField2(ImageTracking, "TypeName", "image-tracking");
 __publicField2(ImageTracking, "Properties", {
   /** Object with plane mesh for the background video */
-  videoPane: { type: Type.Object },
+  videoPane: Property.object(),
   /** Path to the .mind file containing the marker information */
-  mindPath: { type: Type.String },
+  mindPath: Property.string(),
   /** Maximum amount of markers to use */
-  maxTrack: { type: Type.Int, default: 1 },
+  maxTrack: Property.int(1),
   /** Facing mode of the user camera to get the video feed from */
-  facingMode: { type: Type.Enum, values: FacingModes, default: FacingModes[0] }
+  facingMode: Property.enum(FacingModes),
+  /* OneEuroFilter, min cutoff frequency. default is 0.001 */
+  filterMinCF: Property.float(1e-3),
+  /* OneEuroFilter, beta. */
+  filterBeta: Property.float(1),
+  /* number of miss before considered target lost. */
+  missTolerance: Property.int(5),
+  /* number of track before considered target found. */
+  warmupTolerance: Property.int(5)
 });
+var ZERO = [0, 0, 0];
+var tempQuat4 = quat_exports.create();
+var tempQuat22 = quat2_exports.create();
+var tempVec33 = vec3_exports.create();
 var ImageTrackingTarget = class extends Component {
+  constructor() {
+    super(...arguments);
+    __publicField2(this, "originalScaling", vec3_exports.create());
+  }
   init() {
     this.arCamera.getComponent("image-tracking").registerTarget(this.targetIndex, this);
-    this.object.scalingLocal.fill(0);
-    this.object.setDirty();
+  }
+  start() {
+    this.onTrackingLost();
+  }
+  onTrackingLost() {
+    this.object.getScalingLocal(this.originalScaling);
+    this.object.setScalingLocal(ZERO);
   }
   /* Update tracking target transformation */
-  updateTrack(worldMatrix, markerWidth, markerHeight) {
+  updateTrack(worldMatrix, markerWidth, _) {
     if (!worldMatrix) {
-      this.object.scalingLocal.fill(0);
-      this.object.setDirty();
+      this.onTrackingLost();
       return;
     }
-    quat2_exports.fromMat4(this.object.transformLocal, worldMatrix);
-    quat2_exports.normalize(this.object.transformLocal, this.object.transformLocal);
-    this.object.translateObject([markerWidth / 2, markerHeight / 2, 0]);
     const mw = markerWidth / window.devicePixelRatio;
-    this.object.scalingLocal.fill(mw);
-    this.object.setDirty();
+    mat4_exports.getRotation(tempQuat4, worldMatrix);
+    quat_exports.normalize(tempQuat4, tempQuat4);
+    mat4_exports.getTranslation(tempVec33, worldMatrix);
+    vec3_exports.scale(tempVec33, tempVec33, 1 / mw);
+    quat2_exports.fromRotationTranslation(tempQuat22, tempQuat4, tempVec33);
+    this.object.setTransformLocal(tempQuat22);
+    const c = window.devicePixelRatio / 2;
+    this.object.translateObject([c, c, 0]);
+    this.object.setScalingLocal(this.originalScaling);
   }
 };
 __publicField2(ImageTrackingTarget, "TypeName", "image-tracking-target");
@@ -86121,118 +86184,7 @@ __publicField2(ImageTrackingTarget, "Properties", {
   arCamera: { type: Type.Object }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/js/button.js
-function hapticFeedback(object, strength, duration) {
-  const input = object.getComponent(InputComponent);
-  if (input && input.xrInputSource) {
-    const gamepad = input.xrInputSource.gamepad;
-    if (gamepad && gamepad.hapticActuators)
-      gamepad.hapticActuators[0].pulse(strength, duration);
-  }
-}
-var ButtonComponent = class extends Component {
-  static onRegister(engine3) {
-    engine3.registerComponent(HowlerAudioSource);
-    engine3.registerComponent(CursorTarget);
-  }
-  /* Position to return to when "unpressing" the button */
-  returnPos = new Float32Array(3);
-  start() {
-    this.mesh = this.buttonMeshObject.getComponent(MeshComponent);
-    this.defaultMaterial = this.mesh.material;
-    this.buttonMeshObject.getTranslationLocal(this.returnPos);
-    this.target = this.object.getComponent(CursorTarget) || this.object.addComponent(CursorTarget);
-    this.soundClick = this.object.addComponent(HowlerAudioSource, {
-      src: "sfx/click.wav",
-      spatial: true
-    });
-    this.soundUnClick = this.object.addComponent(HowlerAudioSource, {
-      src: "sfx/unclick.wav",
-      spatial: true
-    });
-  }
-  onActivate() {
-    this.target.onHover.add(this.onHover);
-    this.target.onUnhover.add(this.onUnhover);
-    this.target.onDown.add(this.onDown);
-    this.target.onUp.add(this.onUp);
-  }
-  onDeactivate() {
-    this.target.onHover.remove(this.onHover);
-    this.target.onUnhover.remove(this.onUnhover);
-    this.target.onDown.remove(this.onDown);
-    this.target.onUp.remove(this.onUp);
-  }
-  /* Called by 'cursor-target' */
-  onHover = (_, cursor) => {
-    this.mesh.material = this.hoverMaterial;
-    if (cursor.type === "finger-cursor") {
-      this.onDown(_, cursor);
-    }
-    hapticFeedback(cursor.object, 0.5, 50);
-  };
-  /* Called by 'cursor-target' */
-  onDown = (_, cursor) => {
-    this.soundClick.play();
-    this.buttonMeshObject.translate([0, -0.1, 0]);
-    hapticFeedback(cursor.object, 1, 20);
-    this.dataObject = this.DataFetch || this.object.parent.children[6];
-    this.data = this.dataObject.getComponent("data-api").data;
-    this.soundClick.play();
-    if (this.object.name == "instagram")
-      window.open(this.data["Instagram ID"], "_blank");
-    if (this.object.name == "linkedIn")
-      window.open(this.data["LinkedIn ID"], "_blank");
-    if (this.object.name == "website")
-      window.open(this.data["Website"], "_blank");
-    if (this.object.name == "call")
-      window.open("tel:" + this.data["Telephone"].toString());
-    if (this.object.name == "mail")
-      window.open("mailto:" + this.data["Mail"]);
-    if (this.object.name == "location") {
-      if (this.data["Location"] != null)
-        window.open(this.data["Location"], "_blank");
-    }
-  };
-  /* Called by 'cursor-target' */
-  onUp = (_, cursor) => {
-    this.soundUnClick.play();
-    this.buttonMeshObject.setTranslationLocal(this.returnPos);
-    hapticFeedback(cursor.object, 0.7, 20);
-  };
-  /* Called by 'cursor-target' */
-  onUnhover = (_, cursor) => {
-    this.mesh.material = this.defaultMaterial;
-    if (cursor.type === "finger-cursor") {
-      this.onUp(_, cursor);
-    }
-    hapticFeedback(cursor.object, 0.3, 50);
-  };
-};
-__publicField(ButtonComponent, "TypeName", "button");
-__publicField(ButtonComponent, "Properties", {
-  /** Object that has the button's mesh attached */
-  buttonMeshObject: Property.object(),
-  /** Material to apply when the user hovers the button */
-  hoverMaterial: Property.material(),
-  DataFetch: Property.object()
-});
-
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/js/cursor-custom.js
-var CursorCustom = class extends Cursor {
-  update(dt) {
-    mat4_exports.invert(
-      this._projectionMatrix,
-      this._viewComponent.projectionMatrix
-    );
-    super.update(dt);
-  }
-};
-__publicField(CursorCustom, "TypeName", "cursor-custom");
-/* Properties that are configurable in the editor */
-__publicField(CursorCustom, "InheritProperties", true);
-
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/js/data-api.js
+// js/data-api.js
 var import_crypto_js = __toESM(require_crypto_js(), 1);
 var DataApi = class extends Component {
   init() {
@@ -86298,68 +86250,144 @@ __publicField(DataApi, "Properties", {
   url: { type: Type.String, default: "" }
 });
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/js/image-tracking-collision-target.js
-var ImageTrackingCollisionTarget = class extends ImageTrackingTarget {
-  init() {
-    this.arCamera.getComponent(ImageTracking).registerTarget(this.targetIndex, this);
-    this.object.setScalingLocal([0, 0, 0]);
-    this.object.setDirty();
-    this.scale_flag = false;
+// js/button.js
+function hapticFeedback(object, strength, duration) {
+  const input = object.getComponent(InputComponent);
+  if (input && input.xrInputSource) {
+    const gamepad = input.xrInputSource.gamepad;
+    if (gamepad && gamepad.hapticActuators)
+      gamepad.hapticActuators[0].pulse(strength, duration);
   }
-  updateTrack(worldMatrix, markerWidth, markerHeight) {
-    if (!worldMatrix) {
-      this.object.setScalingLocal([0, 0, 0]);
-      this.object.setDirty();
-      return;
-    }
-    quat2_exports.fromMat4(this.object.transformLocal, worldMatrix);
-    quat2_exports.normalize(this.object.transformLocal, this.object.transformLocal);
-    this.object.translateObject([markerWidth / 2, markerHeight / 2, 0]);
-    const mw = markerWidth / window.devicePixelRatio;
-    this.object.setScalingLocal([mw, mw, mw]);
-    if (this.scale_flag == false) {
-      console.warn("entered update track ");
-      this.affectChildren = true;
-      this.collisions = [];
-      this.getComponents(this.object);
-      console.log(this.collisions);
-      this.setCollisionScale(this.object.getScalingLocal([])[0] / 1.5);
-      this.scale_flag = true;
-    }
-    this.object.setDirty();
+}
+var ButtonComponent = class extends Component {
+  static onRegister(engine3) {
+    engine3.registerComponent(HowlerAudioSource);
+    engine3.registerComponent(CursorTarget);
   }
-  update() {
+  /* Position to return to when "unpressing" the button */
+  returnPos = new Float32Array(3);
+  start() {
+    this.mesh = this.buttonMeshObject.getComponent(MeshComponent);
+    this.defaultMaterial = this.mesh.material;
+    this.buttonMeshObject.getTranslationLocal(this.returnPos);
+    this.target = this.object.getComponent(CursorTarget) || this.object.addComponent(CursorTarget);
+    this.soundClick = this.object.addComponent(HowlerAudioSource, {
+      src: "sfx/click.wav",
+      spatial: true
+    });
+    this.soundUnClick = this.object.addComponent(HowlerAudioSource, {
+      src: "sfx/unclick.wav",
+      spatial: true
+    });
+    this.dataObject = this.DataFetch || this.object.parent.children[6];
   }
-  getComponents(obj) {
-    try {
-      if (obj.getComponent(CollisionComponent) != null)
-        this.collisions = this.collisions.concat(obj);
-    } catch (err) {
-      console.log(err);
-    }
-    if (this.affectChildren) {
-      let children = obj.children;
-      for (let i = 0; i < children.length; ++i) {
-        this.getComponents(children[i]);
-      }
-    }
+  onActivate() {
+    this.target.onHover.add(this.onHover);
+    this.target.onUnhover.add(this.onUnhover);
+    this.target.onDown.add(this.onDown);
+    this.target.onUp.add(this.onUp);
   }
-  setCollisionScale(scale7) {
-    const comps = this.collisions;
-    for (let i = 0; i < comps.length; ++i) {
-      let collision = comps[i].getComponent(CollisionComponent);
-      if (collision) {
-        collision.radius = scale7 / 1.2;
-        console.warn(collision);
-      }
+  onDeactivate() {
+    this.target.onHover.remove(this.onHover);
+    this.target.onUnhover.remove(this.onUnhover);
+    this.target.onDown.remove(this.onDown);
+    this.target.onUp.remove(this.onUp);
+  }
+  /* Called by 'cursor-target' */
+  onHover = (_, cursor) => {
+    this.mesh.material.color = [1, 1, 1, 0.8];
+    if (cursor.type === "finger-cursor") {
+      this.onDown(_, cursor);
     }
+    hapticFeedback(cursor.object, 0.5, 50);
+  };
+  /* Called by 'cursor-target' */
+  onDown = (_, cursor) => {
+    this.soundClick.play();
+    this.buttonMeshObject.translate([0, -0.1, 0]);
+    hapticFeedback(cursor.object, 1, 20);
+    this.data = this.dataObject.getComponent(DataApi).data;
+    this.soundClick.play();
+    if (this.object.name == "instagram")
+      window.open(this.data["Instagram ID"], "_blank");
+    if (this.object.name == "linkedIn")
+      window.open(this.data["LinkedIn ID"], "_blank");
+    if (this.object.name == "website")
+      window.open(this.data["Website"], "_blank");
+    if (this.object.name == "call")
+      window.open("tel:" + this.data["Telephone"].toString());
+    if (this.object.name == "mail")
+      window.open("mailto:" + this.data["Mail"]);
+    if (this.object.name == "location") {
+      if (this.data["Location"] != null)
+        window.open(this.data["Location"], "_blank");
+    }
+    if (this.object.name == "vcf") {
+      this.handleVCF();
+    }
+  };
+  /* Called by 'cursor-target' */
+  onUp = (_, cursor) => {
+    this.soundUnClick.play();
+    this.buttonMeshObject.setTranslationLocal(this.returnPos);
+    hapticFeedback(cursor.object, 0.7, 20);
+  };
+  /* Called by 'cursor-target' */
+  onUnhover = (_, cursor) => {
+    this.mesh.material.color = [1, 1, 1, 1];
+    if (cursor.type === "finger-cursor") {
+      this.onUp(_, cursor);
+    }
+    hapticFeedback(cursor.object, 0.3, 50);
+  };
+  generateVCF(data) {
+    const vcfData = `BEGIN:VCARD
+VERSION:3.0
+FN:${data["Name"] + " " + data["Surname"]}
+TEL:${data["Telephone"]}
+EMAIL:${data["Mail"]}
+URL:${data["Website"]}
+END:VCARD`;
+    return vcfData;
+  }
+  handleVCF() {
+    this.data = this.dataObject.getComponent(DataApi).data;
+    console.log(this.data);
+    const vcfData = this.generateVCF(this.data);
+    console.log(vcfData);
+    const vcfBlob = new Blob([vcfData], { type: "text/vcard" });
+    const vcfURL = URL.createObjectURL(vcfBlob);
+    const downloadLink = document.createElement("a");
+    downloadLink.href = vcfURL;
+    downloadLink.download = "contact.vcf";
+    downloadLink.click();
+    URL.revokeObjectURL(vcfURL);
   }
 };
-__publicField(ImageTrackingCollisionTarget, "TypeName", "image-tracking-collision-target");
-/* Properties that are configurable in the editor */
-__publicField(ImageTrackingCollisionTarget, "InheritProperties", true);
+__publicField(ButtonComponent, "TypeName", "button");
+__publicField(ButtonComponent, "Properties", {
+  /** Object that has the button's mesh attached */
+  buttonMeshObject: Property.object(),
+  /** Material to apply when the user hovers the button */
+  hoverMaterial: Property.material(),
+  DataFetch: Property.object()
+});
 
-// D:/vr/wle_ar/stephans_project/github/image-tracking/npm_scratch/NewProject/js/index.js
+// js/cursor-custom.js
+var CursorCustom = class extends Cursor {
+  update(dt) {
+    mat4_exports.invert(
+      this._projectionMatrix,
+      this._viewComponent.projectionMatrix
+    );
+    super.update(dt);
+  }
+};
+__publicField(CursorCustom, "TypeName", "cursor-custom");
+/* Properties that are configurable in the editor */
+__publicField(CursorCustom, "InheritProperties", true);
+
+// js/index.js
 var RuntimeOptions = {
   physx: true,
   loader: false,
@@ -86404,10 +86432,10 @@ engine2.registerComponent(CursorTarget);
 engine2.registerComponent(HowlerAudioListener);
 engine2.registerComponent(HowlerAudioSource);
 engine2.registerComponent(ImageTracking);
+engine2.registerComponent(ImageTrackingTarget);
 engine2.registerComponent(ButtonComponent);
 engine2.registerComponent(CursorCustom);
 engine2.registerComponent(DataApi);
-engine2.registerComponent(ImageTrackingCollisionTarget);
 engine2.scene.load(`${Constants.ProjectName}.bin`).catch((e) => {
   console.error(e);
   window.alert(`Failed to load ${Constants.ProjectName}.bin:`, e);
