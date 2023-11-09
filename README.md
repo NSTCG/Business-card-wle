@@ -1,72 +1,64 @@
 # Business-card-wle
-
-Visit https://github.com/NSTCG/Business-card-wle.git
-
-Code→ Download Zip 
-Extract content to working folder 
+Clone  https://github.com/NSTCG/Business-card-wle.git
 
 Inside Bussinesscard-wle-main there are 2 important folders 
 
 
 Wonderland files inside  image-tracking
-Encryption resources inside “POC”
+<p>Encryption resources inside “POC”
 
 
-1. Encrypt xls and host public key
+## 1. Encrypt xls and host public key
 
-Make the userdata in XLS with given  template (refer existing Mappe1.xls)
-Put the XLS file inside POC folder with the name Mappe1.xls  
-
-( alternatively you can open EncryptionXlsx in vscode and search Mappe1.xls and replace it with your custom location / url of xls data )
+Make the user data in XLS with the given  template (refer to existing Mappe1.xls)
+Put the XLS file inside the POC folder with the name Mappe1.xls
+<p> ( alternatively, you can open EncryptionXlsx.html in vs code and search Mappe1.xls and replace it with your custom location / URL of xls data )
 
 (pls use  xls for compatibility* not xlsx)
 
-Open the EncryptionXlsx.html utility  ( preferred way : vscode with liveserver )
-
-
-
-
+Open the EncryptionXlsx.html utility  ( preferred way: vs code with live-server )
 
 Click on “Encrypt XLSX and Download Key”
 
-
-
-
 This will download 2 files 
-data.txt  (public encrypted data )
-JsonPriv.json (Private data , given to clients )
-     E. Host data.txt so that its accessible from public URL ( ensure the api server is sending proper headers (Access-Control-Allow-*) to avoid cors issue )
+> data.txt  (public encrypted data )
 
-If  you want to serve it with wonderland app , the paste it inside image-recorgnition/static/json  after clearing everything in the folder ,recompile, deploy,then access it after deployment like  <domainName>/json/data.txt.
+>JsonPriv.json (Private data , given to clients ). 
 
-(*if you are using netlify you can easily deploy by drag dropping the deploy folder )
+E. Host data.txt so that it is accessible from a public URL ( ensure the API server is sending proper headers (Access-Control-Allow-*) to avoid cors issue )
+
+If you want to serve it with the Wonderland app, then paste it inside image-recognition/static/json
+<p>After that, recompile > deploy > then access it after deployment like  *< domain name >/json/data.txt*
+
+(*if you are using Netlify you can easily deploy by drag-dropping the deploy folder )
 
 
 
-2. Download QR code and provide it for production 
+## 2. Download the QR code and provide it for production 
 
-Open QRGenerator.html in live server
- It requires 2 fields :
-Website in which we are gonna be deploying ( make the site if its not made already)
-ID key Json source : you can copy and replace the file from downloads to root and add “./JsonPriv.json” 
-Click generate and download QRcode ( make sure you cleaned your previous qrcodes from download folder ) 
+Open EncryptionXlsx.html in the live server again 
+<p>It requires 2 fields :
 
-Each QR code contains special link only through which an employee can enter the site. The name of the qr code is the employee ID
+<p>Website in which we are gonna be deploying ( make the site if it's not made already)
+<p>ID key Json source: you can copy and replace the file from downloads to root and add “./JsonPriv.json” 
+<p>Click generate and download QRcode (This will generate a zip file with all the images of QR codes  ) 
 
-3. Provide public key address in index.html 
-Open Image-tracking/index.html in live server 
- Search fetch and replace the fetch data with newly made url serving the data.txt
+Each QR code contains a special link only through which an employee can enter the site. The name of the QR code is the employee ID
 
-4.Add company logo for tracking
+## 3. Provide a public key address in url.txt
+Open static/url.txt 
+<p>Paste the newly made URL serving the data.txt
+<p>Compile again
+
+## 4. Add company logo for tracking
 
 A. go to https://hiukim.github.io/mind-ar-js-doc/tools/compile 
-B. Compile company logo and download .mind file 
-C. Copy paste and replace that inside "deploy" ( and "image-tracking/static" if you are using editor )
-D. Deploy ( drag drop deploy folder to hosting server)
+<p>B. Compile the company logo and download the .mind file 
+<p>C. Copy and paste and replace that inside static and recompile 
+<p>D. Deploy ( drag drop deploy folder to hosting server)5. Deploy
 
+## 5. Deploy
+the deploy folder to your preferred server after all these steps 
 
-
-
-
-For Wonderland development.
-stable version of WLE nightly 28-07-2022 : https://drive.google.com/drive/folders/1y6_oXUP6Avj9JbA5c4V_HMJL8Os6ONTL?usp=sharing
+<p>Employees can now scan the QR code which will take them to the site 
+<p>And they can scan the company logo to get an overlay of icons with their data.
