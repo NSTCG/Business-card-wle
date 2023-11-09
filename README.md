@@ -63,10 +63,3 @@ A. go to https://hiukim.github.io/mind-ar-js-doc/tools/compile
 B. Compile company logo and download .mind file 
 C. Copy paste and replace that inside "deploy" ( and "image-tracking/static" if you are using editor )
 D. Deploy ( drag drop deploy folder to hosting server)
-
-
-
-
-
-For Wonderland development.
-stable version of WLE nightly 28-07-2022 : https://drive.google.com/drive/folders/1y6_oXUP6Avj9JbA5c4V_HMJL8Os6ONTL?usp=sharing
