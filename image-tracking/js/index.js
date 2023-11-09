@@ -16,10 +16,10 @@ import {CursorTarget} from '@wonderlandengine/components';
 import {HowlerAudioListener} from '@wonderlandengine/components';
 import {HowlerAudioSource} from '@wonderlandengine/components';
 import {ImageTracking} from '@wonderlandengine/mind-ar-tracking';
+import {ImageTrackingTarget} from '@wonderlandengine/mind-ar-tracking';
 import {ButtonComponent} from './button.js';
 import {CursorCustom} from './cursor-custom.js';
 import {DataApi} from './data-api.js';
-import {ImageTrackingCollisionTarget} from './image-tracking-collision-target.js';
 /* wle:auto-imports:end */
 
 import {loadRuntime} from '@wonderlandengine/api';
@@ -82,10 +82,10 @@ engine.registerComponent(CursorTarget);
 engine.registerComponent(HowlerAudioListener);
 engine.registerComponent(HowlerAudioSource);
 engine.registerComponent(ImageTracking);
+engine.registerComponent(ImageTrackingTarget);
 engine.registerComponent(ButtonComponent);
 engine.registerComponent(CursorCustom);
 engine.registerComponent(DataApi);
-engine.registerComponent(ImageTrackingCollisionTarget);
 /* wle:auto-register:end */
 
 engine.scene.load(`${Constants.ProjectName}.bin`).catch((e) => {
