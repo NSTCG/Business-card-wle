@@ -5,6 +5,8 @@ import {
 	Property,
 } from "@wonderlandengine/api";
 import {CursorTarget, HowlerAudioSource} from "@wonderlandengine/components";
+import { DataApi } from './data-api';
+
 
 /**
  * Helper function to trigger haptic feedback pulse.
@@ -69,6 +71,7 @@ export class ButtonComponent extends Component {
 			src: "sfx/unclick.wav",
 			spatial: true,
 		});
+		this.dataObject = this.DataFetch || this.object.parent.children[6];
 	}
 
 	onActivate() {
@@ -87,7 +90,8 @@ export class ButtonComponent extends Component {
 
 	/* Called by 'cursor-target' */
 	onHover = (_, cursor) => {
-		this.mesh.material = this.hoverMaterial;
+		//this.mesh.material = this.hoverMaterial;
+		this.mesh.material.color = [1,1,1,0.8]
 		if (cursor.type === "finger-cursor") {
 			this.onDown(_, cursor);
 		}
@@ -101,8 +105,8 @@ export class ButtonComponent extends Component {
 		this.buttonMeshObject.translate([0.0, -0.1, 0.0]);
 		hapticFeedback(cursor.object, 1.0, 20);
 
-		this.dataObject = this.DataFetch || this.object.parent.children[6];
-		this.data = this.dataObject.getComponent("data-api").data;
+		
+		this.data = this.dataObject.getComponent(DataApi).data
 
 		this.soundClick.play();
 
@@ -119,6 +123,9 @@ export class ButtonComponent extends Component {
 		if (this.object.name == "location")
 			if (this.data["Location"] != null)
 				window.open(this.data["Location"], "_blank");
+		if (this.object.name == "vcf") {
+				this.handleVCF();
+			}
 	};
 
 	/* Called by 'cursor-target' */
@@ -130,11 +137,43 @@ export class ButtonComponent extends Component {
 
 	/* Called by 'cursor-target' */
 	onUnhover = (_, cursor) => {
-		this.mesh.material = this.defaultMaterial;
+		this.mesh.material.color = [1,1,1,1]
 		if (cursor.type === "finger-cursor") {
 			this.onUp(_, cursor);
 		}
 
 		hapticFeedback(cursor.object, 0.3, 50);
 	};
+	generateVCF(data) {
+		const vcfData = `BEGIN:VCARD
+VERSION:3.0
+FN:${data["Name"] + " " + data["Surname"]}
+TEL:${data["Telephone"]}
+EMAIL:${data["Mail"]}
+URL:${data["Website"]}
+END:VCARD`;
+
+		return vcfData;
+	}
+
+	handleVCF() {
+		this.data = this.dataObject.getComponent(DataApi).data;
+		console.log(this.data);
+		const vcfData = this.generateVCF(this.data);
+		console.log(vcfData);
+		// Create a Blob with the VCF data
+		const vcfBlob = new Blob([vcfData], {type: "text/vcard"});
+
+		// Create a URL for the Blob
+		const vcfURL = URL.createObjectURL(vcfBlob);
+
+		// Create an anchor element to trigger the download
+		const downloadLink = document.createElement("a");
+		downloadLink.href = vcfURL;
+		downloadLink.download = "contact.vcf";
+		downloadLink.click();
+
+		// Revoke the URL to release the resources
+		URL.revokeObjectURL(vcfURL);
+	}
 }

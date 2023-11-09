@@ -5,7 +5,8 @@
             "version": [
                 1,
                 1,
-                2
+                3,
+                1
             ]
         },
         "vr": {
@@ -73,6 +74,10 @@
         "89": {
             "fileName": "ICONS REMODELLED/ICONS REMODELLED/Insta.png",
             "importerName": ""
+        },
+        "96": {
+            "fileName": "ICONS REMODELLED/ICONS REMODELLED/Adressbuch.png",
+            "importerName": ""
         }
     },
     "images": {
@@ -87,37 +92,56 @@
             "link": {
                 "name": "Call.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Call.png"
-            }
+            },
+            "stream": false,
+            "compression": "none"
         },
         "75": {
             "link": {
                 "name": "Web.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Web.png"
-            }
+            },
+            "stream": false,
+            "compression": "none"
         },
         "78": {
             "link": {
                 "name": "mail2.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\mail2.png"
-            }
+            },
+            "stream": false,
+            "compression": "none"
         },
         "81": {
             "link": {
                 "name": "Location.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Location.png"
-            }
+            },
+            "compression": "none"
         },
         "84": {
             "link": {
                 "name": "Linkedin2.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Linkedin2.png"
-            }
+            },
+            "stream": false,
+            "compression": "none"
         },
         "87": {
             "link": {
                 "name": "Insta.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Insta.png"
-            }
+            },
+            "stream": false,
+            "compression": "none"
+        },
+        "94": {
+            "link": {
+                "name": "Adressbuch.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Adressbuch.png"
+            },
+            "stream": false,
+            "compression": "none"
         }
     },
     "shaders": {
@@ -382,6 +406,12 @@
                 "name": "Insta.png",
                 "file": "ICONS REMODELLED\\ICONS REMODELLED\\Insta.png"
             }
+        },
+        "95": {
+            "link": {
+                "name": "Adressbuch.png",
+                "file": "ICONS REMODELLED\\ICONS REMODELLED\\Adressbuch.png"
+            }
         }
     },
     "materials": {
@@ -442,7 +472,7 @@
             "name": "location",
             "pipeline": "91",
             "Flat": {
-                "flatTexture": "82"
+                "flatTexture": "95"
             }
         },
         "65": {
@@ -487,7 +517,7 @@
                 {
                     "type": "image-tracking",
                     "image-tracking": {
-                        "videoPane": null,
+                        "videoPane": "93",
                         "mindPath": "./targets.mind",
                         "warmupTolerance": 5
                     },
@@ -511,8 +541,8 @@
             "parent": "48",
             "components": [
                 {
-                    "type": "image-tracking-collision-target",
-                    "image-tracking-collision-target": {
+                    "type": "image-tracking-target",
+                    "image-tracking-target": {
                         "arCamera": "48"
                     }
                 }
@@ -712,7 +742,7 @@
             ]
         },
         "54": {
-            "name": "location",
+            "name": "vcf",
             "parent": "50",
             "components": [
                 {
@@ -953,6 +983,18 @@
                 0.0,
                 0.0,
                 1.0
+            ]
+        },
+        "93": {
+            "name": "videoPlaneDummy",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "68"
+                    }
+                }
             ]
         }
     },
